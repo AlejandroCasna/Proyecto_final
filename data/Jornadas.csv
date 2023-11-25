@@ -1,0 +1,133 @@
+fecha,hora,enfrentamiento,id_equipo_local,id_equipo_visitante
+07/10/23,18:30,Unicaja Almería 3 - 1 Conqueridor Valencia,10,11
+07/10/23,19:00,Voley Palma 2 - 3 CV Teruel,3,9
+07/10/23,19:00,Santo Domingo VB Petrer 0 - 3 CV Melilla,12,6
+08/10/23,12:00,San Roque_Batán 0 - 3 Guaguas,7,5
+07/10/23,19:00,Cisneros Alter 3 - 0 Arenal Emevé,2,1
+07/10/23,19:30,Grupo Rio Duero Soria 3 - 0 Conectabalear CV Manacor,8,4
+14/10/23,18:00,Conectabalear CV Manacor 0 - 3 Unicaja Almería,4,10
+14/10/23,17:30,Arenal Emevé 1 - 3 Grupo Rio Duero Soria,1,8
+14/10/23,12:00,Guaguas 3 - 2 Cisneros Alter,5,2
+15/10/23,17:00,CV Melilla 3 - 0 San Roque_Batán,6,7
+14/10/23,18:30,CV Teruel 3 - 0 Santo Domingo VB Petrer,9,12
+14/10/23,19:00,Conqueridor Valencia 3 - 1 Voley Palma,11,3
+18/10/23,18:30,Unicaja Almería 3 - 0 Voley Palma,10,3
+18/10/23,19:30,Santo Domingo VB Petrer 1 - 3 Conqueridor Valencia,12,11
+18/10/23,20:00,San Roque_Batán 2 - 3 CV Teruel,7,9
+18/10/23,19:00,Cisneros Alter 2 - 3 CV Melilla,2,6
+18/10/23,19:30,Grupo Rio Duero Soria 3 - 1 Guaguas,8,5
+18/10/23,19:00,Conectabalear CV Manacor 3 - 0 Arenal Emevé,4,1
+21/10/23,19:45,Arenal Emevé 0 - 3 Unicaja Almería,1,10
+21/10/23,18:30,Guaguas 3 - 0 Conectabalear CV Manacor,5,4
+22/10/23,17:00,CV Melilla 0 - 3 Grupo Rio Duero Soria,6,8
+21/10/23,18:30,CV Teruel 3 - 0 Cisneros Alter,9,2
+21/10/23,19:00,Conqueridor Valencia 2 - 3 San Roque_Batán,11,7
+21/10/23,19:00,Voley Palma 3 - 0 Santo Domingo VB Petrer,3,12
+28/10/23,18:30,Unicaja Almería 3 - 0 Santo Domingo VB Petrer,10,12
+29/10/23,12:00,San Roque_Batán 3 - 2 Voley Palma,7,3
+28/10/23,19:00,Cisneros Alter 3 - 0 Conqueridor Valencia,2,11
+28/10/23,19:30,Grupo Rio Duero Soria 3 - 0 CV Teruel,8,9
+28/10/23,18:00,Conectabalear CV Manacor 0 - 3 CV Melilla,4,6
+28/10/23,17:00,Arenal Emevé 0 - 3 Guaguas,1,5
+04/11/23,18:30,Guaguas 3 - 1 Unicaja Almería,5,10
+05/11/23,17:00,CV Melilla 3 - 1 Arenal Emevé,6,1
+04/11/23,18:30,CV Teruel 3 - 2 Conectabalear CV Manacor,9,4
+04/11/23,18:30,Conqueridor Valencia 3 - 2 Grupo Rio Duero Soria,11,8
+04/11/23,19:00,Voley Palma 1 - 3 Cisneros Alter,3,2
+05/11/23,11:30,Santo Domingo VB Petrer 2 - 3 San Roque_Batán,12,7
+11/11/23,18:30,Unicaja Almería 3 - 0 San Roque_Batán,10,7
+11/11/23,19:00,Cisneros Alter 3 - 1 Santo Domingo VB Petrer,2,12
+11/11/23,19:30,Grupo Rio Duero Soria 3 - 2 Voley Palma,8,3
+11/11/23,18:00,Conectabalear CV Manacor 3 - 1 Conqueridor Valencia,4,11
+11/11/23,19:45,Arenal Emevé 3 - 1 CV Teruel,1,9
+15/11/23,19:00,Guaguas 3 - 1 CV Melilla,5,6
+19/11/23,17:00,CV Melilla 0 - 3 Unicaja Almería,6,10
+18/11/23,18:30,CV Teruel 0 - 3 Guaguas,9,5
+18/11/23,18:30,Conqueridor Valencia 2 - 3 Arenal Emevé,11,1
+18/11/23,19:00,Voley Palma 1 - 3 Conectabalear CV Manacor,3,4
+18/11/23,19:00,Santo Domingo VB Petrer 1 - 3 Grupo Rio Duero Soria,12,8
+19/11/23,12:00,San Roque_Batán 2 - 3 Cisneros Alter,7,2
+25/11/23,18:30,Unicaja Almería 0 - 0 Cisneros Alter,10,2
+25/11/23,19:30,Grupo Rio Duero Soria 0 - 0 San Roque_Batán,8,7
+25/11/23,18:00,Conectabalear CV Manacor 0 - 0 Santo Domingo VB Petrer,4,12
+25/11/23,17:00,Arenal Emevé 0 - 0 Voley Palma,1,3
+25/11/23,18:30,Guaguas 0 - 0 Conqueridor Valencia,5,11
+25/11/23,19:30,CV Melilla 0 - 0 CV Teruel,6,9
+02/12/23,18:30,Unicaja Almería 0 - 0 CV Teruel,10,9
+02/12/23,18:30,Conqueridor Valencia 0 - 0 CV Melilla,11,6
+02/12/23,19:00,Voley Palma 0 - 0 Guaguas,3,5
+02/12/23,19:00,Santo Domingo VB Petrer 0 - 0 Arenal Emevé,12,1
+03/12/23,11:30,San Roque_Batán 0 - 0 Conectabalear CV Manacor,7,4
+02/12/23,19:00,Cisneros Alter 0 - 0 Grupo Rio Duero Soria,2,8
+09/12/23,19:30,Grupo Rio Duero Soria 0 - 0 Unicaja Almería,8,10
+09/12/23,19:30,Conectabalear CV Manacor 0 - 0 Cisneros Alter,4,2
+09/12/23,19:30,Arenal Emevé 0 - 0 San Roque_Batán,1,7
+09/12/23,18:30,Guaguas 0 - 0 Santo Domingo VB Petrer,5,12
+09/12/23,19:30,CV Melilla 0 - 0 Voley Palma,6,3
+09/12/23,19:30,CV Teruel 0 - 0 Conqueridor Valencia,9,11
+16/12/23,18:30,Conqueridor Valencia 0 - 0 Unicaja Almería,11,10
+16/12/23,18:30,CV Teruel 0 - 0 Voley Palma,9,3
+17/12/23,17:00,CV Melilla 0 - 0 Santo Domingo VB Petrer,6,12
+16/12/23,18:30,Guaguas 0 - 0 San Roque_Batán,5,7
+16/12/23,17:00,Arenal Emevé 0 - 0 Cisneros Alter,1,2
+16/12/23,18:00,Conectabalear CV Manacor 0 - 0 Grupo Rio Duero Soria,4,8
+06/01/24,18:30,Unicaja Almería 0 - 0 Conectabalear CV Manacor,10,4
+06/01/24,19:30,Grupo Rio Duero Soria 0 - 0 Arenal Emevé,8,1
+07/01/24,12:00,Cisneros Alter 0 - 0 Guaguas,2,5
+07/01/24,12:00,San Roque_Batán 0 - 0 CV Melilla,7,6
+06/01/24,19:00,Santo Domingo VB Petrer 0 - 0 CV Teruel,12,9
+06/01/24,19:00,Voley Palma 0 - 0 Conqueridor Valencia,3,11
+13/01/24,19:00,Voley Palma 0 - 0 Unicaja Almería,3,10
+13/01/24,18:30,Conqueridor Valencia 0 - 0 Santo Domingo VB Petrer,11,12
+13/01/24,18:30,CV Teruel 0 - 0 San Roque_Batán,9,7
+14/01/24,17:00,CV Melilla 0 - 0 Cisneros Alter,6,2
+13/01/24,18:30,Guaguas 0 - 0 Grupo Rio Duero Soria,5,8
+13/01/24,19:45,Arenal Emevé 0 - 0 Conectabalear CV Manacor,1,4
+20/01/24,18:30,Unicaja Almería 0 - 0 Arenal Emevé,10,1
+20/01/24,18:00,Conectabalear CV Manacor 0 - 0 Guaguas,4,5
+20/01/24,19:30,Grupo Rio Duero Soria 0 - 0 CV Melilla,8,6
+20/01/24,19:00,Cisneros Alter 0 - 0 CV Teruel,2,9
+21/01/24,12:00,San Roque_Batán 0 - 0 Conqueridor Valencia,7,11
+20/01/24,19:00,Santo Domingo VB Petrer 0 - 0 Voley Palma,12,3
+27/01/24,19:00,Santo Domingo VB Petrer 0 - 0 Unicaja Almería,12,10
+27/01/24,19:00,Voley Palma 0 - 0 San Roque_Batán,3,7
+27/01/24,18:30,Conqueridor Valencia 0 - 0 Cisneros Alter,11,2
+27/01/24,18:30,CV Teruel 0 - 0 Grupo Rio Duero Soria,9,8
+28/01/24,17:00,CV Melilla 0 - 0 Conectabalear CV Manacor,6,4
+27/01/24,18:30,Guaguas 0 - 0 Arenal Emevé,5,1
+03/02/24,18:30,Unicaja Almería 0 - 0 Guaguas,10,5
+03/02/24,17:30,Arenal Emevé 0 - 0 CV Melilla,1,6
+03/02/24,18:00,Conectabalear CV Manacor 0 - 0 CV Teruel,4,9
+03/02/24,19:30,Grupo Rio Duero Soria 0 - 0 Conqueridor Valencia,8,11
+03/02/24,19:00,Cisneros Alter 0 - 0 Voley Palma,2,3
+03/02/24,19:00,San Roque_Batán 0 - 0 Santo Domingo VB Petrer,7,12
+11/02/24,12:00,San Roque_Batán 0 - 0 Unicaja Almería,7,10
+10/02/24,19:00,Santo Domingo VB Petrer 0 - 0 Cisneros Alter,12,2
+10/02/24,19:00,Voley Palma 0 - 0 Grupo Rio Duero Soria,3,8
+10/02/24,18:30,Conqueridor Valencia 0 - 0 Conectabalear CV Manacor,11,4
+10/02/24,18:30,CV Teruel 0 - 0 Arenal Emevé,9,1
+11/02/24,17:00,CV Melilla 0 - 0 Guaguas,6,5
+24/02/24,18:30,Unicaja Almería 0 - 0 CV Melilla,10,6
+24/02/24,18:30,Guaguas 0 - 0 CV Teruel,5,9
+24/02/24,17:30,Arenal Emevé 0 - 0 Conqueridor Valencia,1,11
+24/02/24,18:00,Conectabalear CV Manacor 0 - 0 Voley Palma,4,3
+24/02/24,19:30,Grupo Rio Duero Soria 0 - 0 Santo Domingo VB Petrer,8,12
+24/02/24,18:00,Cisneros Alter 0 - 0 San Roque_Batán,2,7
+02/03/24,19:00,Cisneros Alter 0 - 0 Unicaja Almería,2,10
+03/03/24,12:00,San Roque_Batán 0 - 0 Grupo Rio Duero Soria,7,8
+02/03/24,19:00,Santo Domingo VB Petrer 0 - 0 Conectabalear CV Manacor,12,4
+02/03/24,19:00,Voley Palma 0 - 0 Arenal Emevé,3,1
+02/03/24,18:30,Conqueridor Valencia 0 - 0 Guaguas,11,5
+02/03/24,18:30,CV Teruel 0 - 0 CV Melilla,9,6
+09/03/24,19:30,CV Teruel 0 - 0 Unicaja Almería,9,10
+09/03/24,19:30,CV Melilla 0 - 0 Conqueridor Valencia,6,11
+09/03/24,18:30,Guaguas 0 - 0 Voley Palma,5,3
+09/03/24,19:30,Arenal Emevé 0 - 0 Santo Domingo VB Petrer,1,12
+09/03/24,19:30,Conectabalear CV Manacor 0 - 0 San Roque_Batán,4,7
+09/03/24,19:30,Grupo Rio Duero Soria 0 - 0 Cisneros Alter,8,2
+16/03/24,19:30,Unicaja Almería 0 - 0 Grupo Rio Duero Soria,10,8
+16/03/24,18:30,Cisneros Alter 0 - 0 Conectabalear CV Manacor,2,4
+16/03/24,18:30,San Roque_Batán 0 - 0 Arenal Emevé,7,1
+16/03/24,19:30,Santo Domingo VB Petrer 0 - 0 Guaguas,12,5
+16/03/24,19:30,Voley Palma 0 - 0 CV Melilla,3,6
+16/03/24,19:30,Conqueridor Valencia 0 - 0 CV Teruel,11,9

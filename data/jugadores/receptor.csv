@@ -1,26 +1,27 @@
-Nombre,Partidos_jugados,Sets_jugados,Bloqueos,Bloqueo_exitoso,Bloqueo_fallido,Total_bloqueos,Saque,Errores_Saque,Porcentaje_error,Total_saques,Ataque_exitoso,Errores_ataque,Porcentaje_error,Total_ataques,Ataque_Ranking,id_jugador_x,id_jugador_y
-Conde Barrios Lucas,8,32,7,4,0,11,5,27,8,114,122,14,15,232,"2,3125",14,14
-Zonca Paolo,8,29,12,4,0,26,18,23,10,129,72,12,7,151,"1,9310",64,64
-Schulz Max,8,29,13,3,0,23,9,32,5,92,110,23,22,234,"1,7931",6,6
-Calvo Leandro Omar,8,28,6,8,1,19,7,13,1,81,89,16,14,206,"1,7857",47,47
-Rodríguez Pérez Víctor,8,26,20,16,0,51,10,21,7,111,72,10,11,146,"1,6923",130,130
-Liu Coltyn Go Yuen,8,27,4,11,0,18,11,26,7,109,89,7,16,172,"1,6296",44,44
-Bruno López Nicolás,8,27,2,7,0,20,6,18,6,104,72,9,9,144,"1,3704",54,54
-Vanole Nogueira Silva Thiago,8,25,8,8,0,23,10,18,5,80,55,8,12,116,"1,0800",68,68
-Nieves Suárez Carlos,8,28,1,10,0,16,8,9,1,70,57,8,10,114,"1,0357",140,140
-Monfort Minaya Javier,8,30,5,19,0,41,8,19,2,101,91,22,15,216,"0,9667",143,143
-Giustiniano Mariano Ariel,8,27,2,6,0,12,7,21,3,109,62,10,9,142,"0,9259",79,79
-Funes Facundo Jesús,8,31,5,8,0,25,5,7,2,80,50,6,13,104,"0,8387",142,142
-Cairus Renzo,8,33,8,8,0,23,4,15,6,108,76,25,14,199,"0,7879",37,37
-Villalba Zamorano José,8,31,11,16,1,37,9,30,8,137,66,8,8,154,"0,7419",101,101
-Ferrández Moles Emilio,8,26,9,8,1,26,2,14,3,77,55,13,13,127,"0,6538",119,119
-Zelayeta Mauro Rafael,5,18,5,3,0,12,8,17,6,60,31,6,7,68,"0,6111",121,121
-Del Carmen Barbara Gabriel,8,32,6,4,0,10,7,35,6,128,71,15,13,152,"0,5313",26,26
-Alves Ramos Vitor,5,8,1,2,0,3,2,4,2,23,15,1,8,37,"0,3750",42,42
-Hernández Robeff Tomás Agustín,8,27,2,7,0,18,2,15,2,107,63,21,14,170,"0,3704",166,166
-Giménez Hernández José María,8,33,4,14,0,23,5,14,5,120,60,9,20,155,"0,3636",36,36
-Melgarejo Brian Efren,6,15,3,11,0,14,3,11,2,46,34,8,5,90,"0,3333",69,69
-Olalla Gómez Adrián,8,29,5,18,0,29,4,24,5,91,73,16,18,179,"0,2069",99,99
-Fernández Rodríguez Francisco,4,12,0,2,0,2,1,9,0,41,29,6,12,72,"0,0833",168,168
-Vildosola Mariano,7,26,5,12,2,29,2,13,1,84,33,4,11,96,"-0,0769",126,126
-Bouza Ferreiro Víctor,7,25,4,6,0,10,0,16,4,91,43,13,18,136,"-0,2400",2,2
+Nombre,Partidos_jugados,Sets_jugados,Bloqueos,Bloqueo_exitoso,Bloqueo_fallido,Total_bloqueos,Saque,Errores_Saque,Porcentaje_error,Total_saques,Ataque_exitoso,Errores_ataque,Porcentaje_error,Total_ataques,Ataque_Ranking,id_jugador
+Conde Barrios Lucas,9,35,7,4,0,13,5,31,8,118,125,14,18,245,"2,0000",14
+Calvo Leandro Omar,9,31,9,8,1,22,8,13,2,90,98,16,16,225,"1,9677",47
+Zonca Paolo,9,32,13,5,0,30,21,25,10,143,79,12,9,172,"1,9375",64
+Rodríguez Pérez Víctor,9,29,21,16,0,52,11,23,8,122,79,11,11,159,"1,7241",130
+Schulz Max,9,33,14,3,0,24,9,36,6,107,122,26,24,260,"1,6970",6
+Liu Coltyn Go Yuen,9,30,4,11,0,18,11,29,7,118,94,10,17,186,"1,4000",44
+Bruno López Nicolás,9,30,2,11,0,26,9,20,7,119,79,11,11,161,"1,2333",54
+Giustiniano Mariano Ariel,9,30,3,7,0,17,10,23,4,123,74,10,11,159,"1,2000",79
+Vanole Nogueira Silva Thiago,8,25,8,8,0,23,10,18,5,80,55,8,12,116,"1,0800",68
+Nieves Suárez Carlos,8,28,1,10,0,16,8,9,1,70,57,8,10,114,"1,0357",140
+Villalba Zamorano José,9,35,15,17,1,44,10,34,9,154,77,9,8,180,"0,9429",101
+Funes Facundo Jesús,9,34,7,9,0,31,5,9,2,88,54,7,13,116,"0,8235",142
+Monfort Minaya Javier,9,33,5,21,0,46,10,23,3,118,100,28,16,246,"0,8182",143
+Ferrández Moles Emilio,9,29,9,10,1,29,2,15,5,88,65,14,15,153,"0,7241",119
+Cairus Renzo,9,37,8,9,0,24,4,17,8,122,83,28,16,222,"0,6757",37
+Hernández Robeff Tomás Agustín,9,30,2,7,0,18,3,16,2,121,76,23,15,195,"0,6667",166
+Ruiz Garrido Francisco José,9,29,7,15,0,34,13,17,6,119,47,7,11,98,"0,5862",136
+Zelayeta Mauro Rafael,6,21,5,3,0,13,8,21,6,67,37,7,8,84,"0,5238",121
+Giménez Hernández José María,9,37,4,14,0,23,5,17,5,132,73,12,22,185,"0,4595",36
+Alves Ramos Vitor,5,8,1,2,0,3,2,4,2,23,15,1,8,37,"0,3750",42
+Olalla Gómez Adrián,9,33,5,20,0,33,4,28,5,105,87,19,18,204,"0,3333",99
+Del Carmen Barbara Gabriel,9,35,6,5,0,11,8,37,6,134,72,19,15,168,"0,2857",26
+Fernández Rodríguez Francisco,5,15,1,2,0,3,1,13,1,53,37,7,13,94,"0,2667",168
+Melgarejo Brian Efren,7,18,4,13,0,19,3,14,2,59,41,10,9,117,"0,1111",69
+Vildosola Mariano,8,29,5,13,2,32,2,13,1,91,39,5,14,119,"-0,0345",126
+Bouza Ferreiro Víctor,8,29,4,6,0,10,0,18,4,101,53,17,23,164,"-0,2414",2

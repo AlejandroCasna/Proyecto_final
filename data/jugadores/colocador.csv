@@ -1,16 +1,15 @@
-Nombre,Partidos_jugados,Sets_jugados,Acciones_exitosas,Errores_colocador,%_error_colocador,Puntos_negativos,Puntos_positivos,Acciones_positivas,Total_acumulado,Efic_Ranking,id_jugador
-,1,1,5,0,2,1,0,0,8,"0,5000",
-Cavanna Maximiliano,2,4,21,0,3,3,4,3,34,"0,4412",65.0
-Bertassoni Paulo Renan,8,26,149,2,13,36,17,14,231,"0,4286",133.0
-Roberts Ignacio,7,29,204,1,24,40,31,34,334,"0,3892",23.0
-Riganti Juan Martín,8,28,179,0,23,43,57,19,321,"0,3645",70.0
-Lorente López Lucas,7,26,153,4,17,47,36,10,267,"0,3596",97.0
-Pont Perello Guillem,6,12,33,0,4,12,3,2,54,"0,3519",122.0
-Arjones Ferreiros Jaime,6,24,136,3,21,25,70,27,282,"0,2979",39.0
-de Amo Miguel Ángel,8,28,145,0,12,54,25,18,254,"0,2874",59.0
-Loeches Buitrago Guillermo,8,34,187,2,20,67,31,27,334,"0,2784",88.0
-Martín Pérez César,7,24,136,4,28,41,28,23,260,"0,2769",51.0
-Lorente Camacho Rubén,8,29,152,6,25,47,30,26,286,"0,2762",116.0
-Monfort Minaya Vicente,8,33,138,1,21,48,32,24,264,"0,2500",147.0
-Edward Batalla Dexter,7,26,160,0,36,54,39,32,321,"0,2305",5.0
-García Borrás Héctor,8,29,175,5,39,71,55,23,368,"0,2201",156.0
+Nombre,Partidos_jugados,Sets_jugados,Acciones_exitosas,Errores_colocador,_error_colocador,Puntos_negativos,Puntos_positivos,Acciones_positivas,Total_acumulado,Efic_Ranking,id_jugador_x,id_jugador_y
+Cavanna Maximiliano,2,4,21,0,3,3,4,3,34,"0,4412",65.0,65
+Bertassoni Paulo Renan,9,29,166,2,13,39,19,15,254,"0,4409",133.0,133
+Riganti Juan Martín,9,31,199,0,25,46,63,19,352,"0,3807",70.0,70
+Roberts Ignacio,8,32,216,2,26,45,32,37,358,"0,3743",23.0,23
+Lorente López Lucas,8,30,181,7,19,56,37,13,313,"0,3578",97.0,97
+Martín Pérez César,8,27,158,4,30,50,30,24,296,"0,2838",51.0,51
+Loeches Buitrago Guillermo,9,38,215,5,21,77,34,30,382,"0,2827",88.0,88
+Arjones Ferreiros Jaime,7,28,161,3,24,38,74,30,330,"0,2818",39.0,39
+Lorente Camacho Rubén,9,31,153,6,27,47,32,26,291,"0,2749",116.0,116
+Pont Perello Guillem,7,15,51,0,6,22,13,4,96,"0,2604",122.0,122
+de Amo Miguel Ángel,9,31,157,0,15,62,30,22,286,"0,2552",59.0,59
+Monfort Minaya Vicente,9,36,155,1,24,55,35,26,296,"0,2500",147.0,147
+García Borrás Héctor,9,32,186,5,40,75,58,24,388,"0,2242",156.0,156
+Edward Batalla Dexter,8,30,176,0,39,64,44,36,359,"0,2117",5.0,5

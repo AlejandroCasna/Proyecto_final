@@ -258,3 +258,112 @@ def scraping_jugadores(url):
     
     except Exception as e:
         print(f"Error durante la navegación: {e}")
+
+
+
+'''--------------------------------------------------------------------------------------------------------------------------------------'''
+
+def scraping_jornadas(url):
+    opciones = Options()
+    opciones.add_experimental_option('excludeSwitches', ['enable-automation'])
+    opciones.add_experimental_option('useAutomationExtension', False)
+    opciones.add_argument('--incognito')
+    opciones.add_argument('--start-maximized')
+    
+    try:
+        driver = webdriver.Chrome(options=opciones)
+        driver.get(url)
+
+        if not hacer_clic(driver, (By.ID, 'lnkCookie')):
+            print('No se pudo hacer clic en el botón de cookies.')
+
+        if hacer_clic(driver, (By.XPATH, '//*[@id="menuPrincipalRFEVB"]/div/ul/li[3]/a')):
+            hacer_clic(driver, (By.XPATH, '//*[@id="miWrapper"]/ul/li[2]/ul/li[1]/a'))
+            hacer_clic(driver, (By.XPATH, '//*[@id="miWrapper"]/ul/li[1]/ul/li[1]/a'))
+            hacer_clic(driver, (By.XPATH, '//*[@id="jornadas"]/option[1]'))
+            time.sleep(5)
+            data = driver.find_element(By.XPATH, '//*[@id="CPContenido_rptPlugins_PanPlugin_0"]/div').text.split('\n')[52:]
+
+            jornadas = []
+            for i in data:
+                if 'JORNADA' in i:
+                    temp = []
+                    temp.append(i)
+                    jornadas.append(temp)
+                else:
+                    temp.append(i)
+
+            dataframes_por_jornada = {}
+
+            for jornada in jornadas:
+                fechas = []
+                horas = []
+                enfrentamientos = []
+
+                for i in range(1, len(jornada), 4):
+                    fecha = jornada[i + 1]
+                    hora = jornada[i + 2]
+                    enfrentamiento = jornada[i + 3]
+
+                    fechas.append(fecha)
+                    horas.append(hora)
+                    enfrentamientos.append(enfrentamiento)
+
+                df = pd.DataFrame({'fecha': fechas, 'hora': horas, 'enfrentamiento': enfrentamientos})
+
+                num_jornada = int(jornada[0].split()[-1])
+
+                dataframes_por_jornada[num_jornada] = df
+
+            
+            df_final = pd.concat(dataframes_por_jornada.values(), ignore_index=True)
+
+            print('Scraping exitoso')
+            return df_final
+
+        else:
+            print('No se encontró la entrada correcta en competiciones.')
+            
+
+    except Exception as e:
+        print(f"Error durante la navegación: {e}")
+
+'''--------------------------------------------------------------------------------------------------------------------------------------'''
+
+
+
+def scraping_estadistica(url):
+
+    opciones = Options()
+    opciones.add_experimental_option('excludeSwitches', ['enable-automation'])
+    opciones.add_experimental_option('useAutomationExtension', False)
+    opciones.add_argument('--incognito')
+    opciones.add_argument('--start-maximized')
+
+    try:
+        driver = webdriver.Chrome(options=opciones)
+        driver.get(url)
+
+        if not hacer_clic(driver, (By.ID, 'lnkCookie')):
+            print('No se pudo hacer clic en el botón de cookies.')
+
+        if hacer_clic(driver, (By.XPATH, '//*[@id="menuPrincipalRFEVB"]/div/ul/li[3]/a')):
+            hacer_clic(driver, (By.XPATH, '//*[@id="miWrapper"]/ul/li[2]/ul/li[1]/a'))
+            hacer_clic(driver, (By.XPATH, '//*[@id="miWrapper"]/ul/li[2]/ul/li[4]/a'))
+            hacer_clic(driver, (By.XPATH, '//*[@id="RTS_Statistics_StatsType"]/div/ul/li[2]/a/span/span'))
+            time.sleep(5)
+            clas = driver.find_element(By.CSS_SELECTOR, '#printableArea').text.split('\n')
+            print('Scraping exitoso')
+            return clas
+
+    except Exception as e:
+        print(f"Error durante la navegación: {e}")
+    else:
+        print('No se encontró la entrada correcta en competiciones.')
+    finally:
+        if driver:
+            driver.quit()
+
+
+'''--------------------------------------------------------------------------------------------------------------------------------------'''
+

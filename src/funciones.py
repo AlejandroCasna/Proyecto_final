@@ -14,11 +14,25 @@ import time
 import sys
 from fuzzywuzzy import process
 import difflib
+from sqlalchemy import create_engine
+from sqlalchemy import Integer
+
+
+
 opciones = Options()
 opciones.add_experimental_option('excludeSwitches', ['enable-automation'])
 opciones.add_experimental_option('useAutomationExtension', False)
 opciones.add_argument('--incognito')
 opciones.add_argument('--start-maximized')
+
+
+
+
+
+
+
+
+
 
 def hacer_clic(driver, selector, timeout=10):
     try:

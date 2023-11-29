@@ -12,6 +12,13 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.support import expected_conditions as EC
 import time
 import sys
+from fuzzywuzzy import process
+import difflib
+opciones = Options()
+opciones.add_experimental_option('excludeSwitches', ['enable-automation'])
+opciones.add_experimental_option('useAutomationExtension', False)
+opciones.add_argument('--incognito')
+opciones.add_argument('--start-maximized')
 
 def hacer_clic(driver, selector, timeout=10):
     try:
@@ -367,3 +374,81 @@ def scraping_estadistica(url):
 
 '''--------------------------------------------------------------------------------------------------------------------------------------'''
 
+def equipos(df):
+
+    
+    mapeo = {
+        'Arenal Emevé': 'Arenal Emevé',
+        'Barça Voleibol': 'Barça Voleibol',
+        'Club Vóley Palma': 'Voley Palma',
+        'Conectabalear CV Manacor': 'Manacor',
+        'CV Guaguas': 'Guaguas',
+        'Léleman Conqueridor Valencia': 'Conqueridor Valencia',
+        'Melilla Sport Capital': 'CV Melilla',
+        'Pamesa Teruel Voleibol': 'CV Teruel',
+        'Rio Duero Soria': 'Rio Duero Soria',
+        'Rotogal Boiro': 'Rotogal Boiro',
+        'Unicaja Costa de Almeria': 'Unicaja Almería',
+        'Voley Textil Santanderina': 'Voley Textil Santanderina'
+    }
+    df['Equipo'] = df['Equipo'].map(mapeo)
+
+    return df
+
+
+def equipos2(df):
+    mapeo = {
+        'Arenal Emevé': 'Arenal Emevé',
+        'Barça Voleibol': 'Barça Voleibol',
+        'Club Vóley Palma': 'Voley Palma',
+        'Conectabalear CV Manacor': 'Manacor',
+        'CV Guaguas': 'Guaguas',
+        'Léleman Conqueridor Valencia': 'Conqueridor Valencia',
+        'Melilla Sport Capital': 'CV Melilla',
+        'Pamesa Teruel Voleibol': 'CV Teruel',
+        'Rio Duero Soria': 'Rio Duero Soria',
+        'Rotogal Boiro': 'Rotogal Boiro',
+        'Unicaja Costa de Almeria': 'Unicaja Almería',
+        'Voley Textil Santanderina': 'Voley Textil Santanderina'
+    }
+    
+    # Obtener los nombres únicos de los equipos en el dataframe
+    nombres_originales = df['Equipo'].unique()
+    
+    # Realizar la coincidencia difusa para encontrar los nombres de equipos similares en el diccionario de mapeo
+    nombres_mapeados = [process.extractOne(nombre, mapeo.keys())[0] for nombre in nombres_originales]
+    
+    # Mapear los nombres de los equipos en el dataframe
+    df['Equipo'] = df['Equipo'].map(dict(zip(nombres_originales, nombres_mapeados)))
+    
+    return df
+
+
+import difflib
+
+def equipos3(df):
+    mapeo = {
+        'Arenal Emevé': 'Arenal Emevé',
+        'Barça Voleibol': 'Barça Voleibol',
+        'Club Vóley Palma': 'Voley Palma',
+        'Conectabalear CV Manacor': 'Manacor',
+        'CV Guaguas': 'Guaguas',
+        'Léleman Conqueridor Valencia': 'Conqueridor Valencia',
+        'Melilla Sport Capital': 'CV Melilla',
+        'Pamesa Teruel Voleibol': 'CV Teruel',
+        'Rio Duero Soria': 'Rio Duero Soria',
+        'Rotogal Boiro': 'Rotogal Boiro',
+        'Unicaja Costa de Almeria': 'Unicaja Almería',
+        'Voley Textil Santanderina': 'Voley Textil Santanderina'
+    }
+    
+    # Obtener los nombres únicos de los equipos en el dataframe
+    nombres_originales = df['Equipo'].unique()
+    
+    # Realizar la coincidencia difusa para encontrar los nombres de equipos similares en el diccionario de mapeo
+    nombres_mapeados = [difflib.get_close_matches(nombre, mapeo.keys(), n=1, cutoff=0.4)[0] for nombre in nombres_originales]
+    
+    # Mapear los nombres de los equipos en el dataframe
+    df['Equipo'] = df['Equipo'].map(dict(zip(nombres_originales, nombres_mapeados)))
+    
+    return df

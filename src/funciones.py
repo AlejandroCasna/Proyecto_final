@@ -14,8 +14,8 @@ import time
 import sys
 from fuzzywuzzy import process
 import difflib
-from sqlalchemy import create_engine
-from sqlalchemy import Integer
+from sqlalchemy import create_engine ,text , Integer
+
 
 
 

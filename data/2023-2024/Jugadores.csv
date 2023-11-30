@@ -1,4 +1,4 @@
-#,Nombre,Posición,Altura,Año de nacimiento,Alcance en ataque,Alcance en bloqueo,id_equipo,id_jugador
+Dorsal,Nombre,Posición,Altura,Año de nacimiento,Alcance en ataque,Alcance en bloqueo,id_equipo,id_jugador
 2,Paradela Cortón Miguel,Líbero,0,2004,0,0,1,1
 3,Bouza Ferreiro Víctor,Receptor,0,1990,0,0,1,2
 4,Linares José Luis,Opuesto,0,1998,0,0,1,3

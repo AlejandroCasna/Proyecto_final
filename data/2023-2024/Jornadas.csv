@@ -1,133 +1,133 @@
-fecha,hora,enfrentamiento,id_equipo_local,id_equipo_visitante
-07/10/23,18:30,Unicaja Costa de Almería 3 - 1 UPV Leleman Conqueridor,10,11
-07/10/23,19:00,Club Vóley Palma 2 - 3 Pamesa Teruel Voleibol,3,9
-07/10/23,19:00,Volei Villena Petrer 0 - 3 CV Melilla,12,6
-08/10/23,12:00,CV San Roque 0 - 3 CV Guaguas,7,5
-07/10/23,19:00,Cisneros Alter Tenerife 3 - 0 Arenal Emevé,2,1
-07/10/23,19:30,Grupo Herce Soria 3 - 0 Conectabalear CV Manacor,8,4
-14/10/23,18:00,Conectabalear CV Manacor 0 - 3 Unicaja Costa de Almería,4,10
-14/10/23,17:30,Arenal Emevé 1 - 3 Grupo Herce Soria,1,8
-14/10/23,12:00,CV Guaguas 3 - 2 Cisneros Alter Tenerife,5,2
-15/10/23,17:00,CV Melilla 3 - 0 CV San Roque,6,7
-14/10/23,18:30,Pamesa Teruel Voleibol 3 - 0 Volei Villena Petrer,9,12
-14/10/23,19:00,UPV Leleman Conqueridor 3 - 1 Club Vóley Palma,11,3
-18/10/23,18:30,Unicaja Costa de Almería 3 - 0 Club Vóley Palma,10,3
-18/10/23,19:30,Volei Villena Petrer 1 - 3 UPV Leleman Conqueridor,12,11
-18/10/23,20:00,CV San Roque 2 - 3 Pamesa Teruel Voleibol,7,9
-18/10/23,19:00,Cisneros Alter Tenerife 2 - 3 CV Melilla,2,6
-18/10/23,19:30,Grupo Herce Soria 3 - 1 CV Guaguas,8,5
-18/10/23,19:00,Conectabalear CV Manacor 3 - 0 Arenal Emevé,4,1
-21/10/23,19:45,Arenal Emevé 0 - 3 Unicaja Costa de Almería,1,10
-21/10/23,18:30,CV Guaguas 3 - 0 Conectabalear CV Manacor,5,4
-22/10/23,17:00,CV Melilla 0 - 3 Grupo Herce Soria,6,8
-21/10/23,18:30,Pamesa Teruel Voleibol 3 - 0 Cisneros Alter Tenerife,9,2
-21/10/23,19:00,UPV Leleman Conqueridor 2 - 3 CV San Roque,11,7
-21/10/23,19:00,Club Vóley Palma 3 - 0 Volei Villena Petrer,3,12
-28/10/23,18:30,Unicaja Costa de Almería 3 - 0 Volei Villena Petrer,10,12
-29/10/23,12:00,CV San Roque 3 - 2 Club Vóley Palma,7,3
-28/10/23,19:00,Cisneros Alter Tenerife 3 - 0 UPV Leleman Conqueridor,2,11
-28/10/23,19:30,Grupo Herce Soria 3 - 0 Pamesa Teruel Voleibol,8,9
-28/10/23,18:00,Conectabalear CV Manacor 0 - 3 CV Melilla,4,6
-28/10/23,17:00,Arenal Emevé 0 - 3 CV Guaguas,1,5
-04/11/23,18:30,CV Guaguas 3 - 1 Unicaja Costa de Almería,5,10
-05/11/23,17:00,CV Melilla 3 - 1 Arenal Emevé,6,1
-04/11/23,18:30,Pamesa Teruel Voleibol 3 - 2 Conectabalear CV Manacor,9,4
-04/11/23,18:30,UPV Leleman Conqueridor 3 - 2 Grupo Herce Soria,11,8
-04/11/23,19:00,Club Vóley Palma 1 - 3 Cisneros Alter Tenerife,3,2
-05/11/23,11:30,Volei Villena Petrer 2 - 3 CV San Roque,12,7
-11/11/23,18:30,Unicaja Costa de Almería 3 - 0 CV San Roque,10,7
-11/11/23,19:00,Cisneros Alter Tenerife 3 - 1 Volei Villena Petrer,2,12
-11/11/23,19:30,Grupo Herce Soria 3 - 2 Club Vóley Palma,8,3
-11/11/23,18:00,Conectabalear CV Manacor 3 - 1 UPV Leleman Conqueridor,4,11
-11/11/23,19:45,Arenal Emevé 3 - 1 Pamesa Teruel Voleibol,1,9
-15/11/23,19:00,CV Guaguas 3 - 1 CV Melilla,5,6
-19/11/23,17:00,CV Melilla 0 - 3 Unicaja Costa de Almería,6,10
-18/11/23,18:30,Pamesa Teruel Voleibol 0 - 3 CV Guaguas,9,5
-18/11/23,18:30,UPV Leleman Conqueridor 2 - 3 Arenal Emevé,11,1
-18/11/23,19:00,Club Vóley Palma 1 - 3 Conectabalear CV Manacor,3,4
-18/11/23,19:00,Volei Villena Petrer 1 - 3 Grupo Herce Soria,12,8
-19/11/23,12:00,CV San Roque 2 - 3 Cisneros Alter Tenerife,7,2
-25/11/23,18:30,Unicaja Costa de Almería 3 - 0 Cisneros Alter Tenerife,10,2
-25/11/23,19:30,Grupo Herce Soria 3 - 1 CV San Roque,8,7
-25/11/23,18:00,Conectabalear CV Manacor 3 - 0 Volei Villena Petrer,4,12
-25/11/23,17:00,Arenal Emevé 1 - 3 Club Vóley Palma,1,3
-25/11/23,18:30,CV Guaguas 3 - 0 UPV Leleman Conqueridor,5,11
-25/11/23,19:30,CV Melilla 3 - 0 Pamesa Teruel Voleibol,6,9
-02/12/23,18:30,Unicaja Costa de Almería 0 - 0 Pamesa Teruel Voleibol,10,9
-02/12/23,18:30,UPV Leleman Conqueridor 0 - 0 CV Melilla,11,6
-02/12/23,19:00,Club Vóley Palma 0 - 0 CV Guaguas,3,5
-02/12/23,19:00,Volei Villena Petrer 0 - 0 Arenal Emevé,12,1
-03/12/23,11:30,CV San Roque 0 - 0 Conectabalear CV Manacor,7,4
-02/12/23,19:00,Cisneros Alter Tenerife 0 - 0 Grupo Herce Soria,2,8
-09/12/23,19:30,Grupo Herce Soria 0 - 0 Unicaja Costa de Almería,8,10
-09/12/23,19:30,Conectabalear CV Manacor 0 - 0 Cisneros Alter Tenerife,4,2
-09/12/23,19:30,Arenal Emevé 0 - 0 CV San Roque,1,7
-09/12/23,18:30,CV Guaguas 0 - 0 Volei Villena Petrer,5,12
-09/12/23,19:30,CV Melilla 0 - 0 Club Vóley Palma,6,3
-09/12/23,19:30,Pamesa Teruel Voleibol 0 - 0 UPV Leleman Conqueridor,9,11
-16/12/23,18:30,UPV Leleman Conqueridor 0 - 0 Unicaja Costa de Almería,11,10
-16/12/23,18:30,Pamesa Teruel Voleibol 0 - 0 Club Vóley Palma,9,3
-17/12/23,17:00,CV Melilla 0 - 0 Volei Villena Petrer,6,12
-16/12/23,18:30,CV Guaguas 0 - 0 CV San Roque,5,7
-16/12/23,17:00,Arenal Emevé 0 - 0 Cisneros Alter Tenerife,1,2
-16/12/23,18:00,Conectabalear CV Manacor 0 - 0 Grupo Herce Soria,4,8
-06/01/24,18:30,Unicaja Costa de Almería 0 - 0 Conectabalear CV Manacor,10,4
-06/01/24,19:30,Grupo Herce Soria 0 - 0 Arenal Emevé,8,1
-07/01/24,12:00,Cisneros Alter Tenerife 0 - 0 CV Guaguas,2,5
-07/01/24,12:00,CV San Roque 0 - 0 CV Melilla,7,6
-06/01/24,19:00,Volei Villena Petrer 0 - 0 Pamesa Teruel Voleibol,12,9
-06/01/24,19:00,Club Vóley Palma 0 - 0 UPV Leleman Conqueridor,3,11
-13/01/24,19:00,Club Vóley Palma 0 - 0 Unicaja Costa de Almería,3,10
-13/01/24,18:30,UPV Leleman Conqueridor 0 - 0 Volei Villena Petrer,11,12
-13/01/24,18:30,Pamesa Teruel Voleibol 0 - 0 CV San Roque,9,7
-14/01/24,17:00,CV Melilla 0 - 0 Cisneros Alter Tenerife,6,2
-13/01/24,18:30,CV Guaguas 0 - 0 Grupo Herce Soria,5,8
-13/01/24,19:45,Arenal Emevé 0 - 0 Conectabalear CV Manacor,1,4
-20/01/24,18:30,Unicaja Costa de Almería 0 - 0 Arenal Emevé,10,1
-20/01/24,18:00,Conectabalear CV Manacor 0 - 0 CV Guaguas,4,5
-20/01/24,19:30,Grupo Herce Soria 0 - 0 CV Melilla,8,6
-20/01/24,19:00,Cisneros Alter Tenerife 0 - 0 Pamesa Teruel Voleibol,2,9
-21/01/24,12:00,CV San Roque 0 - 0 UPV Leleman Conqueridor,7,11
-20/01/24,19:00,Volei Villena Petrer 0 - 0 Club Vóley Palma,12,3
-27/01/24,19:00,Volei Villena Petrer 0 - 0 Unicaja Costa de Almería,12,10
-27/01/24,19:00,Club Vóley Palma 0 - 0 CV San Roque,3,7
-27/01/24,18:30,UPV Leleman Conqueridor 0 - 0 Cisneros Alter Tenerife,11,2
-27/01/24,18:30,Pamesa Teruel Voleibol 0 - 0 Grupo Herce Soria,9,8
-28/01/24,17:00,CV Melilla 0 - 0 Conectabalear CV Manacor,6,4
-27/01/24,18:30,CV Guaguas 0 - 0 Arenal Emevé,5,1
-03/02/24,18:30,Unicaja Costa de Almería 0 - 0 CV Guaguas,10,5
-03/02/24,17:30,Arenal Emevé 0 - 0 CV Melilla,1,6
-03/02/24,18:00,Conectabalear CV Manacor 0 - 0 Pamesa Teruel Voleibol,4,9
-03/02/24,19:30,Grupo Herce Soria 0 - 0 UPV Leleman Conqueridor,8,11
-03/02/24,19:00,Cisneros Alter Tenerife 0 - 0 Club Vóley Palma,2,3
-03/02/24,19:00,CV San Roque 0 - 0 Volei Villena Petrer,7,12
-11/02/24,12:00,CV San Roque 0 - 0 Unicaja Costa de Almería,7,10
-10/02/24,19:00,Volei Villena Petrer 0 - 0 Cisneros Alter Tenerife,12,2
-10/02/24,19:00,Club Vóley Palma 0 - 0 Grupo Herce Soria,3,8
-10/02/24,18:30,UPV Leleman Conqueridor 0 - 0 Conectabalear CV Manacor,11,4
-10/02/24,18:30,Pamesa Teruel Voleibol 0 - 0 Arenal Emevé,9,1
-11/02/24,17:00,CV Melilla 0 - 0 CV Guaguas,6,5
-24/02/24,18:30,Unicaja Costa de Almería 0 - 0 CV Melilla,10,6
-24/02/24,18:30,CV Guaguas 0 - 0 Pamesa Teruel Voleibol,5,9
-24/02/24,17:30,Arenal Emevé 0 - 0 UPV Leleman Conqueridor,1,11
-24/02/24,18:00,Conectabalear CV Manacor 0 - 0 Club Vóley Palma,4,3
-24/02/24,19:30,Grupo Herce Soria 0 - 0 Volei Villena Petrer,8,12
-24/02/24,18:00,Cisneros Alter Tenerife 0 - 0 CV San Roque,2,7
-02/03/24,19:00,Cisneros Alter Tenerife 0 - 0 Unicaja Costa de Almería,2,10
-03/03/24,12:00,CV San Roque 0 - 0 Grupo Herce Soria,7,8
-02/03/24,19:00,Volei Villena Petrer 0 - 0 Conectabalear CV Manacor,12,4
-02/03/24,19:00,Club Vóley Palma 0 - 0 Arenal Emevé,3,1
-02/03/24,18:30,UPV Leleman Conqueridor 0 - 0 CV Guaguas,11,5
-02/03/24,18:30,Pamesa Teruel Voleibol 0 - 0 CV Melilla,9,6
-09/03/24,19:30,Pamesa Teruel Voleibol 0 - 0 Unicaja Costa de Almería,9,10
-09/03/24,19:30,CV Melilla 0 - 0 UPV Leleman Conqueridor,6,11
-09/03/24,18:30,CV Guaguas 0 - 0 Club Vóley Palma,5,3
-09/03/24,19:30,Arenal Emevé 0 - 0 Volei Villena Petrer,1,12
-09/03/24,19:30,Conectabalear CV Manacor 0 - 0 CV San Roque,4,7
-09/03/24,19:30,Grupo Herce Soria 0 - 0 Cisneros Alter Tenerife,8,2
-16/03/24,19:30,Unicaja Costa de Almería 0 - 0 Grupo Herce Soria,10,8
-16/03/24,18:30,Cisneros Alter Tenerife 0 - 0 Conectabalear CV Manacor,2,4
-16/03/24,18:30,CV San Roque 0 - 0 Arenal Emevé,7,1
-16/03/24,19:30,Volei Villena Petrer 0 - 0 CV Guaguas,12,5
-16/03/24,19:30,Club Vóley Palma 0 - 0 CV Melilla,3,6
-16/03/24,19:30,UPV Leleman Conqueridor 0 - 0 Pamesa Teruel Voleibol,11,9
+fecha,hora,equipo_local,resultado,equipo_visitante,id_equipo_local,id_equipo_visitante,id_jornada,id
+2023-10-07,18:30:00,Unicaja Costa de Almería ,3-1,UPV Leleman Conqueridor,10,11,1,1
+2023-10-07,19:00:00,Club Vóley Palma ,2-3,Pamesa Teruel Voleibol,3,9,1,2
+2023-10-07,19:00:00,Volei Villena Petrer ,0-3,CV Melilla,12,6,1,3
+2023-10-08,12:00:00,CV San Roque ,0-3,CV Guaguas,7,5,1,4
+2023-10-07,19:00:00,Cisneros Alter Tenerife ,3-0,Arenal Emevé,2,1,1,5
+2023-10-07,19:30:00,Grupo Herce Soria ,3-0,Conectabalear CV Manacor,8,4,1,6
+2023-10-14,18:00:00,Conectabalear CV Manacor ,0-3,Unicaja Costa de Almería,4,10,2,7
+2023-10-14,17:30:00,Arenal Emevé ,1-3,Grupo Herce Soria,1,8,2,8
+2023-10-14,12:00:00,CV Guaguas ,3-2,Cisneros Alter Tenerife,5,2,2,9
+2023-10-15,17:00:00,CV Melilla ,3-0,CV San Roque,6,7,2,10
+2023-10-14,18:30:00,Pamesa Teruel Voleibol ,3-0,Volei Villena Petrer,9,12,2,11
+2023-10-14,19:00:00,UPV Leleman Conqueridor ,3-1,Club Vóley Palma,11,3,2,12
+2023-10-18,18:30:00,Unicaja Costa de Almería ,3-0,Club Vóley Palma,10,3,3,13
+2023-10-18,19:30:00,Volei Villena Petrer ,1-3,UPV Leleman Conqueridor,12,11,3,14
+2023-10-18,20:00:00,CV San Roque ,2-3,Pamesa Teruel Voleibol,7,9,3,15
+2023-10-18,19:00:00,Cisneros Alter Tenerife ,2-3,CV Melilla,2,6,3,16
+2023-10-18,19:30:00,Grupo Herce Soria ,3-1,CV Guaguas,8,5,3,17
+2023-10-18,19:00:00,Conectabalear CV Manacor ,3-0,Arenal Emevé,4,1,3,18
+2023-10-21,19:45:00,Arenal Emevé ,0-3,Unicaja Costa de Almería,1,10,4,19
+2023-10-21,18:30:00,CV Guaguas ,3-0,Conectabalear CV Manacor,5,4,4,20
+2023-10-22,17:00:00,CV Melilla ,0-3,Grupo Herce Soria,6,8,4,21
+2023-10-21,18:30:00,Pamesa Teruel Voleibol ,3-0,Cisneros Alter Tenerife,9,2,4,22
+2023-10-21,19:00:00,UPV Leleman Conqueridor ,2-3,CV San Roque,11,7,4,23
+2023-10-21,19:00:00,Club Vóley Palma ,3-0,Volei Villena Petrer,3,12,4,24
+2023-10-28,18:30:00,Unicaja Costa de Almería ,3-0,Volei Villena Petrer,10,12,5,25
+2023-10-29,12:00:00,CV San Roque ,3-2,Club Vóley Palma,7,3,5,26
+2023-10-28,19:00:00,Cisneros Alter Tenerife ,3-0,UPV Leleman Conqueridor,2,11,5,27
+2023-10-28,19:30:00,Grupo Herce Soria ,3-0,Pamesa Teruel Voleibol,8,9,5,28
+2023-10-28,18:00:00,Conectabalear CV Manacor ,0-3,CV Melilla,4,6,5,29
+2023-10-28,17:00:00,Arenal Emevé ,0-3,CV Guaguas,1,5,5,30
+2023-11-04,18:30:00,CV Guaguas ,3-1,Unicaja Costa de Almería,5,10,6,31
+2023-11-05,17:00:00,CV Melilla ,3-1,Arenal Emevé,6,1,6,32
+2023-11-04,18:30:00,Pamesa Teruel Voleibol ,3-2,Conectabalear CV Manacor,9,4,6,33
+2023-11-04,18:30:00,UPV Leleman Conqueridor ,3-2,Grupo Herce Soria,11,8,6,34
+2023-11-04,19:00:00,Club Vóley Palma ,1-3,Cisneros Alter Tenerife,3,2,6,35
+2023-11-05,11:30:00,Volei Villena Petrer ,2-3,CV San Roque,12,7,6,36
+2023-11-11,18:30:00,Unicaja Costa de Almería ,3-0,CV San Roque,10,7,7,37
+2023-11-11,19:00:00,Cisneros Alter Tenerife ,3-1,Volei Villena Petrer,2,12,7,38
+2023-11-11,19:30:00,Grupo Herce Soria ,3-2,Club Vóley Palma,8,3,7,39
+2023-11-11,18:00:00,Conectabalear CV Manacor ,3-1,UPV Leleman Conqueridor,4,11,7,40
+2023-11-11,19:45:00,Arenal Emevé ,3-1,Pamesa Teruel Voleibol,1,9,7,41
+2023-11-15,19:00:00,CV Guaguas ,3-1,CV Melilla,5,6,7,42
+2023-11-19,17:00:00,CV Melilla ,0-3,Unicaja Costa de Almería,6,10,8,43
+2023-11-18,18:30:00,Pamesa Teruel Voleibol ,0-3,CV Guaguas,9,5,8,44
+2023-11-18,18:30:00,UPV Leleman Conqueridor ,2-3,Arenal Emevé,11,1,8,45
+2023-11-18,19:00:00,Club Vóley Palma ,1-3,Conectabalear CV Manacor,3,4,8,46
+2023-11-18,19:00:00,Volei Villena Petrer ,1-3,Grupo Herce Soria,12,8,8,47
+2023-11-19,12:00:00,CV San Roque ,2-3,Cisneros Alter Tenerife,7,2,8,48
+2023-11-25,18:30:00,Unicaja Costa de Almería ,3-0,Cisneros Alter Tenerife,10,2,9,49
+2023-11-25,19:30:00,Grupo Herce Soria ,3-1,CV San Roque,8,7,9,50
+2023-11-25,18:00:00,Conectabalear CV Manacor ,3-0,Volei Villena Petrer,4,12,9,51
+2023-11-25,17:00:00,Arenal Emevé ,1-3,Club Vóley Palma,1,3,9,52
+2023-11-25,18:30:00,CV Guaguas ,3-0,UPV Leleman Conqueridor,5,11,9,53
+2023-11-25,19:30:00,CV Melilla ,3-0,Pamesa Teruel Voleibol,6,9,9,54
+2023-12-02,18:30:00,Unicaja Costa de Almería ,0-0,Pamesa Teruel Voleibol,10,9,10,55
+2023-12-02,18:30:00,UPV Leleman Conqueridor ,0-0,CV Melilla,11,6,10,56
+2023-12-02,19:00:00,Club Vóley Palma ,0-0,CV Guaguas,3,5,10,57
+2023-12-02,19:00:00,Volei Villena Petrer ,0-0,Arenal Emevé,12,1,10,58
+2023-12-03,11:30:00,CV San Roque ,0-0,Conectabalear CV Manacor,7,4,10,59
+2023-12-02,19:00:00,Cisneros Alter Tenerife ,0-0,Grupo Herce Soria,2,8,10,60
+2023-12-09,19:30:00,Grupo Herce Soria ,0-0,Unicaja Costa de Almería,8,10,11,61
+2023-12-09,19:30:00,Conectabalear CV Manacor ,0-0,Cisneros Alter Tenerife,4,2,11,62
+2023-12-09,19:30:00,Arenal Emevé ,0-0,CV San Roque,1,7,11,63
+2023-12-09,18:30:00,CV Guaguas ,0-0,Volei Villena Petrer,5,12,11,64
+2023-12-09,19:30:00,CV Melilla ,0-0,Club Vóley Palma,6,3,11,65
+2023-12-09,19:30:00,Pamesa Teruel Voleibol ,0-0,UPV Leleman Conqueridor,9,11,11,66
+2023-12-16,18:30:00,UPV Leleman Conqueridor ,0-0,Unicaja Costa de Almería,11,10,12,67
+2023-12-16,18:30:00,Pamesa Teruel Voleibol ,0-0,Club Vóley Palma,9,3,12,68
+2023-12-17,17:00:00,CV Melilla ,0-0,Volei Villena Petrer,6,12,12,69
+2023-12-16,18:30:00,CV Guaguas ,0-0,CV San Roque,5,7,12,70
+2023-12-16,17:00:00,Arenal Emevé ,0-0,Cisneros Alter Tenerife,1,2,12,71
+2023-12-16,18:00:00,Conectabalear CV Manacor ,0-0,Grupo Herce Soria,4,8,12,72
+2024-01-06,18:30:00,Unicaja Costa de Almería ,0-0,Conectabalear CV Manacor,10,4,13,73
+2024-01-06,19:30:00,Grupo Herce Soria ,0-0,Arenal Emevé,8,1,13,74
+2024-01-07,12:00:00,Cisneros Alter Tenerife ,0-0,CV Guaguas,2,5,13,75
+2024-01-07,12:00:00,CV San Roque ,0-0,CV Melilla,7,6,13,76
+2024-01-06,19:00:00,Volei Villena Petrer ,0-0,Pamesa Teruel Voleibol,12,9,13,77
+2024-01-06,19:00:00,Club Vóley Palma ,0-0,UPV Leleman Conqueridor,3,11,13,78
+2024-01-13,19:00:00,Club Vóley Palma ,0-0,Unicaja Costa de Almería,3,10,14,79
+2024-01-13,18:30:00,UPV Leleman Conqueridor ,0-0,Volei Villena Petrer,11,12,14,80
+2024-01-13,18:30:00,Pamesa Teruel Voleibol ,0-0,CV San Roque,9,7,14,81
+2024-01-14,17:00:00,CV Melilla ,0-0,Cisneros Alter Tenerife,6,2,14,82
+2024-01-13,18:30:00,CV Guaguas ,0-0,Grupo Herce Soria,5,8,14,83
+2024-01-13,19:45:00,Arenal Emevé ,0-0,Conectabalear CV Manacor,1,4,14,84
+2024-01-20,18:30:00,Unicaja Costa de Almería ,0-0,Arenal Emevé,10,1,15,85
+2024-01-20,18:00:00,Conectabalear CV Manacor ,0-0,CV Guaguas,4,5,15,86
+2024-01-20,19:30:00,Grupo Herce Soria ,0-0,CV Melilla,8,6,15,87
+2024-01-20,19:00:00,Cisneros Alter Tenerife ,0-0,Pamesa Teruel Voleibol,2,9,15,88
+2024-01-21,12:00:00,CV San Roque ,0-0,UPV Leleman Conqueridor,7,11,15,89
+2024-01-20,19:00:00,Volei Villena Petrer ,0-0,Club Vóley Palma,12,3,15,90
+2024-01-27,19:00:00,Volei Villena Petrer ,0-0,Unicaja Costa de Almería,12,10,16,91
+2024-01-27,19:00:00,Club Vóley Palma ,0-0,CV San Roque,3,7,16,92
+2024-01-27,18:30:00,UPV Leleman Conqueridor ,0-0,Cisneros Alter Tenerife,11,2,16,93
+2024-01-27,18:30:00,Pamesa Teruel Voleibol ,0-0,Grupo Herce Soria,9,8,16,94
+2024-01-28,17:00:00,CV Melilla ,0-0,Conectabalear CV Manacor,6,4,16,95
+2024-01-27,18:30:00,CV Guaguas ,0-0,Arenal Emevé,5,1,16,96
+2024-02-03,18:30:00,Unicaja Costa de Almería ,0-0,CV Guaguas,10,5,17,97
+2024-02-03,17:30:00,Arenal Emevé ,0-0,CV Melilla,1,6,17,98
+2024-02-03,18:00:00,Conectabalear CV Manacor ,0-0,Pamesa Teruel Voleibol,4,9,17,99
+2024-02-03,19:30:00,Grupo Herce Soria ,0-0,UPV Leleman Conqueridor,8,11,17,100
+2024-02-03,19:00:00,Cisneros Alter Tenerife ,0-0,Club Vóley Palma,2,3,17,101
+2024-02-03,19:00:00,CV San Roque ,0-0,Volei Villena Petrer,7,12,17,102
+2024-02-11,12:00:00,CV San Roque ,0-0,Unicaja Costa de Almería,7,10,18,103
+2024-02-10,19:00:00,Volei Villena Petrer ,0-0,Cisneros Alter Tenerife,12,2,18,104
+2024-02-10,19:00:00,Club Vóley Palma ,0-0,Grupo Herce Soria,3,8,18,105
+2024-02-10,18:30:00,UPV Leleman Conqueridor ,0-0,Conectabalear CV Manacor,11,4,18,106
+2024-02-10,18:30:00,Pamesa Teruel Voleibol ,0-0,Arenal Emevé,9,1,18,107
+2024-02-11,17:00:00,CV Melilla ,0-0,CV Guaguas,6,5,18,108
+2024-02-24,18:30:00,Unicaja Costa de Almería ,0-0,CV Melilla,10,6,19,109
+2024-02-24,18:30:00,CV Guaguas ,0-0,Pamesa Teruel Voleibol,5,9,19,110
+2024-02-24,17:30:00,Arenal Emevé ,0-0,UPV Leleman Conqueridor,1,11,19,111
+2024-02-24,18:00:00,Conectabalear CV Manacor ,0-0,Club Vóley Palma,4,3,19,112
+2024-02-24,19:30:00,Grupo Herce Soria ,0-0,Volei Villena Petrer,8,12,19,113
+2024-02-24,18:00:00,Cisneros Alter Tenerife ,0-0,CV San Roque,2,7,19,114
+2024-03-02,19:00:00,Cisneros Alter Tenerife ,0-0,Unicaja Costa de Almería,2,10,20,115
+2024-03-03,12:00:00,CV San Roque ,0-0,Grupo Herce Soria,7,8,20,116
+2024-03-02,19:00:00,Volei Villena Petrer ,0-0,Conectabalear CV Manacor,12,4,20,117
+2024-03-02,19:00:00,Club Vóley Palma ,0-0,Arenal Emevé,3,1,20,118
+2024-03-02,18:30:00,UPV Leleman Conqueridor ,0-0,CV Guaguas,11,5,20,119
+2024-03-02,18:30:00,Pamesa Teruel Voleibol ,0-0,CV Melilla,9,6,20,120
+2024-03-09,19:30:00,Pamesa Teruel Voleibol ,0-0,Unicaja Costa de Almería,9,10,21,121
+2024-03-09,19:30:00,CV Melilla ,0-0,UPV Leleman Conqueridor,6,11,21,122
+2024-03-09,18:30:00,CV Guaguas ,0-0,Club Vóley Palma,5,3,21,123
+2024-03-09,19:30:00,Arenal Emevé ,0-0,Volei Villena Petrer,1,12,21,124
+2024-03-09,19:30:00,Conectabalear CV Manacor ,0-0,CV San Roque,4,7,21,125
+2024-03-09,19:30:00,Grupo Herce Soria ,0-0,Cisneros Alter Tenerife,8,2,21,126
+2024-03-16,19:30:00,Unicaja Costa de Almería ,0-0,Grupo Herce Soria,10,8,22,127
+2024-03-16,18:30:00,Cisneros Alter Tenerife ,0-0,Conectabalear CV Manacor,2,4,22,128
+2024-03-16,18:30:00,CV San Roque ,0-0,Arenal Emevé,7,1,22,129
+2024-03-16,19:30:00,Volei Villena Petrer ,0-0,CV Guaguas,12,5,22,130
+2024-03-16,19:30:00,Club Vóley Palma ,0-0,CV Melilla,3,6,22,131
+2024-03-16,19:30:00,UPV Leleman Conqueridor ,0-0,Pamesa Teruel Voleibol,11,9,22,132

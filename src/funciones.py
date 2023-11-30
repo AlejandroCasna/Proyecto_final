@@ -15,6 +15,7 @@ import sys
 from fuzzywuzzy import process
 import difflib
 from sqlalchemy import create_engine ,text , Integer
+import re
 
 
 
@@ -409,60 +410,8 @@ def equipos(df):
 
     return df
 
+'''--------------------------------------------------------------------------------------------------------------------------------------'''
 
-def equipos2(df):
-    mapeo = {
-        'Arenal Emevé': 'Arenal Emevé',
-        'Barça Voleibol': 'Barça Voleibol',
-        'Club Vóley Palma': 'Voley Palma',
-        'Conectabalear CV Manacor': 'Manacor',
-        'CV Guaguas': 'Guaguas',
-        'Léleman Conqueridor Valencia': 'Conqueridor Valencia',
-        'Melilla Sport Capital': 'CV Melilla',
-        'Pamesa Teruel Voleibol': 'CV Teruel',
-        'Rio Duero Soria': 'Rio Duero Soria',
-        'Rotogal Boiro': 'Rotogal Boiro',
-        'Unicaja Costa de Almeria': 'Unicaja Almería',
-        'Voley Textil Santanderina': 'Voley Textil Santanderina'
-    }
-    
-    # Obtener los nombres únicos de los equipos en el dataframe
-    nombres_originales = df['Equipo'].unique()
-    
-    # Realizar la coincidencia difusa para encontrar los nombres de equipos similares en el diccionario de mapeo
-    nombres_mapeados = [process.extractOne(nombre, mapeo.keys())[0] for nombre in nombres_originales]
-    
-    # Mapear los nombres de los equipos en el dataframe
-    df['Equipo'] = df['Equipo'].map(dict(zip(nombres_originales, nombres_mapeados)))
-    
-    return df
-
-
-import difflib
-
-def equipos3(df):
-    mapeo = {
-        'Arenal Emevé': 'Arenal Emevé',
-        'Barça Voleibol': 'Barça Voleibol',
-        'Club Vóley Palma': 'Voley Palma',
-        'Conectabalear CV Manacor': 'Manacor',
-        'CV Guaguas': 'Guaguas',
-        'Léleman Conqueridor Valencia': 'Conqueridor Valencia',
-        'Melilla Sport Capital': 'CV Melilla',
-        'Pamesa Teruel Voleibol': 'CV Teruel',
-        'Rio Duero Soria': 'Rio Duero Soria',
-        'Rotogal Boiro': 'Rotogal Boiro',
-        'Unicaja Costa de Almeria': 'Unicaja Almería',
-        'Voley Textil Santanderina': 'Voley Textil Santanderina'
-    }
-    
-    # Obtener los nombres únicos de los equipos en el dataframe
-    nombres_originales = df['Equipo'].unique()
-    
-    # Realizar la coincidencia difusa para encontrar los nombres de equipos similares en el diccionario de mapeo
-    nombres_mapeados = [difflib.get_close_matches(nombre, mapeo.keys(), n=1, cutoff=0.4)[0] for nombre in nombres_originales]
-    
-    # Mapear los nombres de los equipos en el dataframe
-    df['Equipo'] = df['Equipo'].map(dict(zip(nombres_originales, nombres_mapeados)))
-    
-    return df
+def extraer_numeros(cadena):
+    numeros = re.findall(r'\d+', cadena)
+    return [int(numero) for numero in numeros]

@@ -109,9 +109,11 @@ CREATE TABLE IF NOT EXISTS jornadas (
     equipo_visitante VARCHAR(255),
     id_equipo_local INT,
     id_equipo_visitante INT,
-    id_jornada INT PRIMARY KEY,
-    FOREIGN KEY (id_jornada) REFERENCES equipo(id_equipo)
-);
+    id_jornada INT,
+    id INT PRIMARY KEY,
+    FOREIGN KEY (id_equipo_local) REFERENCES equipo(id_equipo),
+    FOREIGN KEY (id_equipo_visitante) REFERENCES equipo(id_equipo)
+    );
 
 -- Tabla: estadisticas_equipo
 CREATE TABLE IF NOT EXISTS estadisticas_equipo (

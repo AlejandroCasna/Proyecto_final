@@ -5,7 +5,7 @@ USE volleyball_database;
 -- Tabla: equipo
 CREATE TABLE IF NOT EXISTS equipo (
     id_equipo INT PRIMARY KEY,
-    Nombre VARCHAR(255)
+    Equipo VARCHAR(255)
 );
 
 -- Tabla: jugadores
@@ -45,7 +45,7 @@ CREATE TABLE IF NOT EXISTS receptor (
 );
 
 -- Tabla: opuesto
-CREATE TABLE IF NOT EXISTS libero (
+CREATE TABLE IF NOT EXISTS opuesto (
     Nombre VARCHAR(255),
     Partidos_jugados INT,
     Sets_jugados INT,
@@ -65,7 +65,6 @@ CREATE TABLE IF NOT EXISTS libero (
     id_jugador INT PRIMARY KEY,
     FOREIGN KEY (id_jugador) REFERENCES jugadores(id_jugador)
 );
-
 -- Tabla: libero
 CREATE TABLE IF NOT EXISTS libero (
     Nombre VARCHAR(255),
@@ -180,5 +179,19 @@ CREATE TABLE IF NOT EXISTS centrales (
     Ataque_Ranking INT,
     id_jugador INT PRIMARY KEY,
     FOREIGN KEY (id_jugador) REFERENCES jugadores(id_jugador)
+);
+
+    CREATE TABLE IF NOT EXISTS temporada (
+	id_temporada INT PRIMARY KEY,
+    temporada VARCHAR (10)
+    );
+    
+CREATE TABLE IF NOT EXISTS temporada_equipo (
+    id_temporada INT,
+    id_equipo INT,
+    PRIMARY KEY (id_temporada, id_equipo),
+    FOREIGN KEY (id_temporada) REFERENCES temporada(id_temporada),
+    FOREIGN KEY (id_equipo) REFERENCES equipo(id_equipo)
+    
 );
 

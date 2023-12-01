@@ -1,16 +1,16 @@
-Nombre,Partidos_jugados,Sets_jugados,Bloqueos,Bloqueo_exitoso,Bloqueo_fallido,Total_bloqueos,Saque,Errores_Saque,Porcentaje_error,Total_saques,Ataque_exitoso,Errores_ataque,Porcentaje_error,Total_ataques,Ataque_Ranking,id_jugador
-Linares José Luis,23,83,34,55,17,332,25,23,0,62,366,87,76,785,"2,2169",12
-Rattray Brandon,13,33,13,22,9,94,8,6,0,22,105,15,16,201,"2,0303",68
-De Melo Rodrigo Roberto,28,100,34,86,20,428,22,71,2,167,442,76,60,891,"2,0300",112
-Alves Ramos Vitor,7,26,5,9,1,89,3,2,0,6,88,17,16,204,"2,0000",2
-Martina Federico,27,92,8,36,7,236,27,33,0,86,334,64,75,730,"1,7500",103
-Ferreira Marco,23,83,22,62,12,314,37,56,3,134,295,82,44,656,"1,2892",156
-Escobar Silvaa Yadrián,26,80,27,75,21,302,17,37,2,93,280,55,56,561,"1,2375",63
-Chourio González Anderson José,19,68,3,11,11,201,25,15,0,47,190,53,57,461,"1,2059",51
-Moreno Mosquera Juan Pablo,30,109,64,145,33,485,40,66,3,146,449,113,98,982,"1,1743",124
-Nogueira Amorim Víctor Lucas,25,92,33,83,16,316,29,52,0,132,347,95,78,735,"1,0978",81
-Osorio Recordá Gerard,24,84,25,98,12,249,12,25,0,50,269,50,50,655,"0,9881",25
-Pantaleao Luiz Felipe,11,33,2,16,2,82,12,7,0,27,89,32,20,219,"0,8485",165
-De la Rosa Cañellas Antonio,22,83,15,55,9,293,12,10,1,42,261,77,77,685,"0,8193",37
-Peemuller Richard Willi,8,30,7,31,5,93,14,18,1,36,119,37,29,346,"0,8000",169
-Quelle Rodríguez Juan,19,50,4,30,4,92,6,13,0,38,58,32,22,194,"-0,5800",140
+Nombre,Partidos_jugados,Sets_jugados,Bloqueos,Bloqueo_exitoso,Bloqueo_fallido,Total_bloqueos,Saque,Errores_Saque,Porcentaje_error,Total_saques,Ataque_exitoso,Errores_ataque,Porc_error,Total_ataques,Ataque_Ranking,id_jugador,temporada
+Linares José Luis,23,83,34,55,17,332,25,23,0,62,366,87,76,785,2.2169,211,2022-2023
+Rattray Brandon,13,33,13,22,9,94,8,6,0,22,105,15,16,201,2.0303,267,2022-2023
+De Melo Rodrigo Roberto,28,100,34,86,20,428,22,71,2,167,442,76,60,891,2.03,311,2022-2023
+Alves Ramos Vitor,7,26,5,9,1,89,3,2,0,6,88,17,16,204,2.0,201,2022-2023
+Martina Federico,27,92,8,36,7,236,27,33,0,86,334,64,75,730,1.75,302,2022-2023
+Ferreira Marco,23,83,22,62,12,314,37,56,3,134,295,82,44,656,1.2892,355,2022-2023
+Escobar Silvaa Yadrián,26,80,27,75,21,302,17,37,2,93,280,55,56,561,1.2375,262,2022-2023
+Chourio González Anderson José,19,68,3,11,11,201,25,15,0,47,190,53,57,461,1.2059,250,2022-2023
+Moreno Mosquera Juan Pablo,30,109,64,145,33,485,40,66,3,146,449,113,98,982,1.1743,323,2022-2023
+Nogueira Amorim Víctor Lucas,25,92,33,83,16,316,29,52,0,132,347,95,78,735,1.0978,280,2022-2023
+Osorio Recordá Gerard,24,84,25,98,12,249,12,25,0,50,269,50,50,655,0.9881,224,2022-2023
+Pantaleao Luiz Felipe,11,33,2,16,2,82,12,7,0,27,89,32,20,219,0.8485,364,2022-2023
+De la Rosa Cañellas Antonio,22,83,15,55,9,293,12,10,1,42,261,77,77,685,0.8193,236,2022-2023
+Peemuller Richard Willi,8,30,7,31,5,93,14,18,1,36,119,37,29,346,0.8,368,2022-2023
+Quelle Rodríguez Juan,19,50,4,30,4,92,6,13,0,38,58,32,22,194,-0.58,339,2022-2023

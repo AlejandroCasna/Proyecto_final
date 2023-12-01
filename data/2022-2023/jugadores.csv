@@ -1,178 +1,178 @@
-Dorsal,Nombre,Posición,Altura,Año de nacimiento,Alcance en ataque,Alcance en bloqueo,id_jugador
-1,Ferreira García Gabriel,Colocador/a,188,1997,310,300,1
-2,Alves Ramos Vitor,Receptor,194,2002,330,322,2
-3,Bouza Ferreiro Víctor,Receptor,187,1990,330,320,3
-4,Romaní Leandro Gustavo,Middle-blocker,205,1999,337,323,4
-7,Gallardo Hernández Rodrigo,Líbero,183,1999,295,268,5
-8,Mariño González Anier,Middle-blocker,184,2005,310,300,6
-9,Barrasa Portomeñe Samuel,Líbero,179,2007,290,270,7
-10,Anane Osamudiamen Jorge,Middle-blocker,194,2001,330,320,8
-11,Villar Álvarez Pablo,Colocador/a,186,2002,320,310,9
-12,Rodríguez Rubio Aurelio,Middle-blocker,193,2000,308,300,10
-13,Mena Romero Pau,Opuesto,197,2001,338,330,11
-14,Linares José Luis,Opuesto,182,1998,335,320,12
-15,García Ordoñez Carlos,Receptor,175,2003,280,270,13
-17,Biliato Luca,Receptor,179,1993,312,310,14
-1,Crespo Fushan Pablo,Middle-blocker,194,2006,-,-,15
-2,Rojas Cáceres Cristhian,Receptor,193,2001,342,330,16
-3,Schorlemmer Cuesta Nicolás,Middle-blocker,200,2005,335,325,17
-4,García Borrás Héctor,Colocador/a,179,1998,310,300,18
-5,Masia Porres Arnau,Líbero,181,2002,315,306,19
-6,Ferri Beneito Francisco Javier,Opuesto,188,1999,325,318,20
-7,Loeches Buitrago Guillermo,Colocador/a,183,1996,325,312,21
-9,León Yohan,Receptor,201,1995,355,341,22
-10,Grossi Anderson,Middle-blocker,204,1994,350,338,23
-12,Fuentes Rascón Mauro Isaac,Receptor,192,1997,352,340,24
-14,Osorio Recordá Gerard,Opuesto,202,1993,347,333,25
-16,Valiño Sanz Isaac,Receptor,192,1999,335,320,26
-18,Carabali Kevin Alexander,Middle-blocker,204,1995,360,350,27
-19,Cid Cadenas Mario,Receptor,195,2003,345,328,28
-30,Marín Nieda Juan Francisco,Opuesto,193,2002,345,332,29
--,Fernández Martínez Francisco José,Receptor,-,1995,-,-,30
--,Moreno Mañas Antonio,-,-,1987,-,-,31
-1,Reboredo Coronado Miguel,Receptor,185,2001,-,-,32
-2,Garcías Millas Joan Miquel,Líbero,180,2002,-,-,33
-3,Gallego Sánchez Miguel,Colocador/a,-,1982,-,-,34
-5,Sánchez Coll Javier,Colocador/a,190,2001,-,-,35
-6,Bernal Bravo Abel,Middle-blocker,198,1981,-,-,36
-7,De la Rosa Cañellas Antonio,Opuesto,196,2002,-,-,37
-8,Osado Carrasco José,Líbero,175,1997,-,-,38
-9,Riera Granada Adrián,Líbero,180,2002,-,-,39
-10,Amador Romaguera Sergio,Receptor,190,2004,-,-,40
-11,Cairus Renzo,Receptor,190,1990,-,-,41
-12,Palacios Santos Cristian,Middle-blocker,-,1993,-,-,42
-13,Arranz Boyero Sergi,Colocador/a,187,1990,-,-,43
-14,Liot Tom,Colocador/a,-,1998,-,-,44
-16,Fresquet Barceló Xavier,Middle-blocker,200,2003,-,-,45
-17,Folguera Xavier,Colocador/a,180,1988,-,-,46
-23,Bauza Mestre Josep,Receptor,178,2000,-,-,47
-34,De Carvalho Furtado Carlos Manuel,Middle-blocker,203,1995,-,-,48
-77,Fernández Rodríguez Francisco,Receptor,-,1996,-,-,49
-1,Pont Perello Guillem,Colocador/a,178,2002,-,-,50
-2,Chourio González Anderson José,Opuesto,198,1986,-,-,51
-3,Morato Noguer Ferrán,Receptor,193,1993,-,-,52
-4,Truyols Galmés Llorenç,Opuesto,189,2003,-,-,53
-5,Salerno Aguirre Hector Leonardo Javier,Receptor,198,1991,-,-,54
-6,Piris Guiscafré Antoni,Líbero,180,2001,-,-,55
-7,Filter Albrecht Caetano,Receptor,190,1995,-,-,56
-10,Ribas Brockert Alejandro,Middle-blocker,197,2004,-,-,57
-14,Allen Serrano Luis Vidal,Middle-blocker,200,2001,-,-,58
-16,Monteagudo del Pueblo Joaquín,Middle-blocker,198,1996,-,-,59
-18,Gibanel Galmés Sebastiá,Líbero,180,2000,-,-,60
-21,Martín Pérez César,Colocador/a,185,1995,-,-,61
-1,Fernández Rojas Alejandro,Líbero,183,1987,320,300,62
-3,Escobar Silvaa Yadrián,Opuesto,201,1988,330,310,63
-4,Ruiz Daniel,Líbero,191,1995,300,300,64
-5,Olalla Gómez Adrián,Opuesto,197,2001,320,310,65
-7,de Amo Miguel Ángel,Colocador/a,185,1985,300,300,66
-8,Bertassoni Paulo Renan,Colocador/a,186,1985,340,325,67
-9,Rattray Brandon,Opuesto,195,1998,330,320,68
-10,Almansa Jorge,Receptor,195,1991,346,330,69
-11,Fernández López Fernando,Middle-blocker,200,1997,338,325,70
-13,Zonca Paolo,Receptor,197,1997,345,335,71
-14,Ruiz Mira Borja,Middle-blocker,203,1992,356,340,72
-15,Knigge Matthew,Middle-blocker,203,1996,358,340,73
-17,Susickis Vladislad,Colocador/a,-,1997,-,-,74
-18,Ramos Martín Emiliano,Middle-blocker,197,1991,330,320,75
-22,Conde Barrios Lucas,Receptor,195,2004,330,320,76
-1,Funes Facundo Jesús,Receptor,183,1994,334,307,77
-3,Nieves Suárez Carlos,Opuesto,203,2004,342,312,78
-4,Monfort Minaya Javier,Receptor,196,1990,346,320,79
-7,Mengod Bautista Fernando,Receptor,184,1993,326,293,80
-9,Nogueira Amorim Víctor Lucas,Opuesto,201,1997,341,318,81
-10,Huerta Fabregat José Ignacio,Colocador/a,179,1998,322,292,82
-12,Monfort Minaya Vicente,Colocador/a,185,1988,328,305,83
-14,Pérez Lledó Pablo,Opuesto,-,2004,-,-,84
-15,Soriano Huesca Lucas,Middle-blocker,187,2003,323,306,85
-17,Nagiev Vladis,Middle-blocker,201,1992,3335,313,86
-18,Iborra Ballester Héctor,Líbero,179,2003,306,280,87
-19,de Juan David,Receptor,192,1998,334,317,88
-20,Postemsky Ivan,Middle-blocker,203,1992,334,315,89
-21,Mengod Bautista Javier,Líbero,184,1996,315,285,90
-22,Scarpin Maximiliano,Middle-blocker,202,1990,333,312,91
-1,Radunovic Balsa,Receptor,204,1992,350,330,92
-3,Ruda Martínez Florentino,Receptor,195,2003,334,340,93
-6,El Mesaoudi Sufian,Receptor,185,2003,331,320,94
-7,Tahiri El Aissati Mikael,Opuesto,179,1997,337,317,95
-9,López Alacio David,Middle-blocker,198,2000,343,345,96
-10,Luengas Ignacio Agustín,Receptor,204,1996,355,345,97
-11,Mimoun Chakrani Azddin,Middle-blocker,194,2004,360,338,98
-12,Diedhiou Pascal Jean,Middle-blocker,210,1993,360,340,99
-17,Añes Peralta Frander,Colocador/a,193,1984,325,328,100
-24,Giustiniano Mariano Ariel,Receptor,190,1986,355,345,101
-28,Riganti Juan Martín,Colocador/a,188,1988,330,320,102
-87,Martina Federico,Opuesto,202,1992,348,328,103
-88,Larrañaga Ledo Unai,Líbero,180,2000,330,315,104
-1,Lorente Camacho Rubén,Colocador/a,187,1998,280,240,105
-3,Edward Batalla Dexter,Colocador/a,200,2000,350,333,106
-5,Méndez Jiménez Víctor,Middle-blocker,198,1997,345,335,107
-7,Coutinho Muryllo,Receptor,189,1995,330,320,108
-8,Ferrández Moles Emilio,Receptor,195,2001,346,325,109
-9,Téllez Rodríguez Axel,Middle-blocker,203,1999,355,340,110
-10,López García Rubén,Middle-blocker,200,1999,350,330,111
-13,De Melo Rodrigo Roberto,Opuesto,193,1996,345,325,112
-18,Gámiz Padilla Aharón,Líbero,180,1988,285,250,113
-19,Navarro Allueva Jorge,Opuesto,186,2003,280,250,114
-20,Vildosola Mariano,Receptor,192,1991,330,320,115
-33,Neviadomskyi Stanislav,Receptor,202,1994,340,325,116
-1,Pérez Jaime,Colocador/a,196,1985,-,-,117
-2,Salvador Esteban Manuel,Receptor,192,1986,-,-,118
-4,Pyvovarenko Daniil,Opuesto,205,2004,-,-,119
-5,Lorente López Lucas,Colocador/a,194,2001,-,-,120
-8,Belda de Vial Luke,Receptor,195,2003,-,-,121
-9,Villalba Zamorano José,Receptor,195,2000,-,-,122
-10,San Martín Rodríguez Alejandro,Líbero,180,1994,-,-,123
-11,Moreno Mosquera Juan Pablo,Opuesto,196,1997,-,-,124
-13,Jiménez Abeytua Rodrigo,Líbero,180,2005,-,-,125
-14,Vargas Pelegrin,Receptor,193,1998,-,-,126
-18,Ruiz Rubio Alberto,Colocador/a,181,1994,-,-,127
-19,Dos Santos Junior Mario Augusto,Middle-blocker,200,1988,-,-,128
-20,Domenech Tous Joan,Middle-blocker,204,2001,-,-,129
-21,Tenorio Capeloci Davi,Middle-blocker,209,2005,-,-,130
-1,Alves Castro Adrián,Líbero,168,-,-,-,131
-2,Tubio Ageitos Alberto,Líbero,170,2003,-,-,132
-3,Casais Blanco Martín,Receptor,194,2005,-,-,133
-4,Martínez Blanco Ismael,Colocador/a,175,-,-,-,134
-5,Arjones Ferreiros Jaime,Colocador/a,188,2003,-,-,135
-6,Mendoza Fhilo Kleist Praia,Receptor,193,1989,-,-,136
-7,Davila Torrado Alan,Receptor,180,2003,-,-,137
-8,García Ordóñez Martín,Colocador/a,170,2006,-,-,138
-9,Nieto Gontad Pablo,Receptor,186,2000,-,-,139
-10,Quelle Rodríguez Juan,Opuesto,185,1995,-,-,140
-14,Souto Espasandin Iván,Colocador/a,188,-,-,-,141
-15,Vidal Ferreiros Aarón,Receptor,182,2007,-,-,142
-16,Iglesias Caamaño Mario,Middle-blocker,193,-,-,-,143
-21,Del Carmen Barbara Gabriel,Receptor,186,1994,-,-,144
-22,Elgueta Corneo Geronimo,Opuesto,186,1997,-,-,145
-25,Barro Moya Héctor,Middle-blocker,198,2005,-,-,146
-69,Cheng-Yang Wu,Middle-blocker,189,1992,-,-,147
-1,Carreño Millón Marco,Receptor,193,2004,-,-,148
-2,Torres Gómez Antonio,Receptor,183,2004,-,-,149
-3,Rodríguez Pérez Víctor,Receptor,199,-,-,-,150
-4,González Limón Juan Manuel,Receptor,193,1994,-,-,151
-5,Dos Santos Cezar Moises,Middle-blocker,207,1983,-,-,152
-6,Bakonji Bernard,Colocador/a,200,1997,-,-,153
-7,Portero Losilla Andrés Francisco,Colocador/a,183,1991,-,-,154
-8,Fernández Jorge,Middle-blocker,202,1989,-,-,155
-9,Ferreira Marco,Opuesto,203,1987,-,-,156
-10,García Asensio Raúl,Receptor,183,2003,-,-,157
-11,Delós Torrens Pau,Middle-blocker,198,2004,-,-,158
-12,Vizcaino Gallardo Javier,Colocador/a,191,2003,-,-,159
-14,Moya Berenguel Alejandro,Líbero,175,2004,-,-,160
-15,Fernández Martínez Francisco José,Líbero,177,1995,-,-,161
-16,Martínez Maqueda Ruben,Receptor,185,2003,-,-,162
-17,Giménez Hernández José María,Receptor,185,1995,-,-,163
-1,Redonda Camaño David,Receptor,180,1998,315,300,164
-2,Pantaleao Luiz Felipe,Opuesto,195,1998,330,315,165
-3,Rodrigues Dos Santos Felipe,Colocador/a,194,1991,310,300,166
-6,Sanchis Ignasi,Colocador/a,187,2002,300,300,167
-7,De Carvalho Cavalcante Gabriel,Receptor,199,1999,335,320,168
-7,Peemuller Richard Willi,Opuesto,199,1998,321,342,169
-8,Sánchez Cano Víctor,Líbero,184,1990,290,280,170
-9,Rubín Víctor,Líbero,170,2001,280,270,171
-10,Marcarini Raphael,Receptor,203,1997,330,320,172
-11,Campos Canals Miquel,Middle-blocker,187,2001,325,315,173
-12,Corona Mediavilla Fabián,Receptor,185,2003,310,305,174
-13,Calzón Algaba Francisco José,Middle-blocker,198,1992,330,320,175
-14,Frías Collado Juan Francisco,Middle-blocker,198,2000,325,315,176
-17,Rodríguez Bonilla Roberto,Receptor,190,2000,335,320,177
+Dorsal,Nombre,Posición,Altura,Año_de_nacimiento,Alcance_en_ataque,Alcance_en_bloqueo,id_jugador,temporada
+1,Ferreira García Gabriel,Colocador/a,188,1997,310,300,200,2022-2023
+2,Alves Ramos Vitor,Receptor,194,2002,330,322,201,2022-2023
+3,Bouza Ferreiro Víctor,Receptor,187,1990,330,320,202,2022-2023
+4,Romaní Leandro Gustavo,Middle-blocker,205,1999,337,323,203,2022-2023
+7,Gallardo Hernández Rodrigo,Líbero,183,1999,295,268,204,2022-2023
+8,Mariño González Anier,Middle-blocker,184,2005,310,300,205,2022-2023
+9,Barrasa Portomeñe Samuel,Líbero,179,2007,290,270,206,2022-2023
+10,Anane Osamudiamen Jorge,Middle-blocker,194,2001,330,320,207,2022-2023
+11,Villar Álvarez Pablo,Colocador/a,186,2002,320,310,208,2022-2023
+12,Rodríguez Rubio Aurelio,Middle-blocker,193,2000,308,300,209,2022-2023
+13,Mena Romero Pau,Opuesto,197,2001,338,330,210,2022-2023
+14,Linares José Luis,Opuesto,182,1998,335,320,211,2022-2023
+15,García Ordoñez Carlos,Receptor,175,2003,280,270,212,2022-2023
+17,Biliato Luca,Receptor,179,1993,312,310,213,2022-2023
+1,Crespo Fushan Pablo,Middle-blocker,194,2006,-,-,214,2022-2023
+2,Rojas Cáceres Cristhian,Receptor,193,2001,342,330,215,2022-2023
+3,Schorlemmer Cuesta Nicolás,Middle-blocker,200,2005,335,325,216,2022-2023
+4,García Borrás Héctor,Colocador/a,179,1998,310,300,217,2022-2023
+5,Masia Porres Arnau,Líbero,181,2002,315,306,218,2022-2023
+6,Ferri Beneito Francisco Javier,Opuesto,188,1999,325,318,219,2022-2023
+7,Loeches Buitrago Guillermo,Colocador/a,183,1996,325,312,220,2022-2023
+9,León Yohan,Receptor,201,1995,355,341,221,2022-2023
+10,Grossi Anderson,Middle-blocker,204,1994,350,338,222,2022-2023
+12,Fuentes Rascón Mauro Isaac,Receptor,192,1997,352,340,223,2022-2023
+14,Osorio Recordá Gerard,Opuesto,202,1993,347,333,224,2022-2023
+16,Valiño Sanz Isaac,Receptor,192,1999,335,320,225,2022-2023
+18,Carabali Kevin Alexander,Middle-blocker,204,1995,360,350,226,2022-2023
+19,Cid Cadenas Mario,Receptor,195,2003,345,328,227,2022-2023
+30,Marín Nieda Juan Francisco,Opuesto,193,2002,345,332,228,2022-2023
+-,Fernández Martínez Francisco José,Receptor,-,1995,-,-,229,2022-2023
+-,Moreno Mañas Antonio,-,-,1987,-,-,230,2022-2023
+1,Reboredo Coronado Miguel,Receptor,185,2001,-,-,231,2022-2023
+2,Garcías Millas Joan Miquel,Líbero,180,2002,-,-,232,2022-2023
+3,Gallego Sánchez Miguel,Colocador/a,-,1982,-,-,233,2022-2023
+5,Sánchez Coll Javier,Colocador/a,190,2001,-,-,234,2022-2023
+6,Bernal Bravo Abel,Middle-blocker,198,1981,-,-,235,2022-2023
+7,De la Rosa Cañellas Antonio,Opuesto,196,2002,-,-,236,2022-2023
+8,Osado Carrasco José,Líbero,175,1997,-,-,237,2022-2023
+9,Riera Granada Adrián,Líbero,180,2002,-,-,238,2022-2023
+10,Amador Romaguera Sergio,Receptor,190,2004,-,-,239,2022-2023
+11,Cairus Renzo,Receptor,190,1990,-,-,240,2022-2023
+12,Palacios Santos Cristian,Middle-blocker,-,1993,-,-,241,2022-2023
+13,Arranz Boyero Sergi,Colocador/a,187,1990,-,-,242,2022-2023
+14,Liot Tom,Colocador/a,-,1998,-,-,243,2022-2023
+16,Fresquet Barceló Xavier,Middle-blocker,200,2003,-,-,244,2022-2023
+17,Folguera Xavier,Colocador/a,180,1988,-,-,245,2022-2023
+23,Bauza Mestre Josep,Receptor,178,2000,-,-,246,2022-2023
+34,De Carvalho Furtado Carlos Manuel,Middle-blocker,203,1995,-,-,247,2022-2023
+77,Fernández Rodríguez Francisco,Receptor,-,1996,-,-,248,2022-2023
+1,Pont Perello Guillem,Colocador/a,178,2002,-,-,249,2022-2023
+2,Chourio González Anderson José,Opuesto,198,1986,-,-,250,2022-2023
+3,Morato Noguer Ferrán,Receptor,193,1993,-,-,251,2022-2023
+4,Truyols Galmés Llorenç,Opuesto,189,2003,-,-,252,2022-2023
+5,Salerno Aguirre Hector Leonardo Javier,Receptor,198,1991,-,-,253,2022-2023
+6,Piris Guiscafré Antoni,Líbero,180,2001,-,-,254,2022-2023
+7,Filter Albrecht Caetano,Receptor,190,1995,-,-,255,2022-2023
+10,Ribas Brockert Alejandro,Middle-blocker,197,2004,-,-,256,2022-2023
+14,Allen Serrano Luis Vidal,Middle-blocker,200,2001,-,-,257,2022-2023
+16,Monteagudo del Pueblo Joaquín,Middle-blocker,198,1996,-,-,258,2022-2023
+18,Gibanel Galmés Sebastiá,Líbero,180,2000,-,-,259,2022-2023
+21,Martín Pérez César,Colocador/a,185,1995,-,-,260,2022-2023
+1,Fernández Rojas Alejandro,Líbero,183,1987,320,300,261,2022-2023
+3,Escobar Silvaa Yadrián,Opuesto,201,1988,330,310,262,2022-2023
+4,Ruiz Daniel,Líbero,191,1995,300,300,263,2022-2023
+5,Olalla Gómez Adrián,Opuesto,197,2001,320,310,264,2022-2023
+7,de Amo Miguel Ángel,Colocador/a,185,1985,300,300,265,2022-2023
+8,Bertassoni Paulo Renan,Colocador/a,186,1985,340,325,266,2022-2023
+9,Rattray Brandon,Opuesto,195,1998,330,320,267,2022-2023
+10,Almansa Jorge,Receptor,195,1991,346,330,268,2022-2023
+11,Fernández López Fernando,Middle-blocker,200,1997,338,325,269,2022-2023
+13,Zonca Paolo,Receptor,197,1997,345,335,270,2022-2023
+14,Ruiz Mira Borja,Middle-blocker,203,1992,356,340,271,2022-2023
+15,Knigge Matthew,Middle-blocker,203,1996,358,340,272,2022-2023
+17,Susickis Vladislad,Colocador/a,-,1997,-,-,273,2022-2023
+18,Ramos Martín Emiliano,Middle-blocker,197,1991,330,320,274,2022-2023
+22,Conde Barrios Lucas,Receptor,195,2004,330,320,275,2022-2023
+1,Funes Facundo Jesús,Receptor,183,1994,334,307,276,2022-2023
+3,Nieves Suárez Carlos,Opuesto,203,2004,342,312,277,2022-2023
+4,Monfort Minaya Javier,Receptor,196,1990,346,320,278,2022-2023
+7,Mengod Bautista Fernando,Receptor,184,1993,326,293,279,2022-2023
+9,Nogueira Amorim Víctor Lucas,Opuesto,201,1997,341,318,280,2022-2023
+10,Huerta Fabregat José Ignacio,Colocador/a,179,1998,322,292,281,2022-2023
+12,Monfort Minaya Vicente,Colocador/a,185,1988,328,305,282,2022-2023
+14,Pérez Lledó Pablo,Opuesto,-,2004,-,-,283,2022-2023
+15,Soriano Huesca Lucas,Middle-blocker,187,2003,323,306,284,2022-2023
+17,Nagiev Vladis,Middle-blocker,201,1992,3335,313,285,2022-2023
+18,Iborra Ballester Héctor,Líbero,179,2003,306,280,286,2022-2023
+19,de Juan David,Receptor,192,1998,334,317,287,2022-2023
+20,Postemsky Ivan,Middle-blocker,203,1992,334,315,288,2022-2023
+21,Mengod Bautista Javier,Líbero,184,1996,315,285,289,2022-2023
+22,Scarpin Maximiliano,Middle-blocker,202,1990,333,312,290,2022-2023
+1,Radunovic Balsa,Receptor,204,1992,350,330,291,2022-2023
+3,Ruda Martínez Florentino,Receptor,195,2003,334,340,292,2022-2023
+6,El Mesaoudi Sufian,Receptor,185,2003,331,320,293,2022-2023
+7,Tahiri El Aissati Mikael,Opuesto,179,1997,337,317,294,2022-2023
+9,López Alacio David,Middle-blocker,198,2000,343,345,295,2022-2023
+10,Luengas Ignacio Agustín,Receptor,204,1996,355,345,296,2022-2023
+11,Mimoun Chakrani Azddin,Middle-blocker,194,2004,360,338,297,2022-2023
+12,Diedhiou Pascal Jean,Middle-blocker,210,1993,360,340,298,2022-2023
+17,Añes Peralta Frander,Colocador/a,193,1984,325,328,299,2022-2023
+24,Giustiniano Mariano Ariel,Receptor,190,1986,355,345,300,2022-2023
+28,Riganti Juan Martín,Colocador/a,188,1988,330,320,301,2022-2023
+87,Martina Federico,Opuesto,202,1992,348,328,302,2022-2023
+88,Larrañaga Ledo Unai,Líbero,180,2000,330,315,303,2022-2023
+1,Lorente Camacho Rubén,Colocador/a,187,1998,280,240,304,2022-2023
+3,Edward Batalla Dexter,Colocador/a,200,2000,350,333,305,2022-2023
+5,Méndez Jiménez Víctor,Middle-blocker,198,1997,345,335,306,2022-2023
+7,Coutinho Muryllo,Receptor,189,1995,330,320,307,2022-2023
+8,Ferrández Moles Emilio,Receptor,195,2001,346,325,308,2022-2023
+9,Téllez Rodríguez Axel,Middle-blocker,203,1999,355,340,309,2022-2023
+10,López García Rubén,Middle-blocker,200,1999,350,330,310,2022-2023
+13,De Melo Rodrigo Roberto,Opuesto,193,1996,345,325,311,2022-2023
+18,Gámiz Padilla Aharón,Líbero,180,1988,285,250,312,2022-2023
+19,Navarro Allueva Jorge,Opuesto,186,2003,280,250,313,2022-2023
+20,Vildosola Mariano,Receptor,192,1991,330,320,314,2022-2023
+33,Neviadomskyi Stanislav,Receptor,202,1994,340,325,315,2022-2023
+1,Pérez Jaime,Colocador/a,196,1985,-,-,316,2022-2023
+2,Salvador Esteban Manuel,Receptor,192,1986,-,-,317,2022-2023
+4,Pyvovarenko Daniil,Opuesto,205,2004,-,-,318,2022-2023
+5,Lorente López Lucas,Colocador/a,194,2001,-,-,319,2022-2023
+8,Belda de Vial Luke,Receptor,195,2003,-,-,320,2022-2023
+9,Villalba Zamorano José,Receptor,195,2000,-,-,321,2022-2023
+10,San Martín Rodríguez Alejandro,Líbero,180,1994,-,-,322,2022-2023
+11,Moreno Mosquera Juan Pablo,Opuesto,196,1997,-,-,323,2022-2023
+13,Jiménez Abeytua Rodrigo,Líbero,180,2005,-,-,324,2022-2023
+14,Vargas Pelegrin,Receptor,193,1998,-,-,325,2022-2023
+18,Ruiz Rubio Alberto,Colocador/a,181,1994,-,-,326,2022-2023
+19,Dos Santos Junior Mario Augusto,Middle-blocker,200,1988,-,-,327,2022-2023
+20,Domenech Tous Joan,Middle-blocker,204,2001,-,-,328,2022-2023
+21,Tenorio Capeloci Davi,Middle-blocker,209,2005,-,-,329,2022-2023
+1,Alves Castro Adrián,Líbero,168,-,-,-,330,2022-2023
+2,Tubio Ageitos Alberto,Líbero,170,2003,-,-,331,2022-2023
+3,Casais Blanco Martín,Receptor,194,2005,-,-,332,2022-2023
+4,Martínez Blanco Ismael,Colocador/a,175,-,-,-,333,2022-2023
+5,Arjones Ferreiros Jaime,Colocador/a,188,2003,-,-,334,2022-2023
+6,Mendoza Fhilo Kleist Praia,Receptor,193,1989,-,-,335,2022-2023
+7,Davila Torrado Alan,Receptor,180,2003,-,-,336,2022-2023
+8,García Ordóñez Martín,Colocador/a,170,2006,-,-,337,2022-2023
+9,Nieto Gontad Pablo,Receptor,186,2000,-,-,338,2022-2023
+10,Quelle Rodríguez Juan,Opuesto,185,1995,-,-,339,2022-2023
+14,Souto Espasandin Iván,Colocador/a,188,-,-,-,340,2022-2023
+15,Vidal Ferreiros Aarón,Receptor,182,2007,-,-,341,2022-2023
+16,Iglesias Caamaño Mario,Middle-blocker,193,-,-,-,342,2022-2023
+21,Del Carmen Barbara Gabriel,Receptor,186,1994,-,-,343,2022-2023
+22,Elgueta Corneo Geronimo,Opuesto,186,1997,-,-,344,2022-2023
+25,Barro Moya Héctor,Middle-blocker,198,2005,-,-,345,2022-2023
+69,Cheng-Yang Wu,Middle-blocker,189,1992,-,-,346,2022-2023
+1,Carreño Millón Marco,Receptor,193,2004,-,-,347,2022-2023
+2,Torres Gómez Antonio,Receptor,183,2004,-,-,348,2022-2023
+3,Rodríguez Pérez Víctor,Receptor,199,-,-,-,349,2022-2023
+4,González Limón Juan Manuel,Receptor,193,1994,-,-,350,2022-2023
+5,Dos Santos Cezar Moises,Middle-blocker,207,1983,-,-,351,2022-2023
+6,Bakonji Bernard,Colocador/a,200,1997,-,-,352,2022-2023
+7,Portero Losilla Andrés Francisco,Colocador/a,183,1991,-,-,353,2022-2023
+8,Fernández Jorge,Middle-blocker,202,1989,-,-,354,2022-2023
+9,Ferreira Marco,Opuesto,203,1987,-,-,355,2022-2023
+10,García Asensio Raúl,Receptor,183,2003,-,-,356,2022-2023
+11,Delós Torrens Pau,Middle-blocker,198,2004,-,-,357,2022-2023
+12,Vizcaino Gallardo Javier,Colocador/a,191,2003,-,-,358,2022-2023
+14,Moya Berenguel Alejandro,Líbero,175,2004,-,-,359,2022-2023
+15,Fernández Martínez Francisco José,Líbero,177,1995,-,-,360,2022-2023
+16,Martínez Maqueda Ruben,Receptor,185,2003,-,-,361,2022-2023
+17,Giménez Hernández José María,Receptor,185,1995,-,-,362,2022-2023
+1,Redonda Camaño David,Receptor,180,1998,315,300,363,2022-2023
+2,Pantaleao Luiz Felipe,Opuesto,195,1998,330,315,364,2022-2023
+3,Rodrigues Dos Santos Felipe,Colocador/a,194,1991,310,300,365,2022-2023
+6,Sanchis Ignasi,Colocador/a,187,2002,300,300,366,2022-2023
+7,De Carvalho Cavalcante Gabriel,Receptor,199,1999,335,320,367,2022-2023
+7,Peemuller Richard Willi,Opuesto,199,1998,321,342,368,2022-2023
+8,Sánchez Cano Víctor,Líbero,184,1990,290,280,369,2022-2023
+9,Rubín Víctor,Líbero,170,2001,280,270,370,2022-2023
+10,Marcarini Raphael,Receptor,203,1997,330,320,371,2022-2023
+11,Campos Canals Miquel,Middle-blocker,187,2001,325,315,372,2022-2023
+12,Corona Mediavilla Fabián,Receptor,185,2003,310,305,373,2022-2023
+13,Calzón Algaba Francisco José,Middle-blocker,198,1992,330,320,374,2022-2023
+14,Frías Collado Juan Francisco,Middle-blocker,198,2000,325,315,375,2022-2023
+17,Rodríguez Bonilla Roberto,Receptor,190,2000,335,320,376,2022-2023

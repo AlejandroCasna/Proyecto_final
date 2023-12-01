@@ -1,15 +1,15 @@
-Nombre,Partidos_jugados,Sets_jugados,Acciones_exitosas,Errores_colocador,_error_colocador,Puntos_negativos,Puntos_positivos,Acciones_positivas,Total_acumulado,Efic_Ranking,id_jugador
-Cavanna Maximiliano,2,4,21,0,3,3,4,3,34,0.4412,65
-Bertassoni Paulo Renan,9,29,166,2,13,39,19,15,254,0.4409,133
-Riganti Juan Martín,9,31,199,0,25,46,63,19,352,0.3807,70
-Roberts Ignacio,8,32,216,2,26,45,32,37,358,0.3743,23
-Lorente López Lucas,7,26,153,4,17,47,36,10,267,0.3596,97
-Martín Pérez César,8,27,158,4,30,50,30,24,296,0.2838,51
-Arjones Ferreiros Jaime,7,28,161,3,24,38,74,30,330,0.2818,39
-Loeches Buitrago Guillermo,8,34,187,2,20,67,31,27,334,0.2784,88
-Lorente Camacho Rubén,9,31,153,6,27,47,32,26,291,0.2749,116
-Pont Perello Guillem,7,15,51,0,6,22,13,4,96,0.2604,122
-de Amo Miguel Ángel,9,31,157,0,15,62,30,22,286,0.2552,59
-Monfort Minaya Vicente,9,36,155,1,24,55,35,26,296,0.25,147
-García Borrás Héctor,9,32,186,5,40,75,58,24,388,0.2242,156
-Edward Batalla Dexter,8,30,176,0,39,64,44,36,359,0.2117,5
+Nombre,Partidos_jugados,Sets_jugados,Acciones_exitosas,Errores_colocador,_error_colocador,Puntos_negativos,Puntos_positivos,Acciones_positivas,Total_acumulado,Efic_Ranking,temporada,id_jugador
+Cavanna Maximiliano,2,4,21,0,3,3,4,3,34,0.4412,2023-2024,65
+Bertassoni Paulo Renan,9,29,166,2,13,39,19,15,254,0.4409,2023-2024,133
+Riganti Juan Martín,9,31,199,0,25,46,63,19,352,0.3807,2023-2024,70
+Roberts Ignacio,8,32,216,2,26,45,32,37,358,0.3743,2023-2024,23
+Lorente López Lucas,7,26,153,4,17,47,36,10,267,0.3596,2023-2024,97
+Martín Pérez César,8,27,158,4,30,50,30,24,296,0.2838,2023-2024,51
+Arjones Ferreiros Jaime,7,28,161,3,24,38,74,30,330,0.2818,2023-2024,39
+Loeches Buitrago Guillermo,8,34,187,2,20,67,31,27,334,0.2784,2023-2024,88
+Lorente Camacho Rubén,9,31,153,6,27,47,32,26,291,0.2749,2023-2024,116
+Pont Perello Guillem,7,15,51,0,6,22,13,4,96,0.2604,2023-2024,122
+de Amo Miguel Ángel,9,31,157,0,15,62,30,22,286,0.2552,2023-2024,59
+Monfort Minaya Vicente,9,36,155,1,24,55,35,26,296,0.25,2023-2024,147
+García Borrás Héctor,9,32,186,5,40,75,58,24,388,0.2242,2023-2024,156
+Edward Batalla Dexter,8,30,176,0,39,64,44,36,359,0.2117,2023-2024,5

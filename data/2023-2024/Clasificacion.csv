@@ -1,13 +1,13 @@
-Posición,Equipo,PJ,G,P,PTS,id_equipo
-1,Unicaja Almería,9,8,1,24,10
-2,Rio Duero Soria,9,8,1,24,8
-3,Guaguas,9,8,1,23,5
-4,CV Melilla,9,6,3,17,6
-5,Cisneros Alter,9,5,4,16,2
-6,Manacor,9,4,5,13,4
-7,CV Teruel,9,5,4,12,9
-8,Conqueridor Valencia,9,3,6,10,11
-9,Voley Palma,9,2,7,9,3
-10,San Roque - Batán,9,3,6,8,7
-11,Arenal Emevé,9,2,7,5,1
-12,Santo Domingo VB Petrer,9,0,9,1,12
+Posición,Equipo,PJ,G,P,PTS,id_equipo,temporada
+1,Unicaja Almería,9,8,1,24,10,2023-2024
+2,Rio Duero Soria,9,8,1,24,8,2023-2024
+3,Guaguas,9,8,1,23,5,2023-2024
+4,CV Melilla,9,6,3,17,6,2023-2024
+5,Cisneros Alter,9,5,4,16,2,2023-2024
+6,CV Teruel,9,5,4,12,9,2023-2024
+7,Manacor,9,4,5,13,4,2023-2024
+8,Conqueridor Valencia,9,3,6,10,11,2023-2024
+9,San Roque - Batán,9,3,6,8,7,2023-2024
+10,Voley Palma,9,2,7,9,3,2023-2024
+11,Arenal Emevé,9,2,7,5,1,2023-2024
+12,Santo Domingo VB Petrer,9,0,9,1,12,2023-2024

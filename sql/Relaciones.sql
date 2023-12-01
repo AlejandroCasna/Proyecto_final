@@ -8,6 +8,7 @@ CREATE TABLE IF NOT EXISTS equipo (
     Equipo VARCHAR(255)
 );
 
+
 -- Tabla: jugadores
 CREATE TABLE IF NOT EXISTS jugadores (
     Dorsal INT,
@@ -18,6 +19,7 @@ CREATE TABLE IF NOT EXISTS jugadores (
     Alcance_en_ataque FLOAT,
     Alcance_en_bloqueo FLOAT,
     id_equipo INT,
+    temporada VARCHAR(20),
     id_jugador INT PRIMARY KEY,
     FOREIGN KEY (id_equipo) REFERENCES equipo(id_equipo)
 );
@@ -41,6 +43,7 @@ CREATE TABLE IF NOT EXISTS receptor (
     Total_ataques INT,
     Ataque_Ranking INT,
     id_jugador INT PRIMARY KEY,
+    temporada VARCHAR(20),
     FOREIGN KEY (id_jugador) REFERENCES jugadores(id_jugador)
 );
 
@@ -63,6 +66,7 @@ CREATE TABLE IF NOT EXISTS opuesto (
     Total_ataques INT,
     Ataque_Ranking FLOAT,
     id_jugador INT PRIMARY KEY,
+    temporada VARCHAR(20),
     FOREIGN KEY (id_jugador) REFERENCES jugadores(id_jugador)
 );
 -- Tabla: libero
@@ -79,6 +83,7 @@ CREATE TABLE IF NOT EXISTS libero (
     Total_puntos_recep INT,
     Recep_Ranking FLOAT,
     id_jugador INT PRIMARY KEY,
+    temporada INT,
     FOREIGN KEY (id_jugador) REFERENCES jugadores(id_jugador)
 );
 
@@ -96,6 +101,7 @@ CREATE TABLE IF NOT EXISTS colocador (
     Total_acumulado INT,
     Efic_Ranking INT,
     id_jugador INT PRIMARY KEY,
+    temporada VARCHAR(20),
     FOREIGN KEY (id_jugador) REFERENCES jugadores(id_jugador)
 );
 
@@ -115,7 +121,74 @@ CREATE TABLE IF NOT EXISTS jornadas (
     );
 
 -- Tabla: estadisticas_equipo
-CREATE TABLE IF NOT EXISTS estadisticas_equipo (
+
+
+
+-- Tabla: clasificacion
+CREATE TABLE IF NOT EXISTS clasificacion (
+    Posición INT,
+    Equipo VARCHAR(255),
+    PJ INT,
+    G INT,
+    P INT,
+    PTS INT,
+    id_equipo INT PRIMARY KEY,
+    temporada VARCHAR(20),
+    FOREIGN KEY (id_equipo) REFERENCES equipo(id_equipo)
+);
+
+-- Tabla: centrales
+CREATE TABLE IF NOT EXISTS centrales (
+    Nombre VARCHAR(255),
+    Partidos_jugados INT,
+    Sets_jugados INT,
+    Bloqueos INT,
+    Bloqueo_exitoso INT,
+    Bloqueo_fallido INT,
+    Total_bloqueos INT,
+    Saque INT,
+    Errores_Saque INT,
+    Porcentaje_error FLOAT,
+    Total_saques INT,
+    Ataque_exitoso INT,
+    Errores_ataque INT,
+    Porc_error FLOAT,
+    Total_ataques INT,
+    Ataque_Ranking INT,
+    id_jugador INT PRIMARY KEY,
+    temporada VARCHAR(20),
+    FOREIGN KEY (id_jugador) REFERENCES jugadores(id_jugador)
+);
+
+    CREATE TABLE IF NOT EXISTS temporada (
+	id_temporada INT PRIMARY KEY,
+    temporada VARCHAR (10)
+    );
+    
+CREATE TABLE IF NOT EXISTS temporada_equipo (
+    id_temporada INT,
+    id_equipo INT,
+    PRIMARY KEY (id_temporada, id_equipo),
+    FOREIGN KEY (id_temporada) REFERENCES temporada(id_temporada),
+    FOREIGN KEY (id_equipo) REFERENCES equipo(id_equipo)
+    
+);
+
+
+CREATE TABLE IF NOT EXISTS clasificacion_2022 (
+    Posición INT,
+    Equipo VARCHAR(255),
+    PJ INT,
+    G INT,
+    P INT,
+    PTS INT,
+    id_equipo INT PRIMARY KEY,
+    temporada VARCHAR(20),
+    FOREIGN KEY (id_equipo) REFERENCES equipo(id_equipo)
+    );
+    
+    
+CREATE TABLE IF NOT EXISTS estadisticas_temporada_anterior (
     Equipo VARCHAR(255),
     Jugados INT,
     Sets_Jugados INT,
@@ -144,54 +217,13 @@ CREATE TABLE IF NOT EXISTS estadisticas_equipo (
     Puntos_de_Bloqueo INT,
     Puntos_Set_Bloqueo INT,
     id_equipo INT PRIMARY KEY,
+    temporada VARCHAR(20),
     FOREIGN KEY (id_equipo) REFERENCES equipo(id_equipo)
 );
 
--- Tabla: clasificacion
-CREATE TABLE IF NOT EXISTS clasificacion (
-    Posición INT,
-    Equipo VARCHAR(255),
-    PJ INT,
-    G INT,
-    P INT,
-    PTS INT,
-    id_equipo INT PRIMARY KEY,
-    FOREIGN KEY (id_equipo) REFERENCES equipo(id_equipo)
-);
 
--- Tabla: centrales
-CREATE TABLE IF NOT EXISTS centrales (
-    Nombre VARCHAR(255),
-    Partidos_jugados INT,
-    Sets_jugados INT,
-    Bloqueos INT,
-    Bloqueo_exitoso INT,
-    Bloqueo_fallido INT,
-    Total_bloqueos INT,
-    Saque INT,
-    Errores_Saque INT,
-    Porcentaje_error FLOAT,
-    Total_saques INT,
-    Ataque_exitoso INT,
-    Errores_ataque INT,
-    Porc_error FLOAT,
-    Total_ataques INT,
-    Ataque_Ranking INT,
-    id_jugador INT PRIMARY KEY,
-    FOREIGN KEY (id_jugador) REFERENCES jugadores(id_jugador)
-);
 
-    CREATE TABLE IF NOT EXISTS temporada (
-	id_temporada INT PRIMARY KEY,
-    temporada VARCHAR (10)
-    );
-    
-CREATE TABLE IF NOT EXISTS temporada_equipo (
-    id_temporada INT,
-    id_equipo INT,
-    PRIMARY KEY (id_temporada, id_equipo),
-    FOREIGN KEY (id_temporada) REFERENCES temporada(id_temporada),
-    FOREIGN KEY (id_equipo) REFERENCES equipo(id_equipo)
-    
-);
 
+ALTER TABLE estadisticas_temporada_anterior
+ADD COLUMN id_equipo_anterior INT,
+ADD FOREIGN KEY (id_equipo_anterior) REFERENCES estadisticas_temporada_anterior(id_equipo);

@@ -411,7 +411,119 @@ def equipos(df):
     return df
 
 '''--------------------------------------------------------------------------------------------------------------------------------------'''
+from selenium.webdriver.common.by import By
+from selenium.webdriver.chrome.options import Options
+from selenium import webdriver
+from selenium.webdriver.support.ui import WebDriverWait
+from selenium.webdriver.support import expected_conditions as EC
+import time
 
-def extraer_numeros(cadena):
-    numeros = re.findall(r'\d+', cadena)
-    return [int(numero) for numero in numeros]
+def hacer_clic(driver, by_locator):
+    try:
+        driver.find_element(*by_locator).click()
+        return True
+    except:
+        return False
+
+def scraping(url, parametro='jugadores'):
+    ''' Obligatoriamente pasar URL.
+
+        Parametro por defecto Jugadores.
+        Parametros opcionales: 
+        Equipo
+        Estadistica
+        Clasificacion_jugador.
+        los parametros son tipo str.
+    '''
+    opciones = Options()
+    opciones.add_experimental_option('excludeSwitches', ['enable-automation'])
+    opciones.add_experimental_option('useAutomationExtension', False)
+    opciones.add_argument('--incognito')
+    opciones.add_argument('--start-maximized')
+
+    try:
+        driver = webdriver.Chrome(options=opciones)
+        driver.get(url)
+
+        if not hacer_clic(driver, (By.ID, 'lnkCookie')):
+            print('No se pudo hacer clic en el botón de cookies.')
+            return None
+
+    except Exception as e:
+        print(f"Error durante la navegación: {e}")
+        return None
+
+    superLiga_Masculino = []  # Inicializar la lista al principio
+
+    if parametro == 'jugadores':
+        equipos = driver.find_elements(By.CLASS_NAME, 'rlvI')[0:12]
+        for i in range(12):
+            e = equipos[i]
+            print(e.text)
+            e.click()
+            print('Estoy dentro.')
+            time.sleep(1)
+            superLiga_Masculino.append(driver.find_elements(By.CLASS_NAME, 't-row')[3].text.split('\n'))
+            print('Extraigo')
+            time.sleep(1)
+            driver.get('https://rfevb-web.dataproject.com/CompetitionTeamSearch.aspx?ID=124')
+            time.sleep(1)
+        print('Scraping exitoso')
+
+    elif parametro == 'equipo':
+        equipos = driver.find_elements(By.CLASS_NAME, 'rlvI')[0:12]
+        datos = []
+        for i in range(len(equipos)):
+            e = equipos[i]
+            nombre_equipo = e.text
+            print(nombre_equipo)
+            e.click()
+            print('Estoy dentro.')
+            time.sleep(1)
+            datos.append(nombre_equipo)
+            driver.get('https://rfevb-web.dataproject.com/CompetitionTeamSearch.aspx?ID=124')
+            time.sleep(1)
+        print('Scraping exitoso')
+        return datos
+
+    elif parametro == 'estadistica':
+        lista = []
+        for i in range(5):
+            hacer_clic(driver, (f'//*[@id="ctl00_Content_Main_RLB_PlayerStats"]/div/ul/li[{i}]/a'))
+            c = driver.find_element(By.CSS_SELECTOR, '#ctl00_Content_Main_ctl00_Content_Main_MainDivPanel').text.split('\n')
+            lista.append(c)
+            driver.get(url)
+            print('Scraping exitoso')
+        return lista
+
+    elif parametro == 'clasificacion_jugador':
+        driver.find_element(By.XPATH, '//*[@id="onetrust-accept-btn-handler"]').click()
+        clas = driver.find_element(By.CSS_SELECTOR, '#tournament-table-tabs-and-content').text.split('\n')
+        print('Scraping exitoso')
+        return clas
+
+    try:
+        driver = webdriver.Chrome(options=opciones)
+        driver.get(url)
+    except:
+        pass
+
+    for i in range(1, 5):
+        datos_por_pagina = {}
+        hacer_clic(driver, (By.XPATH, f'//*[@id="ctl00_Content_Main_RLB_PlayerStats"]/div/ul/li[{i}]/a'))
+
+        # Espera a que el elemento esté presente antes de intentar encontrarlo.
+
+        WebDriverWait(driver, 10).until(
+            EC.presence_of_element_located((By.CSS_SELECTOR, '#ctl00_Content_Main_ctl00_Content_Main_MainDivPanel'))
+        )
+
+        datos_pagina_actual = driver.find_element(By.CSS_SELECTOR, '#ctl00_Content_Main_ctl00_Content_Main_MainDivPanel').text.split('\n')
+        datos_por_pagina[i] = datos_pagina_actual
+
+        driver.back()
+        time.sleep(2)
+        driver.get('https://rfevb-web.dataproject.com/Statistics.aspx?ID=111&PID=137')
+
+    print('Scraping exitoso')
+    return datos_por_pagina

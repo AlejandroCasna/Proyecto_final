@@ -16,6 +16,7 @@ from fuzzywuzzy import process
 import difflib
 from sqlalchemy import create_engine ,text , Integer
 import re
+from unidecode import unidecode
 
 
 
@@ -302,6 +303,7 @@ def scraping_jornadas(url):
         if hacer_clic(driver, (By.XPATH, '//*[@id="menuPrincipalRFEVB"]/div/ul/li[3]/a')):
             hacer_clic(driver, (By.XPATH, '//*[@id="miWrapper"]/ul/li[2]/ul/li[1]/a'))
             hacer_clic(driver, (By.XPATH, '//*[@id="miWrapper"]/ul/li[1]/ul/li[1]/a'))
+            hacer_clic(driver, (By.XPATH, '//*[@id="jornadas"]'))
             hacer_clic(driver, (By.XPATH, '//*[@id="jornadas"]/option[1]'))
             time.sleep(5)
             data = driver.find_element(By.XPATH, '//*[@id="CPContenido_rptPlugins_PanPlugin_0"]/div').text.split('\n')[52:]

@@ -14,8 +14,27 @@ from sqlalchemy import create_engine, text, Integer
 import re
 import warnings
 from selenium.common.exceptions import NoSuchElementException
+from unidecode import unidecode
 
 warnings.filterwarnings("ignore")
+
+
+
+''' Funcion scraping:Obligatoriamente pasar URL.
+
+Parametro por defecto = Jugadores.
+Parametros opcionales: 
+Parametro1:Equipo.
+Parametro1:Estadistica_jugador.
+Parametro1:Estadistica_equipo.
+Parametro1:Clasificacion.
+Parametro1:Jugadores.
+
+
+los parametros son tipo str.
+
+
+Funcion hacer click llamada en todas las funciones'''
 
 def hacer_clic(driver, by_locator):
     try:
@@ -28,21 +47,6 @@ def hacer_clic(driver, by_locator):
         
 
 def scraping(url, parametro='jugadores'):
-
-    ''' Obligatoriamente pasar URL.
-            Parametro por defecto Jugadores.
-
-
-            Parametros opcionales: 
-            Equipo.
-            Estadistica_jugador.
-            Estadistica_equipo.
-            Clasificacion.
-            Jugadores.
-
-
-            los parametros son tipo str.
-    '''
     opciones = Options()
     opciones.add_experimental_option('excludeSwitches', ['enable-automation'])
     opciones.add_experimental_option('useAutomationExtension', False)
@@ -82,8 +86,9 @@ def scraping(url, parametro='jugadores'):
             driver.get(url)
         
             time.sleep(1)
-        return superLiga_Masculino
         print('Scraping exitoso')
+        return superLiga_Masculino
+        
 
     elif parametro == 'equipo':
         equipos = driver.find_element(By.CSS_SELECTOR,'#ctl00_Content_Main_ctl00_Content_Main_CompetitonTeams_Name_TeamListViewPanel > div > div').text.split('\n')
@@ -149,5 +154,89 @@ def scraping(url, parametro='jugadores'):
         clas = driver.find_element(By.CSS_SELECTOR, '#RG_Stats_Recap').text.split('\n')
         print('Scraping exitoso')
         return clas
+    
     else:
         print('algo anda mal')
+    
+
+
+def scraping_jornadas(url):
+    opciones = Options()
+    opciones.add_experimental_option('excludeSwitches', ['enable-automation'])
+    opciones.add_experimental_option('useAutomationExtension', False)
+    opciones.add_argument('--incognito')
+    opciones.add_argument('--start-maximized')
+    
+    try:
+        driver = webdriver.Chrome(options=opciones)
+        driver.get(url)
+
+        if not hacer_clic(driver, (By.ID, 'lnkCookie')):
+            print('No se pudo hacer clic en el botón de cookies.')
+
+
+        if hacer_clic(driver, (By.XPATH, '//*[@id="menuPrincipalRFEVB"]/div/ul/li[3]/a')):
+            hacer_clic(driver, (By.XPATH, '//*[@id="miWrapper"]/ul/li[2]/ul/li[1]/a'))
+            hacer_clic(driver, (By.XPATH, '//*[@id="miWrapper"]/ul/li[1]/ul/li[1]/a'))
+            hacer_clic(driver, (By.XPATH, '//*[@id="jornadas"]'))
+            time.sleep(1)
+            hacer_clic(driver, (By.XPATH, '//*[@id="jornadas"]/option[1]'))
+            time.sleep(5)
+            data = driver.find_element(By.XPATH, '//*[@id="CPContenido_rptPlugins_PanPlugin_0"]/div').text.split('\n')[52:]
+
+            jornadas = []
+            for i in data:
+                if 'JORNADA' in i:
+                    temp = []
+                    temp.append(i)
+                    jornadas.append(temp)
+                else:
+                    temp.append(i)
+
+            dataframes_por_jornada = {}
+
+            for jornada in jornadas:
+                fechas = []
+                horas = []
+                enfrentamientos = []
+
+                for i in range(1, len(jornada), 4):
+                    fecha = jornada[i + 1]
+                    hora = jornada[i + 2]
+                    enfrentamiento = jornada[i + 3]
+
+                    fechas.append(fecha)
+                    horas.append(hora)
+                    enfrentamientos.append(enfrentamiento)
+
+                df = pd.DataFrame({'fecha': fechas, 'hora': horas, 'enfrentamiento': enfrentamientos})
+
+                num_jornada = int(jornada[0].split()[-1])
+
+                dataframes_por_jornada[num_jornada] = df
+
+            
+            df_final = pd.concat(dataframes_por_jornada.values(), ignore_index=True)
+
+            print('Scraping exitoso')
+            return df_final
+
+        else:
+            print('No se encontró la entrada correcta en competiciones.')
+            
+    except Exception as e:
+        print(f"Error durante la navegación: {e}")
+            
+
+
+
+
+
+
+
+
+
+
+
+
+

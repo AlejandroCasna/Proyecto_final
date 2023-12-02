@@ -3,6 +3,7 @@ import pandas as pd
 from sqlalchemy import create_engine, text, Integer
 import re
 import warnings
+from unidecode import unidecode
 
 warnings.filterwarnings("ignore")
 
@@ -13,8 +14,16 @@ warnings.filterwarnings("ignore")
     Crear DataFrame: 
     datos: seran los extraidos
     columnas: declaradas por nosotros segun la pagina escrapeada
-    parametro:por defecto equipo
+    
+    parametro por defecto: equipo
     parametro2: jugadores
+    parametro3: estadistica equipo
+    parametro4: clasificacion
+    parametro5: estadistica_libero
+    parametro6: estadistica_colocador
+    parametro7: estadistica_central
+    parametro8: estadistica_opuesto
+    parametro9: estadistica_receptor
 
     '''
 
@@ -23,29 +32,55 @@ def mapear_nombres(equipo):
         'Arenal Emevé': 'Arenal Emevé',
         'Arenal Emevé ': 'Arenal Emevé',
         'Barça Voleibol': 'Barça Voleibol',
+        'Barcelona': 'Barça Voleibol',
         'Feníe Energía Mallorca Volei Palma': 'Voley Palma',
-        'Voley Palma': 'Voley Palma',
+        'Urbia Uenergia Voley Palma':'Voley Palma',
+        'Voley Palma' : 'Voley Palma',
+        'Urbia Voley Palma':'Voley Palma',
+        'Club Vóley Palma':'Voley Palma',
         'Conectabalear CV Manacor': 'Manacor',
         'Manacor': 'Manacor',
         'CV Guaguas': 'Guaguas',
         'Guaguas': 'Guaguas',
         'Léleman VB Valencia': 'Conqueridor Valencia',
         'Valencia': 'Conqueridor Valencia',
+        'UPV Leleman Conqueridor':'Conqueridor Valencia',
+        'Léleman Conqueridor Valencia':'Conqueridor Valencia',
+        'Conqueridor Valencia':'Conqueridor Valencia',
         'Melilla Sport Capital': 'CV Melilla',
         'CV Melilla': 'CV Melilla',
         'Club Voleibol Teruel': 'CV Teruel',
         'CV Teruel': 'CV Teruel',
+        'Pamesa Teruel Voleibol':'CV Teruel',
         'Rio Duero Soria': 'Rio Duero Soria',
+        'Grupo Herce Soria':'Rio Duero Soria',
         'Rotogal Boiro': 'Rotogal Boiro',
         'Rotogal Boiro ': 'Rotogal Boiro',
         'Boiro': 'Rotogal Boiro',
         'Unicaja Costa de Almeria': 'Unicaja Almería',
+        'Unicaja Costa de Almería': 'Unicaja Almería',
         'Unicaja Almería': 'Unicaja Almería',
         'Voley Textil Santanderina': 'Voley Textil Santanderina',
+        'Textil Santanderina': 'Voley Textil Santanderina',
         'UD Ibiza Ushuaïa Volley' : 'Ibiza Voley',
         'Ushuaïa Ibiza Voley' : 'Ibiza Voley',
         'Intasa San Sadurniño' : 'Intasa',
-        'San Sadurnino' : 'Intasa'
+        'San Sadurnino' : 'Intasa',
+        'Grau':'Grau',
+        'UBE L´Illa Grau':'Grau',
+        'Almoradí':'Voleibol Almoradí',
+        'Voleibol Almoradí':'Voleibol Almoradí',
+        'Vecindario ACE GC':'Vecindario Las Palmas',
+        'Vecindario':'Vecindario Las Palmas',
+        'Gámiz Padilla Aaron':'Gámiz Padilla Aharón',
+        'Cisneros Alter':'Cisneros Alter',
+        'CV San Roque':'CV San Roque',
+        'San Roque - Batán':'CV San Roque',
+        'Volei Villena Petrer':'CV Villena Petrer',
+        'Santo Domingo VB Petrer':'CV Villena Petrer',
+
+
+
     }
 
     equipo['Equipo'] = equipo['Equipo'].map(mapeo)
@@ -65,10 +100,10 @@ def crear_df(datos,columna ,parametro):
         filas_organizadas = []
         for equipo in datos:
             datos_filas = equipo[7:]
-            num_filas = len(datos_filas) // len(columna)
             filas_equipo = [datos_filas[i:i + len(columna)] for i in range(0, len(datos_filas), len(columna))]
             filas_organizadas.extend(filas_equipo)
         jugadores = pd.DataFrame(filas_organizadas, columns=columna)
+        return jugadores
 
     elif parametro =='estadistica':
         trozos = [datos[i:i+27] for i in range(2, len(datos), 27)]
@@ -82,7 +117,7 @@ def crear_df(datos,columna ,parametro):
         return estadistica
     
     elif parametro == 'clasificacion':
-        rows = [datos[i:i+13] for i in range(0, len(datos), 12)]
+        rows = [datos[i:i+13] for i in range(0, len(datos), 12)] # algunas veces es 12 el ultimo numero.
         clasificacion = pd.DataFrame(rows, columns=columna)
         return clasificacion
         

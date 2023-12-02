@@ -1,17 +1,17 @@
-Nombre,Partidos_jugados,Sets_jugados,Recepciones,Recepciones_exitosas,Recepciones_fallidas,Recepciones_otro_jugador,Puntos_perdidos_recep,Puntos_ganados_recep,Total_puntos_recep,Recep_Ranking,id_jugador
-San Martín Rodríguez Alejandro,5,17,28,3,6,0,7,16,60,0.4167,102
-Masia Porres Arnau,9,31,109,18,1,11,25,51,215,0.3721,71
-Almansa Jorge,1,3,8,0,2,1,2,9,22,0.3182,61
-Barrasa Portomeñe Samuel,5,10,22,3,0,1,16,16,58,0.3103,4
-Piris Guiscafré Antoni,9,30,73,12,5,7,32,51,180,0.3,45
-Piqueres Flor Nestor,9,32,92,8,17,18,41,69,245,0.2694,160
-Paradela Cortón Miguel,9,28,60,10,7,9,35,43,164,0.25,1
-Dovale Fidalgo Mario,9,35,78,8,13,11,55,73,238,0.2479,16
-Osado Carrasco José,9,36,72,13,13,9,18,79,204,0.2451,34
-Gámiz Padilla Aharón,9,34,65,9,10,11,30,62,187,0.2406,125
-Larrañaga Ledo Unai,8,29,54,12,4,8,17,48,143,0.2378,60
-Fernández Martínez Francisco José,9,29,51,13,8,2,38,42,154,0.2338,132
-Gallardo Hernández Rodrigo,9,37,68,13,22,11,37,55,206,0.2136,90
-Aulisi Santiago Karim,4,18,25,10,17,3,11,28,94,0.1277,105
-Mengod Bautista Javier,8,30,39,13,31,9,41,51,184,0.0924,152
-Iborra Ballester Héctor,4,13,8,11,9,2,28,22,80,-0.0625,150
+Nombre,Partidos_jugados,Sets_jugados,Recepciones,Recepciones_exitosas,Recepciones_fallidas,Recepciones_otro_jugador,Puntos_perdidos_recep,Puntos_ganados_recep,Total_puntos_recep,Recep_Ranking,id_jugador,id_equipo,temporada
+San Martin Rodriguez Alejandro,5,17,28,3,6,0,7,16,60,0.4167,102-2023-2024,8-2023-2024,2023-2024
+Masia Porres Arnau,9,31,109,18,1,11,25,51,215,0.3721,71-2023-2024,6-2023-2024,2023-2024
+Almansa Jorge,1,3,8,0,2,1,2,9,22,0.3182,61-2023-2024,5-2023-2024,2023-2024
+Barrasa Portomene Samuel,5,10,22,3,0,1,16,16,58,0.3103,4-2023-2024,1-2023-2024,2023-2024
+Piris Guiscafre Antoni,9,30,73,12,5,7,32,51,180,0.3,45-2023-2024,4-2023-2024,2023-2024
+Piqueres Flor Nestor,9,32,92,8,17,18,41,69,245,0.2694,160-2023-2024,12-2023-2024,2023-2024
+Paradela Corton Miguel,9,28,60,10,7,9,35,43,164,0.25,1-2023-2024,1-2023-2024,2023-2024
+Dovale Fidalgo Mario,9,35,78,8,13,11,55,73,238,0.2479,16-2023-2024,2-2023-2024,2023-2024
+Osado Carrasco Jose,9,36,72,13,13,9,18,79,204,0.2451,34-2023-2024,3-2023-2024,2023-2024
+Gamiz Padilla Aharon,9,34,65,9,10,11,30,62,187,0.2406,125-2023-2024,9-2023-2024,2023-2024
+Larranaga Ledo Unai,8,29,54,12,4,8,17,48,143,0.2378,60-2023-2024,5-2023-2024,2023-2024
+Fernandez Martinez Francisco Jose,9,29,51,13,8,2,38,42,154,0.2338,132-2023-2024,10-2023-2024,2023-2024
+Gallardo Hernandez Rodrigo,9,37,68,13,22,11,37,55,206,0.2136,90-2023-2024,7-2023-2024,2023-2024
+Aulisi Santiago Karim,4,18,25,10,17,3,11,28,94,0.1277,105-2023-2024,8-2023-2024,2023-2024
+Mengod Bautista Javier,8,30,39,13,31,9,41,51,184,0.0924,152-2023-2024,11-2023-2024,2023-2024
+Iborra Ballester Hector,4,13,8,11,9,2,28,22,80,-0.0625,150-2023-2024,11-2023-2024,2023-2024

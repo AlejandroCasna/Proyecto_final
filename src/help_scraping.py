@@ -28,6 +28,21 @@ def hacer_clic(driver, by_locator):
         
 
 def scraping(url, parametro='jugadores'):
+
+    ''' Obligatoriamente pasar URL.
+            Parametro por defecto Jugadores.
+
+
+            Parametros opcionales: 
+            Equipo.
+            Estadistica_jugador.
+            Estadistica_equipo.
+            Clasificacion.
+            Jugadores.
+
+
+            los parametros son tipo str.
+    '''
     opciones = Options()
     opciones.add_experimental_option('excludeSwitches', ['enable-automation'])
     opciones.add_experimental_option('useAutomationExtension', False)
@@ -47,33 +62,33 @@ def scraping(url, parametro='jugadores'):
     if parametro == 'jugadores':
         equipos = driver.find_elements(By.CLASS_NAME, 'rlvI')[0:12]
         for i in range(12):
-            e = equipos[i]
+                
+            e = driver.find_elements(By.CLASS_NAME, 'rlvI')[i]
+            
             print(e.text)
+            
             e.click()
+            
             print('Estoy dentro.')
+            
             time.sleep(1)
-            superLiga_Masculino.append(driver.find_elements(By.CLASS_NAME, 't-row')[3].text.split('\n'))
+        
+            superLiga_Masculino.append(driver.find_elements(By.CLASS_NAME , 't-row')[3].text.split('\n'))
+            
             print('Extraigo')
+            
             time.sleep(1)
-            driver.get('https://rfevb-web.dataproject.com/CompetitionTeamSearch.aspx?ID=124')
+            
+            driver.get(url)
+        
             time.sleep(1)
+        return superLiga_Masculino
         print('Scraping exitoso')
 
     elif parametro == 'equipo':
-        equipos = driver.find_elements(By.CLASS_NAME, 'rlvI')[0:12]
-        datos = []
-        for i in range(len(equipos)):
-            e = equipos[i]
-            nombre_equipo = e.text
-            print(nombre_equipo)
-            e.click()
-            print('Estoy dentro.')
-            time.sleep(1)
-            datos.append(nombre_equipo)
-            driver.get('https://rfevb-web.dataproject.com/CompetitionTeamSearch.aspx?ID=124')
-            time.sleep(1)
+        equipos = driver.find_element(By.CSS_SELECTOR,'#ctl00_Content_Main_ctl00_Content_Main_CompetitonTeams_Name_TeamListViewPanel > div > div').text.split('\n')
         print('Scraping exitoso')
-        return datos
+        return equipos
 
     elif parametro == 'estadistica_jugador':
         datos_por_pagina = {}
@@ -115,7 +130,7 @@ def scraping(url, parametro='jugadores'):
             datos_por_pagina[i] = datos_pagina_actual
             driver.back()
             time.sleep(2)
-            driver.get('https://rfevb-web.dataproject.com/Statistics.aspx?ID=111&PID=137')
+            driver.get(url)
 
         print('Scraping exitoso')
         return datos_por_pagina
@@ -124,7 +139,7 @@ def scraping(url, parametro='jugadores'):
         WebDriverWait(driver, 30).until(
             EC.presence_of_element_located((By.CSS_SELECTOR, '#tournament-table-tabs-and-content'))
         )
-        clas = driver.find_element(By.CSS_SELECTOR, '#tournament-table-tabs-and-content').text.split('\n')
+        clas = driver.find_element(By.XPATH,'//*[@id="tournament-table-tabs-and-content"]/div[3]/div[1]/div/div/div[2]').text.split('\n')
         print('Scraping exitoso')
         return clas
 
@@ -136,9 +151,3 @@ def scraping(url, parametro='jugadores'):
         return clas
     else:
         print('algo anda mal')
-
-    
-
-
-
- 

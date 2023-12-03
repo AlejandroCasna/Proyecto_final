@@ -39,6 +39,8 @@ def mapear_nombres(equipo):
         'Urbia Voley Palma':'Voley Palma',
         'Club Vóley Palma':'Voley Palma',
         'Conectabalear CV Manacor': 'Manacor',
+        ' Conectabalear CV Manacor': 'Manacor',
+        'Conectabalear CV Manacor ': 'Manacor',
         'Manacor': 'Manacor',
         'CV Guaguas': 'Guaguas',
         'Guaguas': 'Guaguas',
@@ -64,15 +66,20 @@ def mapear_nombres(equipo):
         'Textil Santanderina': 'Voley Textil Santanderina',
         'UD Ibiza Ushuaïa Volley' : 'Ibiza Voley',
         'Ushuaïa Ibiza Voley' : 'Ibiza Voley',
+        'Ibiza Voley': 'Ibiza Voley',
+        'UD Ibiza Ushuaia Volley':'Ibiza Voley',
         'Intasa San Sadurniño' : 'Intasa',
         'San Sadurnino' : 'Intasa',
         'Grau':'Grau',
         'UBE L´Illa Grau':'Grau',
+       "UBE L'Illa Grau" : 'Grau',
         'Almoradí':'Voleibol Almoradí',
         'Voleibol Almoradí':'Voleibol Almoradí',
         'Vecindario ACE GC':'Vecindario Las Palmas',
+        'Vecindario ACE GC ':'Vecindario Las Palmas',
+        ' Vecindario ACE GC':'Vecindario Las Palmas',
         'Vecindario':'Vecindario Las Palmas',
-        'Gámiz Padilla Aaron':'Gámiz Padilla Aharón',
+        'Gámiz Padilla Aaron':'Gámiz Padilla Aharon',
         'Cisneros Alter':'Cisneros Alter',
         'CV San Roque':'CV San Roque',
         'San Roque - Batán':'CV San Roque',
@@ -146,3 +153,20 @@ def crear_df(datos,columna ,parametro):
         datos = [datos[i:i+13] for i in range(3, len(datos), 13)]
         colocador = pd.DataFrame(datos, columns=columna)
         return colocador
+    
+    else:
+        None
+
+def normalizar(ruta):
+    df = pd.read_csv(ruta)
+    for col in df.select_dtypes(include='object').columns:
+        df[col] = df[col].apply(lambda x: unidecode(str(x), 'utf-8') if pd.notnull(x) else x)
+    df.columns = [unidecode(col, 'utf-8') for col in df.columns]
+    return df
+
+
+def normalizar_df(df):
+    for col in df.select_dtypes(include='object').columns:
+        df[col] = df[col].apply(lambda x: unidecode(str(x), 'utf-8') if pd.notnull(x) else x)
+    df.columns = [unidecode(col, 'utf-8') for col in df.columns]
+    return df

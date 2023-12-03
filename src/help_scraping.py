@@ -64,8 +64,8 @@ def scraping(url, parametro='jugadores'):
         
     superLiga_Masculino = []  
     if parametro == 'jugadores':
-        equipos = driver.find_elements(By.CLASS_NAME, 'rlvI')[0:12]
-        for i in range(12):
+        equipos = driver.find_elements(By.CLASS_NAME, 'rlvI')[0:14]
+        for i in range(14):
                 
             e = driver.find_elements(By.CLASS_NAME, 'rlvI')[i]
             

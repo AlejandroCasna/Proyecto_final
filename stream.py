@@ -6,60 +6,29 @@ import webbrowser
 import base64
 import io
 import os
-
+import plotly.express as px
+import sys
+from src.help_graficos import *
 
 st.set_page_config(page_icon = ':volleyball:', page_title = 'SetyMatchStream')
+st.set_option('deprecation.showPyplotGlobalUse', False)
 
-
-
-
-
-def set_bg_hack_url():
-    '''
-    A function to unpack an image from url and set as bg.
-    Returns
-    -------
-    The background.
-    '''
-        
+def pagina_inicio():
     st.markdown(
          f"""
          <style>
          .stApp {{
-             background: url("https://st2.depositphotos.com/1704023/46428/i/1600/depositphotos_464283366-stock-photo-sport-arena-interior-professional-volleyball.jpg");
+             background: url("https://integralspor.com/uploads/blog/detail/1618e792d4b1254221.jpg");
              background-size: cover
          }}
          </style>
          """,
          unsafe_allow_html=True
      )
-set_bg_hack_url()
+    
 
-
-def pagina_inicio():
-    pass
-
-
-def statistics():
-    st.title("Estadísticas")
-    st.write("Contenido de la página de estadísticas")
-
-# Diccionario de páginas
-paginas = {"Inicio": pagina_inicio, "Estadísticas": statistics}
-
-# Barra lateral con menú desplegable
-selected_page = st.sidebar.radio("Seleccione una página", list(paginas.keys()))
-
-# Mostrar la página seleccionada
-paginas[selected_page]()
-
-
-import streamlit as st
-import pandas as pd
-import os
-
-def pagina_inicio():
-    st.sidebar.title("Información General")
+    st.header('Bienvenidos a SetyMatchStream')
+    
 
     # Cargar los datos
     df = pd.read_csv('..\Proyecto_final\data\Equipos_final.csv')
@@ -95,7 +64,7 @@ def pagina_inicio():
     # Verificar si se ha seleccionado un equipo
     if equipo_seleccionado == 'Seleccione un equipo':
         # Mostrar un mensaje predeterminado
-        st.sidebar.write('''🏐 ¡Bienvenidos a SetyMatchStream - tu fuente de análisis profundo y estadísticas del vóley! 📊🏐
+        st.sidebar.write('''🏐 ¡Bienvenidos a SetyMatchStream - tu fuente de análisis profundo y estadísticas del vóleyball! 📊🏐
         Estamos emocionados de sumergirnos en las cifras y datos que definen el rendimiento de los equipos de vóley, tanto en la temporada actual como en las pasadas. Prepárense para un recorrido informativo que iluminará los logros, estrategias y momentos clave que han marcado la historia reciente de este emocionante deporte.
         En este espacio, nos sumergiremos en los números, exploraremos tendencias, y desentrañaremos las historias detrás de cada estadística. ¿Cuál equipo tuvo el mejor desempeño en ataques? ¿Quién lidera en bloqueos? ¿Cómo se compara el rendimiento actual con el de temporadas anteriores? Todas estas respuestas y más las descubriremos juntos.
         Este no es solo un stream, es una inmersión en la analítica del vóley. Los invito a compartir sus observaciones, hacer preguntas y participar activamente en la conversación estadística. ¡Hagamos de este espacio un encuentro apasionante para los amantes del vóley y los números!
@@ -119,8 +88,9 @@ def pagina_inicio():
             st.sidebar.warning(f"No hay URL de imagen asociada para el equipo {equipo_seleccionado}.")
 
     # Presentación con color de texto personalizado
-    presentacion = """<div style="color: #DCC9C9;font-size: 20px;text-shadow: 2px 2px 4px rgba(1,1,1,0.5);">
-        Bienvenido a nuestra página dedicada a las estadísticas de vóley, donde la pasión por el juego se une con el análisis técnico detallado.
+
+    presentacion = """<div style="color: #FFFFFF;font-size: 20px;text-shadow: 2px 2px 4px rgba(1,1,1,0.5);">
+        Bienvenidos a SetyMatchStream dedicada a las estadísticas de vóley, donde la pasión por el juego se une con el análisis técnico detallado.
         Sumérgete en un mundo de datos precisos y reveladores que iluminan el desempeño de tus equipos y jugadores favoritos.   
         Nos adentramos en los aspectos más técnicos del vóley, desglosando cada partido en números significativos.
         Desde el porcentaje de aciertos en saques hasta la eficacia en los remates, nuestra página ofrece un análisis exhaustivo que va más allá de lo superficial.
@@ -132,7 +102,8 @@ def pagina_inicio():
         Entra en el mundo de las estadísticas de vóley, donde cada número cuenta una historia apasionante sobre el emocionante mundo de este deporte.
     </div>"""
 
-    # Imagen
+    
+
     image_url = "https://www.purovoley.com/wp-content/uploads/2022/08/Japan-men-2022.png"
 
     # Diseño de columnas
@@ -202,5 +173,189 @@ def pagina_inicio():
         # Ajusta el tamaño de la imagen y la hace clickeable
         st.markdown(
             f'<a href="{url}" target="_blank"><img src="{image_url}" width="600"></a>', unsafe_allow_html=True)
+        
 
-pagina_inicio()
+
+    clasificacion = pd.read_csv('/ironhack/Proyecto_final/data/2023-2024/Clasificacion.csv')
+
+    # Selecciona solo las columnas que deseas mostrar (por ejemplo, de la columna 2 a la 5)
+    clasificacion = clasificacion.iloc[:, 0:6]
+
+    # Establece el estilo de la tabla para cambiar el color de fondo
+    st.markdown(
+        """
+        <style>
+        .stTable {
+            background-color: #ffffff;  # Puedes cambiar el color de fondo aquí
+        }
+        </style>
+        """,
+        unsafe_allow_html=True
+    )
+
+    # Muestra la tabla con el estilo aplicado
+    st.dataframe(clasificacion)
+
+    
+
+def estadisticas():
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background: url("https://img.olympics.com/images/image/private/t_s_pog_staticContent_hero_lg_2x/f_auto/primary/tkynwuonkevlorq0r9c7");
+             background-size: cover
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
+    st.markdown("<h1 style='text-align: center;'>Estadísticas de equipo</h1>", unsafe_allow_html=True)
+
+
+    estadistica = pd.read_csv('../Proyecto_final/posgresSQL/data/estadistica.csv')
+
+    # Filtros
+    filtro_equipo = [''] + list(estadistica['Equipo'].unique())
+    filtro_temporada = [''] + list(estadistica['temporada'].unique())
+
+    # Barra lateral con filtros
+    equipo_seleccionado = st.sidebar.selectbox("Selecciona un Equipo", filtro_equipo)
+    temporada_seleccionada = st.sidebar.selectbox("Selecciona una Temporada", filtro_temporada)
+
+    # Filtrar el DataFrame
+    if equipo_seleccionado != '' and temporada_seleccionada != '':
+        # Aplicar ambos filtros
+        estadistica_filtrada = estadistica[
+            (estadistica['Equipo'] == equipo_seleccionado) & (estadistica['temporada'] == temporada_seleccionada)
+        ]
+    elif equipo_seleccionado != '':
+        # Aplicar solo el filtro de equipo
+        estadistica_filtrada = estadistica[estadistica['Equipo'] == equipo_seleccionado]
+    elif temporada_seleccionada != '':
+        # Aplicar solo el filtro de temporada
+        estadistica_filtrada = estadistica[estadistica['temporada'] == temporada_seleccionada]
+    else:
+        # No aplicar filtros
+        estadistica_filtrada = estadistica
+
+    # Columnas que se mostrarán
+    mostrar = ['Equipo', 'Efic_Saque', 'Efic_Recepcion', 'Efic_Ataque', 'Puntos_Set_Bloqueo', 'temporada']
+
+    # Crear un diseño de dos columnas
+    col1, col2 = st.columns(2)
+
+    # En la primera columna, mostrar el DataFrame filtrado
+    with col1:
+        st.markdown("<br>", unsafe_allow_html=True)
+        st.markdown("<br>", unsafe_allow_html=True)
+        st.markdown("<br>", unsafe_allow_html=True)
+        st.markdown("<br>", unsafe_allow_html=True)
+        st.markdown("<br>", unsafe_allow_html=True)
+
+        st.dataframe(estadistica_filtrada[mostrar])
+
+    # En la segunda columna, mostrar el gráfico de araña si se seleccionó un equipo
+    with col2:
+        st.write('')   
+        if equipo_seleccionado:
+            araña(equipo_seleccionado)
+
+
+
+
+
+    st.markdown("<h1 style='text-align: center;'>Estadísticas de jugadores</h1>", unsafe_allow_html=True)
+
+    jugadores = pd.read_csv('../Proyecto_final/posgresSQL/data/jugadores.csv')
+
+    # Initialize
+    posicion = None
+    equipo = None
+    temporada = None
+
+    # Filtros
+    filtro_equipo2 = [''] + list(estadistica['Equipo'].unique())
+    filtro_temporada2 = [''] + list(jugadores['temporada'].unique())
+    filtro_posicion = [''] + list(jugadores['Posicion'].unique())
+
+    st.sidebar.write('---')
+
+    # Barra lateral con filtros
+    equipo_seleccionado2 = st.sidebar.selectbox('Selecciona un Equipo', filtro_equipo2, key='equipo_selectbox')
+    temporada_seleccionada2 = st.sidebar.selectbox('Selecciona una Temporada', filtro_temporada2, key='temporada_selectbox')
+    posicion_seleccionada = st.sidebar.selectbox('Selecciona una Posición', filtro_posicion, key='posicion_selectbox')
+
+    if equipo_seleccionado2 != '':
+    # Aplicar solo el filtro de equipo
+        equipo = estadistica[estadistica['Equipo'] == equipo_seleccionado2]
+    elif temporada_seleccionada2 != '':
+        # Aplicar solo el filtro de temporada
+        temporada = estadistica[estadistica['temporada'] == temporada_seleccionada2]
+    elif temporada_seleccionada2 != '':
+        # Aplicar solo el filtro de temporada
+        posicion = jugadores[jugadores['Posicion'] == posicion_seleccionada]
+    
+
+    
+    jugadores = (jugadores[jugadores.Posicion == posicion])
+    estadistica = (estadistica[(estadistica['Equipo'] == equipo) & (estadistica['temporada'] == temporada)])
+
+
+    mostrar = ['Nombre','Posicion','Altura','Ano_de_nacimiento','Alcance_en_ataque','Alcance_en_bloqueo','temporada',]
+
+    merged_df = jugadores.merge(estadistica, on='id_equipo', how='left')
+
+    st.dataframe(merged_df)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+opciones = {
+    "Inicio": pagina_inicio,
+    "Estadísticas": estadisticas,
+    
+}
+# Sidebar navigation selection
+st.sidebar.write("## Navegación")
+opcion_seleccionada = st.sidebar.radio("Ir a", list(opciones.keys()))
+# Display the selected page
+if opcion_seleccionada in opciones:
+    opciones[opcion_seleccionada]()
+
+
+
+
+
+
+
+
+
+
+
+
+
+

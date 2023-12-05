@@ -6,6 +6,8 @@ import webbrowser
 import base64
 import io
 import os
+import requests
+from bs4 import BeautifulSoup
 
 st.set_page_config(page_icon = ':volleyball:', page_title = 'SetyMatchStream')
 
@@ -68,7 +70,7 @@ equipo_seleccionado = st.sidebar.selectbox('Seleccione Equipo', ['Seleccione un 
 # Verificar si se ha seleccionado un equipo
 if equipo_seleccionado == 'Seleccione un equipo':
     # Mostrar un mensaje predeterminado
-    st.sidebar.write('''🏐 ¡Bienvenidos a [Nombre del Stream] - tu fuente de análisis profundo y estadísticas del vóley! 📊🏐
+    st.sidebar.write('''🏐 ¡Bienvenidos a SetyMatchStream - tu fuente de análisis profundo y estadísticas del vóley! 📊🏐
 
 Estamos emocionados de sumergirnos en las cifras y datos que definen el rendimiento de los equipos de vóley, tanto en la temporada actual como en las pasadas. Prepárense para un recorrido informativo que iluminará los logros, estrategias y momentos clave que han marcado la historia reciente de este emocionante deporte.
 
@@ -98,51 +100,56 @@ else:
 file_path = os.path.abspath('../Proyecto_final/data/2023-2024/Jornadas.csv')
 file_path2 = os.path.abspath('../Proyecto_final/jornadas_Streamlit.csv')
 
-st.title('Jornadas Temporada 2023-2024')
+st.markdown("""
+    <style>
+    .title {
+        text-align: center;
+    }
+    </style>
+    <h1 class="title">Jornadas Temporada 2023-2024</h1>
+    """, unsafe_allow_html=True)
 
-
-# Intenta cargar el archivo CSV
 jornadas = pd.read_csv(file_path)
 jornadas2 = pd.read_csv(file_path2)
 jornadas.reset_index(drop=True, inplace=True)
-columna_izquierda_1, columna_izquierda_2 = st.columns(2)
+columna_izquierda_1, columna_izquierda_2 , columna_publicidad= st.columns(3)
 
 
-# Define las columnas que quieres mostrar
-columnas_a_mostrar = ['equipo_local', 'resultado', 'equipo_visitante']
+####### FILTROS ######
+columnas_a_mostrar = ['fecha','equipo_local', 'resultado', 'equipo_visitante']
 
-# Agrega una opción vacía al principio de la lista de opciones únicas para 'id_jornada'
+#FILTRO VACIO JORNADA
 opciones_jornada = [''] + list(jornadas['id_jornada'].unique())
 
-# Crea un filtro para la columna 'id_jornada' con una opción vacía por defecto
+# FILTRO JORNADA
 valor_filtro = columna_izquierda_1.selectbox("Selecciona una jornada", opciones_jornada, index=0)
 
-# Filtra el DataFrame basado en el valor seleccionado si se ha seleccionado una opción
-if valor_filtro:
-    jornadas_filtradas = jornadas[jornadas['id_jornada'] == valor_filtro]
-    # Muestra solo las columnas seleccionadas del DataFrame filtrado
-    columna_izquierda_1.dataframe(jornadas_filtradas[columnas_a_mostrar], width=600, height=250)
+columnas_a_mostrar2 = ['fecha','Equipo','resultado', 'equipo'] 
 
-
-
-
-
-
-columnas_a_mostrar2 = ['Equipo','resultado', 'equipo'] 
-
-# Agrega una opción vacía al principio de la lista de opciones únicas para 'fecha'
+# FILTRO VACIO EQUIPO
 opciones_equipo = [''] + list(jornadas2['Equipo'].unique())
 
-# Crea un filtro para la columna 'fecha' con una opción vacía por defecto
+# FILTRO EQUIPO
 valor_filtro2 = columna_izquierda_2.selectbox("Selecciona un Equipo", opciones_equipo, index=0)
 
-# Filtra el DataFrame basado en el valor seleccionado si se ha seleccionado una opción
+# FILTRO JORNADAS
+if valor_filtro:
+    jornadas_filtradas = jornadas[jornadas['id_jornada'] == valor_filtro]
+    columna_izquierda_1.dataframe(jornadas_filtradas[columnas_a_mostrar], width=800, height=250)
+
+# FILTRO EQUIPOS
 if valor_filtro2:
     jornadas_filtradas2 = jornadas2[jornadas2['Equipo'] == valor_filtro2]
-    # Muestra solo las columnas seleccionadas del DataFrame filtrado
-    columna_izquierda_2.dataframe(jornadas_filtradas2[columnas_a_mostrar2], width=600, height=250)
+    columna_izquierda_2.dataframe(jornadas_filtradas2[columnas_a_mostrar2], width=800, height=250)
 
 
+with columna_publicidad:
+    url = "https://www.rfevb.com/competiciones/superliga-masculina"
+    image_path = "../Proyecto_final/noticia.png"
+    absolute_path = os.path.abspath(image_path)
+    st.markdown(f'[![Noticias de la Jornada]({absolute_path})]({url})', unsafe_allow_html=True) 
+
+    
 
 
 

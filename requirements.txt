@@ -57,7 +57,7 @@ six
 smmap
 sniffio
 sortedcontainers
-streamlit
+streamlit==1.29.0
 tenacity
 toml
 toolz

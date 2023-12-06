@@ -1,7 +1,6 @@
 import streamlit as st
 import pandas as pd
 from PIL import Image
-import matplotlib.pyplot as plt
 import webbrowser
 import base64
 import io
@@ -30,11 +29,11 @@ def pagina_inicio():
 
     st.header('Bienvenidos a VoleyStats Pro')
 
-# Enlaces de las imágenes de los logos
+# logo para cuenta personal
     github_logo = "https://icon-library.com/images/github-logo-icon/github-logo-icon-12.jpg"
     linkedin_logo = "https://www.freeiconspng.com/thumbs/linkedin-logo-png/linkedin-logo-0.png"
 
-    # Crea los enlaces con los logos
+    # los crea dentro de la imagen 
     github_link = f'<a href="https://github.com/AlejandroCasna"><img src="{github_logo}" width="50"></a>'
     linkedin_link = f'<a href="https://www.linkedin.com/in/alejandrocasna/"><img src="{linkedin_logo}" width="50"></a>'
 
@@ -44,8 +43,8 @@ def pagina_inicio():
 
     
 
-    # Cargar los datos
-    df = pd.read_csv('..\Proyecto_final\data\Equipos_final.csv')
+  
+    df = pd.read_csv('../VoleyStats-Pro/data/Equipos_final.csv')
 
     # Mapear equipos a URLs de imagen
     equipos_a_imagenes = {
@@ -75,9 +74,8 @@ def pagina_inicio():
     # Barra lateral para seleccionar el equipo
     equipo_seleccionado = st.sidebar.selectbox('Seleccione Equipo', ['Seleccione un equipo'] + list(df.Equipo))
 
-    # Verificar si se ha seleccionado un equipo
+    # mientras no se seleccione nada aparece el siguiente texto
     if equipo_seleccionado == 'Seleccione un equipo':
-        # Mostrar un mensaje predeterminado
         st.sidebar.write('''🏐 ¡Bienvenidos a VoleyStats Pro - tu fuente de análisis profundo y estadísticas del vóleyball! 📊🏐 
                          Estamos emocionados de sumergirnos en las cifras y datos que definen el rendimiento de los equipos de vóley, 
                          tanto en la temporada actual como en las pasadas.
@@ -90,7 +88,7 @@ def pagina_inicio():
 
         
     else:
-        # Verificar si el equipo seleccionado tiene una URL de imagen asociada
+        # Verificar si el equipo seleccionado tien imagen asociada
         if equipo_seleccionado in equipos_a_imagenes:
             url_imagen = equipos_a_imagenes[equipo_seleccionado]
             st.sidebar.markdown(
@@ -124,24 +122,24 @@ def pagina_inicio():
 
     image_url = "https://www.purovoley.com/wp-content/uploads/2022/08/Japan-men-2022.png"
 
-    # Diseño de columnas
+    # diseño de la primera caja. lo divido en 2 sectores
     columna_texto, columna_imagen = st.columns(2)
 
-    # En la primera columna, coloca el texto con descripción
+    # primer columna texto
     columna_texto.markdown(presentacion, unsafe_allow_html=True)
 
-    # Espaciado para centrar verticalmente
+    # Espacias
     columna_texto.text(" " * 10)
 
-    # En la segunda columna, coloca la imagen con ancho de 1000 píxeles
+    # segunda columna imagen
     columna_imagen.image(image_url, width=1000, use_column_width=True)
 
                     #-----------------------------------------------------------------------------------------------------------
 
     # SEGUNDA PARTE
 
-    file_path = os.path.abspath('../Proyecto_final/data/2023-2024/Jornadas.csv')
-    file_path2 = os.path.abspath('../Proyecto_final/jornadas_Streamlit.csv')
+    file_path = os.path.abspath('../VoleyStats-Pro/data/2023-2024/Jornadas.csv')
+    file_path2 = os.path.abspath('../VoleyStats-Pro/jornadas_Streamlit.csv')
 
     st.markdown("""
         <style>
@@ -197,7 +195,7 @@ def pagina_inicio():
         
 
 
-    clasificacion = pd.read_csv('/ironhack/Proyecto_final/data/2023-2024/Clasificacion.csv')
+    clasificacion = pd.read_csv('../VoleyStats-Pro/data/2023-2024/Clasificacion.csv')
     st.markdown("""
         <style>
         .title {
@@ -259,36 +257,40 @@ def estadisticas():
     st.markdown("<h1 style='text-align: center;'>Estadísticas de equipo</h1>", unsafe_allow_html=True)
 
 
-    estadistica = pd.read_csv('../Proyecto_final/posgresSQL/data/estadistica.csv')
+    estadistica = pd.read_csv('../VoleyStats-Pro/posgresSQL/data/estadistica.csv')
 
-    # Filters
+    # filtros
     filtro_equipo = [''] + list(estadistica['Equipo'].unique())
     filtro_temporada = [''] + list(estadistica['temporada'].unique())
 
-    # Sidebar filters
+
+    st.sidebar.write('---')
+    st.sidebar.title('Estadísticas de equipo.')
+    # filtros lateral
     equipo_seleccionado = st.sidebar.selectbox("Selecciona un Equipo", filtro_equipo)
     temporada_seleccionada = st.sidebar.selectbox("Selecciona una Temporada", filtro_temporada)
 
-    # Filter the DataFrame
+    # filtros del dataframe
     estadistica_filtrada = estadistica.copy()
     if equipo_seleccionado != '':
         estadistica_filtrada = estadistica_filtrada[estadistica_filtrada['Equipo'] == equipo_seleccionado]
     if temporada_seleccionada != '':
         estadistica_filtrada = estadistica_filtrada[estadistica_filtrada['temporada'] == temporada_seleccionada]
 
-    # Graph selector
+    # selector de grafico
     opciones_grafico = ['Gráfico de Dona', 'Gráfico de Pastel', 'Gráfico de Barras Apiladas','Gráfico Araña']
     grafico_seleccionado = st.sidebar.selectbox("Selecciona un Gráfico", opciones_grafico)
 
-    # Create a two-column layout
+    # dividimos ese sector en 2
     col1, col2 = st.columns(2)
     
+    #el primero dataframe
     with col1:
         st.markdown("<br>", unsafe_allow_html=True)
         mostrar1 = ['Equipo', 'Efic_Saque', 'Efic_Recepcion', 'Efic_Ataque', 'Puntos_Set_Bloqueo','temporada']
         st.dataframe(estadistica_filtrada[mostrar1])
 
-  
+    # el segundo los graficos creados en help_graficos
     with col2:
         if grafico_seleccionado == 'Gráfico de Dona':
             grafico_dona(estadistica_filtrada)
@@ -310,28 +312,29 @@ def estadisticas():
     
     st.markdown("<h1 style='text-align: center;'>Jugadores por equipo</h1>", unsafe_allow_html=True)
     
-    jugadores = pd.read_csv('../Proyecto_final/posgresSQL/data/jugadores.csv')
-    estadistica = pd.read_csv('../Proyecto_final/posgresSQL/data/estadistica.csv')
+    jugadores = pd.read_csv('../VoleyStats-Pro/posgresSQL/data/jugadores.csv')
+    estadistica = pd.read_csv('../VoleyStats-Pro/posgresSQL/data/estadistica.csv')
 
-    # Inicializar variables
+    # en base a pruebas fue necesario iniciarlas vacias
     posicion = None
     equipo = None
     temporada = None
 
-    # Filtros
+    # filtros
     filtro_equipo2 = [''] + list(estadistica['Equipo'].unique())
     filtro_temporada2 = [''] + list(jugadores['temporada'].unique())
     filtro_posicion = [''] + list(jugadores['Posicion'].unique())
     filtro_posicion.remove('0')
 
     st.sidebar.write('---')
+    st.sidebar.title('Jugadores por equipo.')
 
-    # Barra lateral con filtros
+    # filtros laterales
     equipo_seleccionado2 = st.sidebar.selectbox('Selecciona un Equipo', filtro_equipo2, key='equipo_selectbox')
     temporada_seleccionada2 = st.sidebar.selectbox('Selecciona una Temporada', filtro_temporada2, key='temporada_selectbox')
     posicion_seleccionada = st.sidebar.selectbox('Selecciona una Posición', filtro_posicion, key='posicion_selectbox')
 
-    # Aplicar filtros
+    # filtros
     if equipo_seleccionado2 != '':
         estadistica = estadistica[estadistica['Equipo'] == equipo_seleccionado2]
     if temporada_seleccionada2 != '':
@@ -340,7 +343,7 @@ def estadisticas():
         jugadores = jugadores[jugadores['Posicion'] == posicion_seleccionada]
     
 
-    # Hacer merge de los DataFrames
+    # merge para coger toda la informacion necesaria
     mostrar = ['Nombre', 'Posicion', 'Altura', 'Ano_de_nacimiento', 'Alcance_en_ataque', 'Alcance_en_bloqueo', 'temporada']
     merged_df = pd.merge(jugadores, estadistica, on=['id_equipo', 'temporada'], how='inner')[mostrar]
 
@@ -355,57 +358,54 @@ def estadisticas():
      
 
     st.markdown("<h1 style='text-align: center;'>Estadística por jugador</h1>", unsafe_allow_html=True)
+    df_posicion_filtrado= None
+    df_equipo = pd.read_csv('../VoleyStats-Pro/posgresSQL/data/Equipos.csv')
+    df_jugadores = pd.read_csv('../VoleyStats-Pro/posgresSQL/data/jugadores.csv')
+    df_opuesto = pd.read_csv('../VoleyStats-Pro/posgresSQL/data/opuestos.csv')
+    df_central = pd.read_csv('../VoleyStats-Pro/posgresSQL/data/centrales.csv')
+    df_colocador = pd.read_csv('../VoleyStats-Pro/posgresSQL/data/colocadores.csv')
+    df_libero = pd.read_csv('../VoleyStats-Pro/posgresSQL/data/liberos.csv')
+    df_receptor = pd.read_csv('../VoleyStats-Pro/posgresSQL/data/receptores.csv')
 
 
-    centrales = pd.read_csv('../Proyecto_final/posgresSQL/data/centrales.csv')
-    colocadores = pd.read_csv('../Proyecto_final/posgresSQL/data/colocadores.csv')
-    liberos = pd.read_csv('../Proyecto_final/posgresSQL/data/liberos.csv')
-    opuestos = pd.read_csv('../Proyecto_final/posgresSQL/data/opuestos.csv')
-    receptores = pd.read_csv('../Proyecto_final/posgresSQL/data/receptores.csv')
-    jugadores = pd.read_csv('../Proyecto_final/posgresSQL/data/jugadores.csv')
-    estadistica = pd.read_csv('../Proyecto_final/posgresSQL/data/estadistica.csv')
-    equipo = pd.read_csv('../Proyecto_final/posgresSQL/data/Equipos.csv')
+    st.sidebar.write('---')
+    st.sidebar.title('Estadísticas por jugador.')
+    # Crear los filtros en el sidebar
+    seleccion1 = st.sidebar.selectbox('Selecciona un equipo', df_equipo['Equipo'].unique())
+    seleccion2 = st.sidebar.selectbox('Selecciona una temporada', df_jugadores['temporada'].unique())
+    seleccion3 = st.sidebar.selectbox('Selecciona una posición', df_jugadores['Posicion'].unique())
 
+    posicion_seleccionada = seleccion3
 
-    columnas_por_posicion = {
-        'Colocador': ['Nombre','Partidos_jugados', 'Sets_jugados', 'Puntos_negativos', 'Puntos_positivos', 'Acciones_positivas', 'Efic_Ranking', 'temporada'],
-        'Central': ['Nombre','Partidos_jugados', 'Sets_jugados', 'Errores_Saque', 'Porc_error', 'Ataque_Ranking', 'temporada'],
-        'Opuesto': ['Nombre','Partidos_jugados', 'Sets_jugados', 'Porcentaje_error','Ataque_exitoso', 'Porc_error', 'Ataque_Ranking', 'temporada'],
-        'Receptor': ['Nombre','Partidos_jugados', 'Sets_jugados', 'Errores_Saque', 'Porcentaje_error', 'Ataque_exitoso', 'Porc_error', 'Ataque_Ranking', 'temporada'],
-        'Libero': ['Nombre','Partidos_jugados', 'Sets_jugados', 'Puntos_perdidos_recep', 'Puntos_ganados_recep', 'Recep_Ranking', 'temporada']
-    }
+    df_jugadores_filtrado = df_jugadores[(df_jugadores['id_equipo'] == df_equipo[df_equipo['Equipo'] == seleccion1]['id_equipo'].values[0]) & 
+                                        (df_jugadores['temporada'] == seleccion2) & 
+                                        (df_jugadores['Posicion'] == posicion_seleccionada)]
+    
+    columnas_opuesto = ['Nombre','Partidos_jugados','Sets_jugados','Bloqueo_exitoso','Bloqueo_fallido','Total_bloqueos','Errores_Saque','Porcentaje_error','Total_saques','Errores_ataque','Porc_error','Total_ataques','Ataque_Ranking','temporada']
+    columnas_central = ['Nombre','Partidos_jugados','Sets_jugados','Bloqueo_exitoso','Bloqueo_fallido','Total_bloqueos','Errores_Saque','Porcentaje_error','Total_saques','Ataque_exitoso','Errores_ataque','Porc_error','Total_ataques','Ataque_Ranking','temporada']
+    columnas_colocador = ['Nombre','Partidos_jugados','Sets_jugados','Acciones_exitosas','Errores_colocador','Puntos_negativos','Puntos_positivos','Acciones_positivas','Total_acumulado','Efic_Ranking','temporada']
+    columnas_libero = ['Nombre','Partidos_jugados','Sets_jugados','Recepciones_exitosas','Recepciones_fallidas','Recep_Ranking','temporada']
+    columnas_receptor = ['Nombre','Partidos_jugados','Sets_jugados','Bloqueo_exitoso','Bloqueo_fallido','Total_bloqueos','Errores_Saque','Porcentaje_error','Total_saques','Ataque_exitoso','Errores_ataque','Porc_error','Total_ataques','Ataque_Ranking','temporada']
 
-
-    centrales= pd.merge(merged_df,centrales,on=['id_equipo'], how='left')
-    colocadores= pd.merge(merged_df,colocadores,on=['id_equipo'], how='left')
-    liberos= pd.merge(merged_df,liberos,on=['id_equipo'], how='left')
-    opuestos= pd.merge(merged_df,opuestos,on=['id_equipo'], how='left')
-    receptores= pd.merge(merged_df,receptores,on=['id_equipo'], how='left')
-
-
-    if posicion_seleccionada == 'Central':
-        jugadores_filtrados = centrales.loc[:, columnas_por_posicion['Central']]
-
-
-    elif posicion_seleccionada == 'Colocador':
-        jugadores_filtrados = colocadores.loc[:, columnas_por_posicion['Colocador']]
-
-
-    elif posicion_seleccionada == 'Libero':
-        jugadores_filtrados = liberos.loc[:, columnas_por_posicion['Libero']]
-
-    elif posicion_seleccionada == 'Opuesto':
-        jugadores_filtrados = opuestos.loc[:, columnas_por_posicion['Opuesto']]
-
-    elif posicion_seleccionada == 'Receptor':
-        jugadores_filtrados = receptores.loc[:, columnas_por_posicion['Receptor']]
-
+    # Filtrar el dataframe correspondiente a la posición seleccionada y seleccionar las columnas deseadas
+    if posicion_seleccionada.lower() == 'opuesto':
+        df_posicion_filtrado = df_opuesto[df_opuesto['id_jugador'].isin(df_jugadores_filtrado['id_jugador'])][columnas_opuesto]
+    elif posicion_seleccionada.lower() == 'central':
+        df_posicion_filtrado = df_central[df_central['id_jugador'].isin(df_jugadores_filtrado['id_jugador'])][columnas_central]
+    elif posicion_seleccionada.lower() == 'colocador':
+        df_posicion_filtrado = df_colocador[df_colocador['id_jugador'].isin(df_jugadores_filtrado['id_jugador'])][columnas_colocador]
+    elif posicion_seleccionada.lower() == 'libero':
+        df_posicion_filtrado = df_libero[df_libero['id_jugador'].isin(df_jugadores_filtrado['id_jugador'])][columnas_libero]
+    elif posicion_seleccionada.lower() == 'receptor':
+        df_posicion_filtrado = df_receptor[df_receptor['id_jugador'].isin(df_jugadores_filtrado['id_jugador'])][columnas_receptor]
     else:
-        jugadores_filtrados = jugadores
+        st.error("Posición no reconocida")
 
-    st.dataframe(merged_df)
-
-
+    # Mostrar la información de los jugadores en el dataframe filtrado
+    if df_posicion_filtrado is not None:
+        st.dataframe(df_posicion_filtrado)
+    else:
+        st.write("No hay datos para mostrar.")
 
 
 

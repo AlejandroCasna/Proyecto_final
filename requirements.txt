@@ -46,7 +46,7 @@ PySocks
 python-dateutil
 python-dotenv
 pytz
-pywin32==302
+pywin32>=300,<=400
 pyzmq
 referencing
 requests

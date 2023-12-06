@@ -48,6 +48,7 @@ python-dotenv
 pytz
 pyzmq
 ploty
+PyPI
 referencing
 requests
 rich

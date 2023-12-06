@@ -5,3 +5,4 @@
 *.txt
 __init__.py
 __pycache__
+*.vscode

@@ -137,7 +137,7 @@ def pagina_inicio():
     # En la segunda columna, coloca la imagen con ancho de 1000 píxeles
     columna_imagen.image(image_url, width=1000, use_column_width=True)
 
-    #-----------------------------------------------------------------------------------------------------------
+                    #-----------------------------------------------------------------------------------------------------------
 
     # SEGUNDA PARTE
 
@@ -306,7 +306,7 @@ def estadisticas():
 
 
 
-#----------------------------------------------------------SEGUNDA PARTE DE LA PAGINA---------------------------------------------------
+                                #----------------------------------------------------------SEGUNDA PARTE DE LA PAGINA---------------------------------------------------
     
     
     st.markdown("<h1 style='text-align: center;'>Jugadores por equipo</h1>", unsafe_allow_html=True)
@@ -352,9 +352,9 @@ def estadisticas():
 
 
 
-#----------------------------------------------------------TERCERA PARTE DE LA PAGINA---------------------------------------------------
-    
-    
+           #----------------------------------------------------------TERCERA PARTE DE LA PAGINA---------------------------------------------------
+     
+
     st.markdown("<h1 style='text-align: center;'>Estadística por jugador</h1>", unsafe_allow_html=True)
 
 
@@ -365,34 +365,47 @@ def estadisticas():
     receptores = pd.read_csv('../Proyecto_final/posgresSQL/data/receptores.csv')
     jugadores = pd.read_csv('../Proyecto_final/posgresSQL/data/jugadores.csv')
     estadistica = pd.read_csv('../Proyecto_final/posgresSQL/data/estadistica.csv')
-
-    if posicion_seleccionada == 'Central':
-        jugadores_filtrados = centrales
-    elif posicion_seleccionada == 'Colocador':
-        jugadores_filtrados = colocadores
-    elif posicion_seleccionada == 'Libero':
-        jugadores_filtrados = liberos
-    elif posicion_seleccionada == 'Opuesto':
-        jugadores_filtrados = opuestos
-    elif posicion_seleccionada == 'Receptor':
-        jugadores_filtrados = receptores
-    else:
-        jugadores_filtrados = jugadores
+    equipo = pd.read_csv('../Proyecto_final/posgresSQL/data/Equipos.csv')
 
 
     columnas_por_posicion = {
-        'Colocador': ['Partidos_jugados', 'Sets_jugados', 'Puntos_negativos', 'Puntos_positivos', 'Acciones_positivas', 'Efic_Ranking', 'temporada'],
-        'Central': ['Partidos_jugados', 'Sets_jugados', 'Errores_Saque', 'Porc_error', 'Ataque_Ranking', 'temporada'],
-        'Opuesto': ['Partidos_jugados', 'Sets_jugados', 'Porcentaje_error','Ataque_exitoso', 'Porc_error', 'Ataque_Ranking', 'temporada'],
-        'Receptor': ['Partidos_jugados', 'Sets_jugados', 'Errores_Saque', 'Porcentaje_error', 'Ataque_exitoso', 'Porc_error', 'Ataque_Ranking', 'temporada'],
-        'Libero': ['Partidos_jugados', 'Sets_jugados', 'Puntos_perdidos_recep', 'Puntos_ganados_recep', 'Recep_Ranking', 'temporada']
+        'Colocador': ['Nombre','Partidos_jugados', 'Sets_jugados', 'Puntos_negativos', 'Puntos_positivos', 'Acciones_positivas', 'Efic_Ranking', 'temporada'],
+        'Central': ['Nombre','Partidos_jugados', 'Sets_jugados', 'Errores_Saque', 'Porc_error', 'Ataque_Ranking', 'temporada'],
+        'Opuesto': ['Nombre','Partidos_jugados', 'Sets_jugados', 'Porcentaje_error','Ataque_exitoso', 'Porc_error', 'Ataque_Ranking', 'temporada'],
+        'Receptor': ['Nombre','Partidos_jugados', 'Sets_jugados', 'Errores_Saque', 'Porcentaje_error', 'Ataque_exitoso', 'Porc_error', 'Ataque_Ranking', 'temporada'],
+        'Libero': ['Nombre','Partidos_jugados', 'Sets_jugados', 'Puntos_perdidos_recep', 'Puntos_ganados_recep', 'Recep_Ranking', 'temporada']
     }
 
 
-    columnas_mostrar = columnas_por_posicion.get(posicion_seleccionada, ['Equipo', 'Efic_Saque', 'Efic_Recepcion', 'Efic_Ataque', 'Puntos_Set_Bloqueo','temporada'])
+    centrales= pd.merge(merged_df,centrales,on=['id_equipo'], how='left')
+    colocadores= pd.merge(merged_df,colocadores,on=['id_equipo'], how='left')
+    liberos= pd.merge(merged_df,liberos,on=['id_equipo'], how='left')
+    opuestos= pd.merge(merged_df,opuestos,on=['id_equipo'], how='left')
+    receptores= pd.merge(merged_df,receptores,on=['id_equipo'], how='left')
 
-  
-    st.dataframe(merged_df,width=2000,height=300)[columnas_mostrar]
+
+    if posicion_seleccionada == 'Central':
+        jugadores_filtrados = centrales.loc[:, columnas_por_posicion['Central']]
+
+
+    elif posicion_seleccionada == 'Colocador':
+        jugadores_filtrados = colocadores.loc[:, columnas_por_posicion['Colocador']]
+
+
+    elif posicion_seleccionada == 'Libero':
+        jugadores_filtrados = liberos.loc[:, columnas_por_posicion['Libero']]
+
+    elif posicion_seleccionada == 'Opuesto':
+        jugadores_filtrados = opuestos.loc[:, columnas_por_posicion['Opuesto']]
+
+    elif posicion_seleccionada == 'Receptor':
+        jugadores_filtrados = receptores.loc[:, columnas_por_posicion['Receptor']]
+
+    else:
+        jugadores_filtrados = jugadores
+
+    st.dataframe(merged_df)
+
 
 
 

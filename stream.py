@@ -403,7 +403,7 @@ def estadisticas():
 
     # Mostrar la información de los jugadores en el dataframe filtrado
     if df_posicion_filtrado is not None:
-        st.dataframe(df_posicion_filtrado)
+        st.dataframe(df_posicion_filtrado,width=2000,height=300)
     else:
         st.write("No hay datos para mostrar.")
 

@@ -10,7 +10,9 @@ import plotly.express as px
 import sys
 from src.help_graficos import *
 
-st.set_page_config(page_icon = ':volleyball:', page_title = 'SetyMatchStream')
+
+
+st.set_page_config(page_icon = ':volleyball:', page_title = 'VoleyStats Pro')
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 def pagina_inicio():
@@ -27,7 +29,20 @@ def pagina_inicio():
      )
     
 
-    st.header('Bienvenidos a SetyMatchStream')
+    st.header('Bienvenidos a VoleyStats Pro')
+
+# Enlaces de las imágenes de los logos
+    github_logo = "https://icon-library.com/images/github-logo-icon/github-logo-icon-12.jpg"
+    linkedin_logo = "https://www.freeiconspng.com/thumbs/linkedin-logo-png/linkedin-logo-0.png"
+
+    # Crea los enlaces con los logos
+    github_link = f'<a href="https://github.com/AlejandroCasna"><img src="{github_logo}" width="50"></a>'
+    linkedin_link = f'<a href="https://www.linkedin.com/in/alejandrocasna/"><img src="{linkedin_logo}" width="50"></a>'
+
+    # Añade los enlaces a la barra lateral
+    st.sidebar.markdown(github_link, unsafe_allow_html=True)
+    st.sidebar.markdown(linkedin_link, unsafe_allow_html=True)
+
     
 
     # Cargar los datos
@@ -64,7 +79,7 @@ def pagina_inicio():
     # Verificar si se ha seleccionado un equipo
     if equipo_seleccionado == 'Seleccione un equipo':
         # Mostrar un mensaje predeterminado
-        st.sidebar.write('''🏐 ¡Bienvenidos a SetyMatchStream - tu fuente de análisis profundo y estadísticas del vóleyball! 📊🏐 
+        st.sidebar.write('''🏐 ¡Bienvenidos a VoleyStats Pro - tu fuente de análisis profundo y estadísticas del vóleyball! 📊🏐 
                          Estamos emocionados de sumergirnos en las cifras y datos que definen el rendimiento de los equipos de vóley, 
                          tanto en la temporada actual como en las pasadas.
                           Prepárense para un recorrido informativo que iluminará los logros,
@@ -93,18 +108,18 @@ def pagina_inicio():
 
     # Presentación con color de texto personalizado
 
-    presentacion = """<div style="color: #FFFFFF;font-size: 20px;text-shadow: 2px 2px 4px rgba(1,1,1,0.5);">
-        Bienvenidos a SetyMatchStream, dedicada a las estadísticas de vóley, donde la pasión por el juego se une con el análisis técnico detallado.
-        Sumérgete en un mundo de datos precisos y reveladores que iluminan el desempeño de tus equipos y jugadores favoritos.
-        Nos adentramos en los aspectos más técnicos del vóley, desglosando cada partido en números significativos.
-        Desde el porcentaje de aciertos en saques hasta la eficacia en los remates, nuestra página ofrece un análisis exhaustivo que va más allá de lo superficial.
-        Descubre la magia detrás de cada pase preciso, cada bloqueo exitoso y cómo estas estadísticas se traducen en fortalezas y áreas de mejora para cada equipo. 
-        Nuestra misión es proporcionarte insights valiosos que te permitan entender a fondo el rendimiento individual y colectivo en el campo de cada equipo. 
-        Ya seas un apasionado seguidor del vóley o un analista ávido en busca de datos fundamentales, 
-        aquí encontrarás la información adecuada que alimentará tu conocimiento y enriquecerá tu experiencia del juego.
-        Eleva tu comprensión del juego y únete a una comunidad donde la pasión se combina con la precisión. 
-        Entra en el mundo de las estadísticas de vóley, donde cada número cuenta una historia apasionante sobre el emocionante mundo de este deporte 
-    </div>"""
+    presentacion = """<div style='color: #FFFFFF;font-size: 20px;text-shadow: 2px 2px 4px rgba(1,1,1,0.5); text-align: justify;'>
+    Bienvenidos a VoleyStats Pro, dedicada a las estadísticas de vóley, donde la pasión por el juego se une con el análisis técnico detallado.
+    Sumérgete en un mundo de datos precisos y reveladores que iluminan el desempeño de tus equipos y jugadores favoritos.
+    Nos adentramos en los aspectos más técnicos del vóley, desglosando cada partido en números significativos.
+    Desde el porcentaje de aciertos en saques hasta la eficacia en los remates, nuestra página ofrece un análisis exhaustivo que va más allá de lo superficial.
+    Descubre la magia detrás de cada pase preciso, cada bloqueo exitoso y cómo estas estadísticas se traducen en fortalezas y áreas de mejora para cada equipo. 
+    Nuestra misión es proporcionarte insights valiosos que te permitan entender a fondo el rendimiento individual y colectivo en el campo de cada equipo. 
+    Ya seas un apasionado seguidor del vóley o un analista ávido en busca de datos fundamentales, 
+    aquí encontrarás la información adecuada que alimentará tu conocimiento y enriquecerá tu experiencia del juego.
+    Eleva tu comprensión del juego y únete a una comunidad donde la pasión se combina con la precisión. 
+    Entra en el mundo de las estadísticas de vóley, donde cada número cuenta una historia apasionante sobre el emocionante mundo de este deporte &quot;SetyMatchStream&quot;
+</div>"""
 
     
 
@@ -190,7 +205,7 @@ def pagina_inicio():
             text-align: center;
         }
         </style>
-        <h1 class="title">Tabla de posiciones:</h1>
+        <h1 class="title">Tabla de posiciones</h1>
         """, unsafe_allow_html=True)
     
     st.markdown('#### Aqui veras la tabla de resultados en donde figurara semanalmente actualizada las posiciones de los equipos, los partidos jugados, entre ellos los ganados y perdidos y los puntos totales obtenidos hasta el momento.')
@@ -210,26 +225,42 @@ def pagina_inicio():
     )
 
     # Muestra la tabla con el estilo aplicado
-    st.dataframe(clasificacion)
+    
+    st.dataframe(clasificacion,width=2000,height=400)
 
     
 
 def estadisticas():
     st.markdown(
-         f"""
-         <style>
-         .stApp {{
-             background: url("https://img.olympics.com/images/image/private/t_s_pog_staticContent_hero_lg_2x/f_auto/primary/tkynwuonkevlorq0r9c7");
-             background-size: cover
-         }}
-         </style>
-         """,
-         unsafe_allow_html=True
-     )
+    f"""
+    <style>
+    .stApp {{
+        background-image: url("https://img.olympics.com/images/image/private/t_s_pog_staticContent_hero_lg_2x/f_auto/primary/tkynwuonkevlorq0r9c7");
+        background-size: cover;
+        background-attachment: fixed;
+        background-repeat: no-repeat;
+        background-position: center;
+    }}
+    .stApp:before {{
+        content: '';
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        background: rgba(240, 200, 0, 0.1); /* Ajusta la opacidad aquí */
+        pointer-events: none; /* Asegúrate de que el pseudo-elemento no capture eventos de clic */
+        z-index: -1; /* Coloca el pseudo-elemento detrás del contenido */
+    }}
+    </style>
+    """,
+    unsafe_allow_html=True
+    )
     st.markdown("<h1 style='text-align: center;'>Estadísticas de equipo</h1>", unsafe_allow_html=True)
 
-    estadistica = pd.read_csv('../Proyecto_final/posgresSQL/data/estadistica.csv')
 
+    estadistica = pd.read_csv('../Proyecto_final/posgresSQL/data/estadistica.csv')
 
     # Filters
     filtro_equipo = [''] + list(estadistica['Equipo'].unique())
@@ -239,27 +270,24 @@ def estadisticas():
     equipo_seleccionado = st.sidebar.selectbox("Selecciona un Equipo", filtro_equipo)
     temporada_seleccionada = st.sidebar.selectbox("Selecciona una Temporada", filtro_temporada)
 
-    # Graph selector
-    opciones_grafico = ['Gráfico de Dona', 'Gráfico de Pastel', 'Gráfico de Barras Apiladas','Gráfica Araña']
-    grafico_seleccionado = st.sidebar.selectbox("Selecciona un Gráfico", opciones_grafico)
-
     # Filter the DataFrame
-    estadistica_filtrada = estadistica
+    estadistica_filtrada = estadistica.copy()
     if equipo_seleccionado != '':
         estadistica_filtrada = estadistica_filtrada[estadistica_filtrada['Equipo'] == equipo_seleccionado]
     if temporada_seleccionada != '':
         estadistica_filtrada = estadistica_filtrada[estadistica_filtrada['temporada'] == temporada_seleccionada]
 
+    # Graph selector
+    opciones_grafico = ['Gráfico de Dona', 'Gráfico de Pastel', 'Gráfico de Barras Apiladas','Gráfico Araña']
+    grafico_seleccionado = st.sidebar.selectbox("Selecciona un Gráfico", opciones_grafico)
+
     # Create a two-column layout
     col1, col2 = st.columns(2)
-
     
     with col1:
         st.markdown("<br>", unsafe_allow_html=True)
         mostrar1 = ['Equipo', 'Efic_Saque', 'Efic_Recepcion', 'Efic_Ataque', 'Puntos_Set_Bloqueo','temporada']
         st.dataframe(estadistica_filtrada[mostrar1])
-
-   
 
   
     with col2:
@@ -269,8 +297,12 @@ def estadisticas():
             grafico_pastel(estadistica_filtrada)
         elif grafico_seleccionado == 'Gráfico de Barras Apiladas':
             grafico_barras_apiladas(estadistica_filtrada)
-        elif equipo_seleccionado =='Gráfico Araña':
+        elif grafico_seleccionado == 'Gráfico Araña':
             araña(equipo_seleccionado)
+
+    
+   
+    
 
 
 
@@ -313,8 +345,9 @@ def estadisticas():
     mostrar = ['Nombre', 'Posicion', 'Altura', 'Ano_de_nacimiento', 'Alcance_en_ataque', 'Alcance_en_bloqueo', 'temporada']
     merged_df = pd.merge(jugadores, estadistica, on=['id_equipo', 'temporada'], how='inner')[mostrar]
 
-    # Mostrar el DataFrame resultante
-    st.dataframe(merged_df)
+
+
+    st.dataframe(merged_df,width=2000,height=300)
 
 
 
@@ -350,7 +383,7 @@ def estadisticas():
     columnas_por_posicion = {
         'Colocador': ['Partidos_jugados', 'Sets_jugados', 'Puntos_negativos', 'Puntos_positivos', 'Acciones_positivas', 'Efic_Ranking', 'temporada'],
         'Central': ['Partidos_jugados', 'Sets_jugados', 'Errores_Saque', 'Porc_error', 'Ataque_Ranking', 'temporada'],
-        'Opuesto': ['Partidos_jugados', 'Sets_jugados', 'Porcentaje_error', 'Ataque_exitoso', 'Porc_error', 'Ataque_Ranking', 'temporada'],
+        'Opuesto': ['Partidos_jugados', 'Sets_jugados', 'Porcentaje_error','Ataque_exitoso', 'Porc_error', 'Ataque_Ranking', 'temporada'],
         'Receptor': ['Partidos_jugados', 'Sets_jugados', 'Errores_Saque', 'Porcentaje_error', 'Ataque_exitoso', 'Porc_error', 'Ataque_Ranking', 'temporada'],
         'Libero': ['Partidos_jugados', 'Sets_jugados', 'Puntos_perdidos_recep', 'Puntos_ganados_recep', 'Recep_Ranking', 'temporada']
     }
@@ -359,19 +392,7 @@ def estadisticas():
     columnas_mostrar = columnas_por_posicion.get(posicion_seleccionada, ['Equipo', 'Efic_Saque', 'Efic_Recepcion', 'Efic_Ataque', 'Puntos_Set_Bloqueo','temporada'])
 
   
-    st.dataframe(merged_df)
-
-
-
-
-
-
-
-
-
-
-
-
+    st.dataframe(merged_df,width=2000,height=300)[columnas_mostrar]
 
 
 

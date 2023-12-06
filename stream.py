@@ -1,12 +1,11 @@
 import streamlit as st
 import pandas as pd
 from PIL import Image
-import pylab as plt
+import matplotlib.pyplot as plt
 import webbrowser
 import base64
 import io
 import os
-import plotly.express as px
 import sys
 from src.help_graficos import *
 

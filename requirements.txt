@@ -23,7 +23,7 @@ jsonschema-specifications
 jupyter_core
 markdown-it-py
 MarkupSafe
-matplotlib-inline
+matplotlib
 mdurl
 nest-asyncio
 numpy

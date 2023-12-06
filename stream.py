@@ -149,7 +149,7 @@ def pagina_inicio():
     columnas_a_mostrar = ['fecha', 'equipo_local', 'resultado', 'equipo_visitante']
 
     # FILTRO VACIO JORNADA
-    opciones_jornada = [''] + list(jornadas['id_jornada'].unique())
+    opciones_jornada = ['Selecciona un número de jornada.'] + list(jornadas['id_jornada'].unique())
 
     # FILTRO JORNADA
     valor_filtro = columna_izquierda_1.selectbox("Selecciona una jornada", opciones_jornada, index=0)
@@ -157,7 +157,8 @@ def pagina_inicio():
     columnas_a_mostrar2 = ['fecha', 'Equipo', 'resultado', 'equipo']
 
     # FILTRO VACIO EQUIPO
-    opciones_equipo = [''] + list(jornadas2['Equipo'].unique())
+    opciones_equipo = ['Selecciona un Equipo.'] + list(jornadas2['Equipo'].unique())
+    
 
     # FILTRO EQUIPO
     valor_filtro2 = columna_izquierda_2.selectbox("Selecciona un Equipo", opciones_equipo, index=0)
@@ -276,7 +277,7 @@ def estadisticas():
 #----------------------------------------------------------SEGUNDA PARTE DE LA PAGINA---------------------------------------------------
     
     
-    st.markdown("<h1 style='text-align: center;'>Estadísticas de jugadores</h1>", unsafe_allow_html=True)
+    st.markdown("<h1 style='text-align: center;'>Jugadores por equipo</h1>", unsafe_allow_html=True)
     
     jugadores = pd.read_csv('../Proyecto_final/posgresSQL/data/jugadores.csv')
     estadistica = pd.read_csv('../Proyecto_final/posgresSQL/data/estadistica.csv')
@@ -290,6 +291,7 @@ def estadisticas():
     filtro_equipo2 = [''] + list(estadistica['Equipo'].unique())
     filtro_temporada2 = [''] + list(jugadores['temporada'].unique())
     filtro_posicion = [''] + list(jugadores['Posicion'].unique())
+    filtro_posicion.remove('0')
 
     st.sidebar.write('---')
 
@@ -305,6 +307,7 @@ def estadisticas():
         jugadores = jugadores[jugadores.temporada == temporada_seleccionada2]
     if posicion_seleccionada != '':
         jugadores = jugadores[jugadores['Posicion'] == posicion_seleccionada]
+    
 
     # Hacer merge de los DataFrames
     mostrar = ['Nombre', 'Posicion', 'Altura', 'Ano_de_nacimiento', 'Alcance_en_ataque', 'Alcance_en_bloqueo', 'temporada']
@@ -316,6 +319,47 @@ def estadisticas():
 
 
 
+#----------------------------------------------------------TERCERA PARTE DE LA PAGINA---------------------------------------------------
+    
+    
+    st.markdown("<h1 style='text-align: center;'>Estadística por jugador</h1>", unsafe_allow_html=True)
+
+
+    centrales = pd.read_csv('../Proyecto_final/posgresSQL/data/centrales.csv')
+    colocadores = pd.read_csv('../Proyecto_final/posgresSQL/data/colocadores.csv')
+    liberos = pd.read_csv('../Proyecto_final/posgresSQL/data/liberos.csv')
+    opuestos = pd.read_csv('../Proyecto_final/posgresSQL/data/opuestos.csv')
+    receptores = pd.read_csv('../Proyecto_final/posgresSQL/data/receptores.csv')
+    jugadores = pd.read_csv('../Proyecto_final/posgresSQL/data/jugadores.csv')
+    estadistica = pd.read_csv('../Proyecto_final/posgresSQL/data/estadistica.csv')
+
+    if posicion_seleccionada == 'Central':
+        jugadores_filtrados = centrales
+    elif posicion_seleccionada == 'Colocador':
+        jugadores_filtrados = colocadores
+    elif posicion_seleccionada == 'Libero':
+        jugadores_filtrados = liberos
+    elif posicion_seleccionada == 'Opuesto':
+        jugadores_filtrados = opuestos
+    elif posicion_seleccionada == 'Receptor':
+        jugadores_filtrados = receptores
+    else:
+        jugadores_filtrados = jugadores
+
+
+    columnas_por_posicion = {
+        'Colocador': ['Partidos_jugados', 'Sets_jugados', 'Puntos_negativos', 'Puntos_positivos', 'Acciones_positivas', 'Efic_Ranking', 'temporada'],
+        'Central': ['Partidos_jugados', 'Sets_jugados', 'Errores_Saque', 'Porc_error', 'Ataque_Ranking', 'temporada'],
+        'Opuesto': ['Partidos_jugados', 'Sets_jugados', 'Porcentaje_error', 'Ataque_exitoso', 'Porc_error', 'Ataque_Ranking', 'temporada'],
+        'Receptor': ['Partidos_jugados', 'Sets_jugados', 'Errores_Saque', 'Porcentaje_error', 'Ataque_exitoso', 'Porc_error', 'Ataque_Ranking', 'temporada'],
+        'Libero': ['Partidos_jugados', 'Sets_jugados', 'Puntos_perdidos_recep', 'Puntos_ganados_recep', 'Recep_Ranking', 'temporada']
+    }
+
+
+    columnas_mostrar = columnas_por_posicion.get(posicion_seleccionada, ['Equipo', 'Efic_Saque', 'Efic_Recepcion', 'Efic_Ataque', 'Puntos_Set_Bloqueo','temporada'])
+
+  
+    st.dataframe(merged_df)
 
 
 

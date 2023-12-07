@@ -1,6 +1,6 @@
 pip
 setuptools
-passlib==1.6
+passlib
 altair
 attrs
 backcall

@@ -1,7 +1,7 @@
 pip
 setuptools
 passlib
-python-slugify==0.2
+python-slugify
 altair
 attrs
 backcall

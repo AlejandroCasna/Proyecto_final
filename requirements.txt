@@ -46,6 +46,7 @@ PySocks
 python-dateutil
 python-dotenv
 pytz
+pylot
 pyzmq
 referencing
 requests

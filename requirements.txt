@@ -1,5 +1,5 @@
 pip
-setuptools
+setuptools==57.5
 passlib
 python-slugify
 altair

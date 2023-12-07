@@ -1,4 +1,4 @@
-![gift]()
+![gift](https://github.com/AlejandroCasna/VoleyStats-Pro/blob/1eb0d8a03e27a9dd85e3ac775496432f4e1b106f/Imagen/VoleyStats-Pro.gif)
 
 * El siguiente proyecto consiste en un encargo realizado por uno de los equipos de la SuperLiga masculina de vóley. 
 Se nos informó sobre un problema relacionado con el análisis de estadísticas de los equipos rivales al momento de elaborar un plan de juego. Es fundamental contar con estadísticas de los rivales para poder abordar un plan de juego efectivo. 
@@ -27,7 +27,7 @@ Con la ayuda de Streamlit, se logrará una visualización clara y efectiva de la
 <summary>PostgresSQL</summary>
 <br>
   
-![diagrama]()
+![diagrama](https://github.com/AlejandroCasna/VoleyStats-Pro/blob/1eb0d8a03e27a9dd85e3ac775496432f4e1b106f/Imagen/ERG_posgreSQL.png)
 </details>
 
 

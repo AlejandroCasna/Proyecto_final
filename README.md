@@ -52,3 +52,12 @@ Con la ayuda de Streamlit, se logrará una visualización clara y efectiva de la
 ![diagrama](https://github.com/AlejandroCasna/VoleyStats-Pro/blob/078e70a18fb0b569cd32bb23924ab0881668f3cd/Imagen/stats_jugador.png)
 </details>
 <br>
+
+
+# Proximos pasos.
+
+*Desarrollar un mapa de calor a partir de vídeos de vóley con el fin de identificar las áreas del campo de juego a las que los jugadores suelen dirigir sus acciones, teniendo en cuenta diversas circunstancias, como la dirección habitual de la jugada tras la recepción, la posición del colocador, y otras variables relevantes.
+
+*Integrar Streamlit con la base de datos PostgreSQL para garantizar una actualización constante con nuevos datos.
+
+*Desarrollar una aplicación ejecutable que facilite el acceso directo a la página desde dispositivos móviles

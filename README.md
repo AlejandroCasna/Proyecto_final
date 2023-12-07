@@ -36,24 +36,19 @@ Con la ayuda de Streamlit, se logrará una visualización clara y efectiva de la
 <summary>Estadísticas por equipo</summary>
 <br>
 
-![diagrama]()
+![diagrama](https://github.com/AlejandroCasna/VoleyStats-Pro/blob/078e70a18fb0b569cd32bb23924ab0881668f3cd/Imagen/stats_equipo.png)
 </details>
 
 <details>
 <summary>Jugadores por equipo</summary>
 <br>
 
-![diagrama]()
-</details>
-<br>
-
-![diagrama]()
+![diagrama](https://github.com/AlejandroCasna/VoleyStats-Pro/blob/078e70a18fb0b569cd32bb23924ab0881668f3cd/Imagen/jugadores_quipo.png)
 </details>
 
 <details>
 <summary>Estadística por jugador</summary>
-<br>
 
-![diagrama]()
+![diagrama](https://github.com/AlejandroCasna/VoleyStats-Pro/blob/078e70a18fb0b569cd32bb23924ab0881668f3cd/Imagen/stats_jugador.png)
 </details>
-
+<br>

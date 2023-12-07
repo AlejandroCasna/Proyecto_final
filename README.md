@@ -1,1 +1,59 @@
-# Proyecto_final
+![gift]()
+
+* El siguiente proyecto consiste en un encargo realizado por uno de los equipos de la SuperLiga masculina de vóley. 
+Se nos informó sobre un problema relacionado con el análisis de estadísticas de los equipos rivales al momento de elaborar un plan de juego. Es fundamental contar con estadísticas de los rivales para poder abordar un plan de juego efectivo. 
+`El objetivo´ es mejorar tanto el tiempo y resultados en la obtención de datos sobre los equipos rivales, enfocándose en aspectos como ataque, defensa, recepción y bloqueo.
+
+
+# Pasos a seguir.
+
+## Obtención de estadísticas de los equipos y sus jugadores.
+* Scraping [**Federación Española de Voley**](https://www.rfevb.com/)
+
+* Scraping [**Flasshcore**](https://www.flashscore.es/)
+
+## Base de datos.
+* MySQL Worbench
+* PostgreSQL
+
+## Visualizacion.
+* Streamlit
+
+El resultado de este proceso será la creación de una base de datos sólida y actualizada, alimentada por las estadísticas obtenidas a través del scraping de fuentes confiables como la Federación Española de Vóley y Flashscore. Esta base de datos, gestionada tanto en MySQL Workbench como en PostgreSQL, proporcionará una plataforma integral para el análisis detallado de los equipos y sus jugadores.
+
+Con la ayuda de Streamlit, se logrará una visualización clara y efectiva de las estadísticas recopiladas, permitiendo al equipo en cuestión acceder fácilmente a la información crucial sobre el rendimiento de sus rivales en áreas clave como ataque, defensa, recepción y bloqueo. Este enfoque integral y tecnológicamente avanzado tiene como objetivo mejorar significativamente la toma de decisiones estratégicas, contribuyendo así al éxito y rendimiento óptimo en la liga.
+
+<details>
+<summary>PostgresSQL</summary>
+<br>
+  
+![diagrama]()
+</details>
+
+
+
+<details>
+<summary>Estadísticas por equipo</summary>
+<br>
+
+![diagrama]()
+</details>
+
+<details>
+<summary>Jugadores por equipo</summary>
+<br>
+
+![diagrama]()
+</details>
+<br>
+
+![diagrama]()
+</details>
+
+<details>
+<summary>Estadística por jugador</summary>
+<br>
+
+![diagrama]()
+</details>
+

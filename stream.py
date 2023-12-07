@@ -155,29 +155,29 @@ def pagina_inicio():
     file_path2 = os.path.abspath('../VoleyStats-Pro/jornadas_Streamlit.csv')
 
     header_style = """
-    <style>
+   <style>
     .stApp {
         font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     }
     .header-styles {
-        font-size: 40px;
-        font-weight: bold;
-        color: #FF4B4B;  /* Cambia el color según tus preferencias */
-        text-align: center;
-        padding: 10px;
-        background-color: #F0F2F6;  /* Fondo del encabezado */
-        border-radius: 10px;  /* Bordes redondeados */
-        margin: 25px;
-        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);  /* Sombra para dar efecto de elevación */
-    }
-    </style>
+    font-size: 40px;
+    font-weight: bold;
+    color: #000000;  /* Cambiado a negro */
+    text-align: center;
+    padding: 10px;
+    background-color: #F0F2F6;  /* Fondo del encabezado */
+    border-radius: 10px;  /* Bordes redondeados */
+    margin: 25px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);  /* Sombra para dar efecto de elevación */
+}
+</style>
     """
 
     # Inyecta el CSS en la aplicación de Streamlit
     st.markdown(header_style, unsafe_allow_html=True)
 
     # Usa una clase personalizada para el encabezado
-    st.markdown('<div class="header-styles">Jornadas Temporada 2023-2024</div>', unsafe_allow_html=True)
+    st.markdown('<div class="header-styles">Jornadas temporada 2023-2024</div>', unsafe_allow_html=True)
 
     jornadas = pd.read_csv(file_path)
     jornadas2 = pd.read_csv(file_path2)

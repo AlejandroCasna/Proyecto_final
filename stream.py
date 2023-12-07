@@ -29,17 +29,21 @@ def pagina_inicio():
 
     st.header('Bienvenidos a VoleyStats Pro')
 
-# logo para cuenta personal
-    github_logo = "https://icon-library.com/images/github-logo-icon/github-logo-icon-12.jpg"
-    linkedin_logo = "https://www.freeiconspng.com/thumbs/linkedin-logo-png/linkedin-logo-0.png"
+    col1, col2 = st.sidebar.columns(2)
+    with col1:
+        # logo para cuenta personal
+        github_logo = "https://icon-library.com/images/github-logo-icon/github-logo-icon-12.jpg"
 
-    # los crea dentro de la imagen 
-    github_link = f'<a href="https://github.com/AlejandroCasna"><img src="{github_logo}" width="50"></a>'
-    linkedin_link = f'<a href="https://www.linkedin.com/in/alejandrocasna/"><img src="{linkedin_logo}" width="50"></a>'
+        # los crea dentro de la imagen 
+        github_link = f'<a href="https://github.com/AlejandroCasna"><img src="{github_logo}" width="50"></a>'
 
-    # Añade los enlaces a la barra lateral
-    st.sidebar.markdown(github_link, unsafe_allow_html=True)
-    st.sidebar.markdown(linkedin_link, unsafe_allow_html=True)
+        # Añade los enlaces a la barra lateral
+        st.sidebar.markdown(github_link, unsafe_allow_html=True)
+    with col2:
+        linkedin_logo = "https://www.freeiconspng.com/thumbs/linkedin-logo-png/linkedin-logo-0.png"
+        linkedin_link = f'<a href="https://www.linkedin.com/in/alejandrocasna/"><img src="{linkedin_logo}" width="50"></a>'
+        st.sidebar.markdown(linkedin_link, unsafe_allow_html=True)
+
 
     
 
@@ -74,34 +78,20 @@ def pagina_inicio():
     # Barra lateral para seleccionar el equipo
     equipo_seleccionado = st.sidebar.selectbox('Seleccione Equipo', ['Seleccione un equipo'] + list(df.Equipo))
 
-    # mientras no se seleccione nada aparece el siguiente texto
-    if equipo_seleccionado == 'Seleccione un equipo':
-        st.sidebar.write('''🏐 ¡Bienvenidos a VoleyStats Pro - tu fuente de análisis profundo y estadísticas del vóleyball! 📊🏐 
-                         Estamos emocionados de sumergirnos en las cifras y datos que definen el rendimiento de los equipos de vóley, 
-                         tanto en la temporada actual como en las pasadas.
-                          Prepárense para un recorrido informativo que iluminará los logros,
-                          estrategias y momentos clave que han marcado la historia reciente de este emocionante deporte.
-                          En este espacio, nos sumergiremos en los números, exploraremos tendencias, y desentrañaremos las historias detrás de cada estadística.
-                          ¿Cuál equipo tuvo el mejor desempeño en ataques? ¿Quién lidera en bloqueos? ¿Cómo se compara el rendimiento actual con el de temporadas anteriores?
-                          Todas estas respuestas y más las descubriremos juntos. Este no es solo un stream, es una inmersión en la analítica del vóley.
-                          ''')
+    # Verificar si el equipo seleccionado tien imagen asociada
+    if equipo_seleccionado in equipos_a_imagenes:
+        url_imagen = equipos_a_imagenes[equipo_seleccionado]
+        st.sidebar.markdown(
+            f'<img src="{url_imagen}" alt="Imagen de {equipo_seleccionado}" style="border-radius:20%; width:50%;">',
+            unsafe_allow_html=True
+        )
 
-        
+        # Mostrar información específica de la columna 'informacion' con saltos de línea
+        informacion_equipo = df[df['Equipo'] == equipo_seleccionado]['informacion'].iloc[0]
+        st.sidebar.markdown(f"\n{informacion_equipo}", unsafe_allow_html=True)
+
     else:
-        # Verificar si el equipo seleccionado tien imagen asociada
-        if equipo_seleccionado in equipos_a_imagenes:
-            url_imagen = equipos_a_imagenes[equipo_seleccionado]
-            st.sidebar.markdown(
-                f'<img src="{url_imagen}" alt="Imagen de {equipo_seleccionado}" style="border-radius:20%; width:50%;">',
-                unsafe_allow_html=True
-            )
-
-            # Mostrar información específica de la columna 'informacion' con saltos de línea
-            informacion_equipo = df[df['Equipo'] == equipo_seleccionado]['informacion'].iloc[0]
-            st.sidebar.markdown(f"\n{informacion_equipo}", unsafe_allow_html=True)
-
-        else:
-            st.sidebar.warning(f"No hay URL de imagen asociada para el equipo {equipo_seleccionado}.")
+        st.sidebar.warning(f"Seleccione un equipo para más información {equipo_seleccionado}.")
 
     # Presentación con color de texto personalizado
 
@@ -225,9 +215,7 @@ def pagina_inicio():
     
     st.dataframe(clasificacion,width=2000,height=400)
 
-    
-
-def estadisticas():
+def estadisticas_equipo():
     st.markdown(
     f"""
     <style>
@@ -309,7 +297,7 @@ def estadisticas():
 
                                 #----------------------------------------------------------SEGUNDA PARTE DE LA PAGINA---------------------------------------------------
     
-    
+def jugadores_equipo():
     st.markdown("<h1 style='text-align: center;'>Jugadores por equipo</h1>", unsafe_allow_html=True)
     
     jugadores = pd.read_csv('../VoleyStats-Pro/posgresSQL/data/jugadores.csv')
@@ -356,7 +344,7 @@ def estadisticas():
 
            #----------------------------------------------------------TERCERA PARTE DE LA PAGINA---------------------------------------------------
      
-
+def metricas_jugadores():
     st.markdown("<h1 style='text-align: center;'>Estadística por jugador</h1>", unsafe_allow_html=True)
     df_posicion_filtrado= None
     df_equipo = pd.read_csv('../VoleyStats-Pro/posgresSQL/data/Equipos.csv')
@@ -414,12 +402,14 @@ def estadisticas():
 
 opciones = {
     "Inicio": pagina_inicio,
-    "Estadísticas": estadisticas,
-    
-}
+    "Estadísticas por equipo": estadisticas_equipo,
+    "Jugadores por equipo": jugadores_equipo,
+    "Métricas de jugadores": metricas_jugadores
+    }
+
 # Sidebar navigation selection
 st.sidebar.write("## Navegación")
-opcion_seleccionada = st.sidebar.radio("Ir a", list(opciones.keys()))
+opcion_seleccionada = st.sidebar.radio("",list(opciones.keys()))
 # Display the selected page
 if opcion_seleccionada in opciones:
     opciones[opcion_seleccionada]()

@@ -27,7 +27,30 @@ def pagina_inicio():
      )
     
 
-    st.header('Bienvenidos a VoleyStats Pro')
+    header_style = """
+    <style>
+    .stApp {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+    .header-styles {
+        font-size: 40px;
+        font-weight: bold;
+        color: #FF4B4B;  /* Cambia el color según tus preferencias */
+        text-align: center;
+        padding: 10px;
+        background-color: #F0F2F6;  /* Fondo del encabezado */
+        border-radius: 10px;  /* Bordes redondeados */
+        margin: 25px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);  /* Sombra para dar efecto de elevación */
+    }
+    </style>
+    """
+
+    # Inyecta el CSS en la aplicación de Streamlit
+    st.markdown(header_style, unsafe_allow_html=True)
+
+    # Usa una clase personalizada para el encabezado
+    st.markdown('<div class="header-styles">Bienvenidos a VoleyStats Pro</div>', unsafe_allow_html=True)
 
     col1, col2 = st.sidebar.columns(2)
     with col1:
@@ -105,7 +128,7 @@ def pagina_inicio():
     Ya seas un apasionado seguidor del vóley o un analista ávido en busca de datos fundamentales, 
     aquí encontrarás la información adecuada que alimentará tu conocimiento y enriquecerá tu experiencia del juego.
     Eleva tu comprensión del juego y únete a una comunidad donde la pasión se combina con la precisión. 
-    Entra en el mundo de las estadísticas de vóley, donde cada número cuenta una historia apasionante sobre el emocionante mundo de este deporte &quot;SetyMatchStream&quot;
+    Entra en el mundo de las estadísticas de vóley, donde cada número cuenta una historia apasionante sobre el emocionante mundo de este deporte.
 </div>"""
 
     
@@ -131,16 +154,30 @@ def pagina_inicio():
     file_path = os.path.abspath('../VoleyStats-Pro/data/2023-2024/Jornadas.csv')
     file_path2 = os.path.abspath('../VoleyStats-Pro/jornadas_Streamlit.csv')
 
-    st.markdown("""
-        <style>
-        .title {
-            text-align: center;
-        }
-        </style>
-        <h1 class="title">Jornadas Temporada 2023-2024</h1>
-        """, unsafe_allow_html=True)
-    
-    st.markdown('#### Elije una jornada de juego y conoce los enfrentamientos y resultados de cada equipo')
+    header_style = """
+    <style>
+    .stApp {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+    .header-styles {
+        font-size: 40px;
+        font-weight: bold;
+        color: #FF4B4B;  /* Cambia el color según tus preferencias */
+        text-align: center;
+        padding: 10px;
+        background-color: #F0F2F6;  /* Fondo del encabezado */
+        border-radius: 10px;  /* Bordes redondeados */
+        margin: 25px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);  /* Sombra para dar efecto de elevación */
+    }
+    </style>
+    """
+
+    # Inyecta el CSS en la aplicación de Streamlit
+    st.markdown(header_style, unsafe_allow_html=True)
+
+    # Usa una clase personalizada para el encabezado
+    st.markdown('<div class="header-styles">Jornadas Temporada 2023-2024</div>', unsafe_allow_html=True)
 
     jornadas = pd.read_csv(file_path)
     jornadas2 = pd.read_csv(file_path2)
@@ -186,16 +223,31 @@ def pagina_inicio():
 
 
     clasificacion = pd.read_csv('../VoleyStats-Pro/data/2023-2024/Clasificacion.csv')
-    st.markdown("""
-        <style>
-        .title {
-            text-align: center;
-        }
-        </style>
-        <h1 class="title">Tabla de posiciones</h1>
-        """, unsafe_allow_html=True)
     
-    st.markdown('#### Aqui veras la tabla de resultados en donde figurara semanalmente actualizada las posiciones de los equipos, los partidos jugados, entre ellos los ganados y perdidos y los puntos totales obtenidos hasta el momento.')
+    header_style = """
+    <style>
+    .stApp {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+    .header-styles {
+        font-size: 40px;
+        font-weight: bold;
+        color: #FF4B4B;  /* Cambia el color según tus preferencias */
+        text-align: center;
+        padding: 10px;
+        background-color: #F0F2F6;  /* Fondo del encabezado */
+        border-radius: 10px;  /* Bordes redondeados */
+        margin: 25px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);  /* Sombra para dar efecto de elevación */
+    }
+    </style>
+    """
+
+    # Inyecta el CSS en la aplicación de Streamlit
+    st.markdown(header_style, unsafe_allow_html=True)
+
+    # Usa una clase personalizada para el encabezado
+    st.markdown('<div class="header-styles">Tabla de posiciones</div>', unsafe_allow_html=True)
  
     clasificacion = clasificacion.iloc[:, 0:6]
 
@@ -217,32 +269,42 @@ def pagina_inicio():
 
 def estadisticas_equipo():
     st.markdown(
-    f"""
+         f"""
+         <style>
+         .stApp {{
+             background: url("https://integralspor.com/uploads/blog/detail/1618e792d4b1254221.jpg");
+             background-size: cover
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
+    
+
+    header_style = """
     <style>
-    .stApp {{
-        background-image: url("https://img.olympics.com/images/image/private/t_s_pog_staticContent_hero_lg_2x/f_auto/primary/tkynwuonkevlorq0r9c7");
-        background-size: cover;
-        background-attachment: fixed;
-        background-repeat: no-repeat;
-        background-position: center;
-    }}
-    .stApp:before {{
-        content: '';
-        display: block;
-        position: absolute;
-        top: 0;
-        left: 0;
-        bottom: 0;
-        right: 0;
-        background: rgba(240, 200, 0, 0.1); /* Ajusta la opacidad aquí */
-        pointer-events: none; /* Asegúrate de que el pseudo-elemento no capture eventos de clic */
-        z-index: -1; /* Coloca el pseudo-elemento detrás del contenido */
-    }}
+    .stApp {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+    .header-styles {
+        font-size: 40px;
+        font-weight: bold;
+        color: #FF4B4B;  /* Cambia el color según tus preferencias */
+        text-align: center;
+        padding: 10px;
+        background-color: #F0F2F6;  /* Fondo del encabezado */
+        border-radius: 10px;  /* Bordes redondeados */
+        margin: 25px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);  /* Sombra para dar efecto de elevación */
+    }
     </style>
-    """,
-    unsafe_allow_html=True
-    )
-    st.markdown("<h1 style='text-align: center;'>Estadísticas de equipo</h1>", unsafe_allow_html=True)
+    """
+
+    # Inyecta el CSS en la aplicación de Streamlit
+    st.markdown(header_style, unsafe_allow_html=True)
+
+    # Usa una clase personalizada para el encabezado
+    st.markdown('<div class="header-styles">Estadísticas por equipo</div>', unsafe_allow_html=True)
 
 
     estadistica = pd.read_csv('../VoleyStats-Pro/posgresSQL/data/estadistica.csv')
@@ -298,7 +360,44 @@ def estadisticas_equipo():
                                 #----------------------------------------------------------SEGUNDA PARTE DE LA PAGINA---------------------------------------------------
     
 def jugadores_equipo():
-    st.markdown("<h1 style='text-align: center;'>Jugadores por equipo</h1>", unsafe_allow_html=True)
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background: url("https://integralspor.com/uploads/blog/detail/1618e792d4b1254221.jpg");
+             background-size: cover
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
+    
+
+    header_style = """
+    <style>
+    .stApp {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+    .header-styles {
+        font-size: 40px;
+        font-weight: bold;
+        color: #FF4B4B;  /* Cambia el color según tus preferencias */
+        text-align: center;
+        padding: 10px;
+        background-color: #F0F2F6;  /* Fondo del encabezado */
+        border-radius: 10px;  /* Bordes redondeados */
+        margin: 25px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);  /* Sombra para dar efecto de elevación */
+    }
+    </style>
+    """
+
+    # Inyecta el CSS en la aplicación de Streamlit
+    st.markdown(header_style, unsafe_allow_html=True)
+
+    # Usa una clase personalizada para el encabezado
+    st.markdown('<div class="header-styles">Jugadores por equipo</div>', unsafe_allow_html=True)
+    
     
     jugadores = pd.read_csv('../VoleyStats-Pro/posgresSQL/data/jugadores.csv')
     estadistica = pd.read_csv('../VoleyStats-Pro/posgresSQL/data/estadistica.csv')
@@ -337,7 +436,7 @@ def jugadores_equipo():
 
 
 
-    st.dataframe(merged_df,width=2000,height=300)
+    st.dataframe(merged_df,width=2000,height=600)
 
 
 
@@ -345,7 +444,47 @@ def jugadores_equipo():
            #----------------------------------------------------------TERCERA PARTE DE LA PAGINA---------------------------------------------------
      
 def metricas_jugadores():
-    st.markdown("<h1 style='text-align: center;'>Estadística por jugador</h1>", unsafe_allow_html=True)
+    st.markdown(
+         f"""
+         <style>
+         .stApp {{
+             background: url("https://integralspor.com/uploads/blog/detail/1618e792d4b1254221.jpg");
+             background-size: cover
+         }}
+         </style>
+         """,
+         unsafe_allow_html=True
+     )
+    
+
+    header_style = """
+    <style>
+    .stApp {
+        font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    }
+    .header-styles {
+        font-size: 40px;
+        font-weight: bold;
+        color: #FF4B4B;  /* Cambia el color según tus preferencias */
+        text-align: center;
+        padding: 10px;
+        background-color: #F0F2F6;  /* Fondo del encabezado */
+        border-radius: 10px;  /* Bordes redondeados */
+        margin: 25px;
+        box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);  /* Sombra para dar efecto de elevación */
+    }
+    </style>
+    """
+
+    # Inyecta el CSS en la aplicación de Streamlit
+    st.markdown(header_style, unsafe_allow_html=True)
+
+    # Usa una clase personalizada para el encabezado
+    st.markdown('<div class="header-styles">Estadística por jugador</div>', unsafe_allow_html=True)
+
+
+
+
     df_posicion_filtrado= None
     df_equipo = pd.read_csv('../VoleyStats-Pro/posgresSQL/data/Equipos.csv')
     df_jugadores = pd.read_csv('../VoleyStats-Pro/posgresSQL/data/jugadores.csv')
@@ -362,8 +501,10 @@ def metricas_jugadores():
     seleccion1 = st.sidebar.selectbox('Selecciona un equipo', df_equipo['Equipo'].unique())
     seleccion2 = st.sidebar.selectbox('Selecciona una temporada', df_jugadores['temporada'].unique())
     seleccion3 = st.sidebar.selectbox('Selecciona una posición', df_jugadores['Posicion'].unique())
+    
 
     posicion_seleccionada = seleccion3
+    
 
     df_jugadores_filtrado = df_jugadores[(df_jugadores['id_equipo'] == df_equipo[df_equipo['Equipo'] == seleccion1]['id_equipo'].values[0]) & 
                                         (df_jugadores['temporada'] == seleccion2) & 
@@ -378,7 +519,7 @@ def metricas_jugadores():
     # Filtrar el dataframe correspondiente a la posición seleccionada y seleccionar las columnas deseadas
     if posicion_seleccionada.lower() == 'opuesto':
         df_posicion_filtrado = df_opuesto[df_opuesto['id_jugador'].isin(df_jugadores_filtrado['id_jugador'])][columnas_opuesto]
-    elif posicion_seleccionada.lower() == 'central':
+    elif posicion_seleccionada.lower() == 'Middle-blocker':
         df_posicion_filtrado = df_central[df_central['id_jugador'].isin(df_jugadores_filtrado['id_jugador'])][columnas_central]
     elif posicion_seleccionada.lower() == 'colocador':
         df_posicion_filtrado = df_colocador[df_colocador['id_jugador'].isin(df_jugadores_filtrado['id_jugador'])][columnas_colocador]
@@ -388,6 +529,7 @@ def metricas_jugadores():
         df_posicion_filtrado = df_receptor[df_receptor['id_jugador'].isin(df_jugadores_filtrado['id_jugador'])][columnas_receptor]
     else:
         st.error("Posición no reconocida")
+        
 
     # Mostrar la información de los jugadores en el dataframe filtrado
     if df_posicion_filtrado is not None:

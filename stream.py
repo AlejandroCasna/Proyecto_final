@@ -443,7 +443,7 @@ def jugadores_equipo():
 
            #----------------------------------------------------------TERCERA PARTE DE LA PAGINA---------------------------------------------------
      
-def metricas_jugadores():
+def estadisticas_jugadores():
     st.markdown(
          f"""
          <style>
@@ -546,7 +546,7 @@ opciones = {
     "Inicio": pagina_inicio,
     "Estadísticas por equipo": estadisticas_equipo,
     "Jugadores por equipo": jugadores_equipo,
-    "Métricas de jugadores": metricas_jugadores
+    "Estadísticas de jugadores": estadisticas_jugadores
     }
 
 # Sidebar navigation selection

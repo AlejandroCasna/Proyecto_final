@@ -78,4 +78,4 @@ Con la ayuda de Streamlit, se logrará una visualización clara y efectiva de la
 
 - [**Joblib**](https://joblib.readthedocs.io/en/stable/): Una biblioteca de Python para procesar tareas en paralelo. Solo para main.py.
 
--[**Plotly**](https://plotly.com/python/plotly-express/): Plotly Express es una librería de visualización de datos en Python que proporciona una interfaz fácil de usar para crear gráficos interactivos y visualizaciones estadísticas de manera rápida y sencilla.
+- [**Plotly**](https://plotly.com/python/plotly-express/): Plotly Express es una librería de visualización de datos en Python que proporciona una interfaz fácil de usar para crear gráficos interactivos y visualizaciones estadísticas de manera rápida y sencilla.

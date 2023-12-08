@@ -307,7 +307,7 @@ def estadisticas_equipo():
     st.markdown('<div class="header-styles">Estadísticas por equipo</div>', unsafe_allow_html=True)
 
 
-    estadistica = pd.read_csv('../VoleyStats-Pro/posgresSQL/data/estadistica.csv')
+    estadistica = pd.read_csv('../VoleyStats-Pro/postgresSQL/data/estadistica.csv')
 
     # filtros
     filtro_equipo = [''] + list(estadistica['Equipo'].unique())
@@ -399,8 +399,8 @@ def jugadores_equipo():
     st.markdown('<div class="header-styles">Jugadores por equipo</div>', unsafe_allow_html=True)
     
     
-    jugadores = pd.read_csv('../VoleyStats-Pro/posgresSQL/data/jugadores.csv')
-    estadistica = pd.read_csv('../VoleyStats-Pro/posgresSQL/data/estadistica.csv')
+    jugadores = pd.read_csv('../VoleyStats-Pro/postgresSQL/data/jugadores.csv')
+    estadistica = pd.read_csv('../VoleyStats-Pro/postgresSQL/data/estadistica.csv')
 
     # en base a pruebas fue necesario iniciarlas vacias
     posicion = None
@@ -486,13 +486,13 @@ def estadisticas_jugadores():
 
 
     df_posicion_filtrado= None
-    df_equipo = pd.read_csv('../VoleyStats-Pro/posgresSQL/data/Equipos.csv')
-    df_jugadores = pd.read_csv('../VoleyStats-Pro/posgresSQL/data/jugadores.csv')
-    df_opuesto = pd.read_csv('../VoleyStats-Pro/posgresSQL/data/opuestos.csv')
-    df_central = pd.read_csv('../VoleyStats-Pro/posgresSQL/data/centrales.csv')
-    df_colocador = pd.read_csv('../VoleyStats-Pro/posgresSQL/data/colocadores.csv')
-    df_libero = pd.read_csv('../VoleyStats-Pro/posgresSQL/data/liberos.csv')
-    df_receptor = pd.read_csv('../VoleyStats-Pro/posgresSQL/data/receptores.csv')
+    df_equipo = pd.read_csv('../VoleyStats-Pro/postgresSQL/data/Equipos.csv')
+    df_jugadores = pd.read_csv('../VoleyStats-Pro/postgresSQL/data/jugadores.csv')
+    df_opuesto = pd.read_csv('../VoleyStats-Pro/postgresSQL/data/opuestos.csv')
+    df_central = pd.read_csv('../VoleyStats-Pro/postgresSQL/data/centrales.csv')
+    df_colocador = pd.read_csv('../VoleyStats-Pro/postgresSQL/data/colocadores.csv')
+    df_libero = pd.read_csv('../VoleyStats-Pro/postgresSQL/data/liberos.csv')
+    df_receptor = pd.read_csv('../VoleyStats-Pro/postgresSQL/data/receptores.csv')
 
 
     st.sidebar.write('---')

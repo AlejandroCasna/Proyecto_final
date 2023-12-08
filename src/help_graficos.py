@@ -3,7 +3,7 @@ import plotly.express as px
 import streamlit as st
 
 
-df = pd.read_csv('..\VoleyStats-Pro\posgresSQL\data\estadistica.csv')
+df = pd.read_csv('..\VoleyStats-Pro\postgresSQL\data\estadistica.csv')
 columnas_seleccionadas = ['Equipo', 'Efic_Saque', 'Efic_Recepcion', 'Efic_Ataque', 'Puntos_Set_Bloqueo', 'temporada']
 df = df[columnas_seleccionadas]
 

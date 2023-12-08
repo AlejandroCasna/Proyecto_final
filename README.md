@@ -61,3 +61,21 @@ Con la ayuda de Streamlit, se logrará una visualización clara y efectiva de la
 *Integrar Streamlit con la base de datos PostgreSQL para garantizar una actualización constante con nuevos datos.
 
 *Desarrollar una aplicación ejecutable que facilite el acceso directo a la página desde dispositivos móviles
+
+# Librerías utilizadas
+
+- [**Python**](https://www.python.org):  El lenguaje de programación principal utilizado para implementar el proceso ETL y llevar a cabo el análisis.
+
+- [**Selenium**](https://www.selenium.dev/documentation/): Una herramienta de automatización web utilizada para interactuar con sitios web y obtener datos de chat de sitios que no proporcionan una API directa.
+
+- [**Sqlalchemy**](https://docs.sqlalchemy.org/en/20/): Una herramienta SQL de Python y un kit de herramientas de ORM que proporciona una manera más sencilla de interactuar con bases de datos SQL.
+
+- [**Re**](https://docs.python.org/3/library/re.html): Una librería en Python para trabajar con expresiones regulares, que son patrones de búsqueda y coincidencia de texto. 
+
+- [**Time**](https://docs.python.org/3/library/time.html): Una librería en Python para trabajar con operaciones relacionadas con el tiempo. Es útil para medir intervalos de tiempo y pausar la ejecución de un programa.
+
+- [**Streamlit**](https://streamlit.io/): Streamlit es un marco de desarrollo de código abierto en Python que simplifica considerablemente la creación de aplicaciones web interactivas y atractivas
+
+- [**Joblib**](https://joblib.readthedocs.io/en/stable/): Una biblioteca de Python para procesar tareas en paralelo. Solo para main.py.
+
+-[**Plotly**](https://plotly.com/python/plotly-express/): Plotly Express es una librería de visualización de datos en Python que proporciona una interfaz fácil de usar para crear gráficos interactivos y visualizaciones estadísticas de manera rápida y sencilla.
